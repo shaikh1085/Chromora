@@ -2,127 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Application Pages -->
   <url>
-    <loc>https://chromoraflow.vercel.app/</loc>
+    <loc>https://paywiseuk.vercel.app//</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/color-picker</loc>
+    <loc>https://paywiseuk.vercel.app//color-picker</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/color-wheel</loc>
+    <loc>https://paywiseuk.vercel.app//color-wheel</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/color-palette-generator</loc>
+    <loc>https://paywiseuk.vercel.app//color-palette-generator</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/ai-palette-generator</loc>
+    <loc>https://paywiseuk.vercel.app//ai-palette-generator</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/gradient-generator</loc>
+    <loc>https://paywiseuk.vercel.app//gradient-generator</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/color-converter</loc>
+    <loc>https://paywiseuk.vercel.app//color-converter</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/color-shades-generator</loc>
+    <loc>https://paywiseuk.vercel.app//color-shades-generator</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/color-mixer</loc>
+    <loc>https://paywiseuk.vercel.app//color-mixer</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/color-blindness-simulator</loc>
+    <loc>https://paywiseuk.vercel.app//color-blindness-simulator</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/random-color-generator</loc>
+    <loc>https://paywiseuk.vercel.app//random-color-generator</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/pantone-color-converter</loc>
+    <loc>https://paywiseuk.vercel.app//pantone-color-converter</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/favicon-generator</loc>
+    <loc>https://paywiseuk.vercel.app//favicon-generator</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/contrast-checker</loc>
+    <loc>https://paywiseuk.vercel.app//contrast-checker</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/image-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//image-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/design-preview</loc>
+    <loc>https://paywiseuk.vercel.app//design-preview</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/colors</loc>
+    <loc>https://paywiseuk.vercel.app//colors</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/saved-palettes</loc>
+    <loc>https://paywiseuk.vercel.app//saved-palettes</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/about</loc>
+    <loc>https://paywiseuk.vercel.app//about</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/privacy</loc>
+    <loc>https://paywiseuk.vercel.app//privacy</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/terms</loc>
+    <loc>https://paywiseuk.vercel.app//terms</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -130,73 +130,73 @@
 
   <!-- Color Converter Landing Sub-pages -->
   <url>
-    <loc>https://chromoraflow.vercel.app/hex-to-rgb</loc>
+    <loc>https://paywiseuk.vercel.app//hex-to-rgb</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/rgb-to-hex</loc>
+    <loc>https://paywiseuk.vercel.app//rgb-to-hex</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/hex-to-hsl</loc>
+    <loc>https://paywiseuk.vercel.app//hex-to-hsl</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/hsl-to-hex</loc>
+    <loc>https://paywiseuk.vercel.app//hsl-to-hex</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/hex-to-cmyk</loc>
+    <loc>https://paywiseuk.vercel.app//hex-to-cmyk</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/cmyk-to-hex</loc>
+    <loc>https://paywiseuk.vercel.app//cmyk-to-hex</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/hex-to-oklch</loc>
+    <loc>https://paywiseuk.vercel.app//hex-to-oklch</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/oklch-to-hex</loc>
+    <loc>https://paywiseuk.vercel.app//oklch-to-hex</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/rgb-to-hsl</loc>
+    <loc>https://paywiseuk.vercel.app//rgb-to-hsl</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/hsl-to-rgb</loc>
+    <loc>https://paywiseuk.vercel.app//hsl-to-rgb</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/rgb-to-cmyk</loc>
+    <loc>https://paywiseuk.vercel.app//rgb-to-cmyk</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/cmyk-to-rgb</loc>
+    <loc>https://paywiseuk.vercel.app//cmyk-to-rgb</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -204,181 +204,181 @@
 
   <!-- Curated Collection Palette Pages -->
   <url>
-    <loc>https://chromoraflow.vercel.app/ramadan-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//ramadan-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/eid-mubarak-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//eid-mubarak-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/wedding-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//wedding-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/vintage-retro-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//vintage-retro-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/cyberpunk-neon-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//cyberpunk-neon-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/pastel-aesthetic-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//pastel-aesthetic-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/earthy-warm-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//earthy-warm-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/minimalist-monochrome-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//minimalist-monochrome-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/tailwind-essentials-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//tailwind-essentials-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/forest-nature-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//forest-nature-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/sunset-horizons-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//sunset-horizons-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/ocean-depths-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//ocean-depths-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/luxury-gold-black-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//luxury-gold-black-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/autumn-cozy-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//autumn-cozy-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/coffee-warm-brown-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//coffee-warm-brown-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/spring-blossom-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//spring-blossom-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/summer-vibrant-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//summer-vibrant-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/winter-frost-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//winter-frost-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/neon-glow-dark-ui-palette</loc>
+    <loc>https://paywiseuk.vercel.app//neon-glow-dark-ui-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/fintech-trust-blue-palette</loc>
+    <loc>https://paywiseuk.vercel.app//fintech-trust-blue-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/healthcare-clean-teal-palette</loc>
+    <loc>https://paywiseuk.vercel.app//healthcare-clean-teal-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/food-restaurant-warm-palette</loc>
+    <loc>https://paywiseuk.vercel.app//food-restaurant-warm-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/real-estate-prestige-palette</loc>
+    <loc>https://paywiseuk.vercel.app//real-estate-prestige-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/saas-modern-purple-palette</loc>
+    <loc>https://paywiseuk.vercel.app//saas-modern-purple-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/diwali-festival-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//diwali-festival-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/holi-vibrant-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//holi-vibrant-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/chinese-new-year-color-palette</loc>
+    <loc>https://paywiseuk.vercel.app//chinese-new-year-color-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/cherry-blossom-japan-palette</loc>
+    <loc>https://paywiseuk.vercel.app//cherry-blossom-japan-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/nordic-scandinavian-palette</loc>
+    <loc>https://paywiseuk.vercel.app//nordic-scandinavian-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chromoraflow.vercel.app/mediterranean-terracotta-palette</loc>
+    <loc>https://paywiseuk.vercel.app//mediterranean-terracotta-palette</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
