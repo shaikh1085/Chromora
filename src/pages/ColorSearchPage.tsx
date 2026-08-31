@@ -102,7 +102,7 @@ export const ColorSearchPage: React.FC<{
             'pantone color names list',
             'css named colors reference chart',
           ],
-          canonicalUrl: 'https://chromora.app/colors',
+          canonicalUrl: 'https://chromoraflow.vercel.app/colors',
           faqs: directoryFaqs,
           softwareApp: {
             name: 'Chromora Color Names Directory & Finder',
