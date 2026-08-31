@@ -11,7 +11,7 @@ export const PrivacyPage: React.FC<{ navigate: (route: string) => void }> = ({ n
           title: 'Privacy Policy — Chromora',
           description:
             'Chromora values your privacy: 100% client-side local calculations, zero server storage of uploaded images, and zero third-party telemetry.',
-          canonicalUrl: 'https://chromora.app/privacy',
+          canonicalUrl: 'https://chromoraflow.vercel.app/privacy',
         }}
       />
 
