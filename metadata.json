@@ -1,6 +1,6 @@
 {
   "name": "Chromora",
-  "description": "An intelligent color discovery, palette generation, WCAG accessibility contrast, image extraction, and design token platform.",
+  "description": "Generate accessible color palettes for UI design, check WCAG contrast in real time, extract colors from images with HEX codes, convert OKLCH to HEX, and export CSS design tokens.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
