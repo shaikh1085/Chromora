@@ -64,7 +64,7 @@ export const PaletteCollectionPage: React.FC<{
         config={{
           title: data.title,
           description: data.metaDescription,
-          canonicalUrl: `https://chromora.app/${data.slug}`,
+          canonicalUrl: `https://chromoraflow.vercel.app/${data.slug}`,
           keywords: [
             data.primaryKeyword,
             `${data.primaryKeyword} ideas`,
