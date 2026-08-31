@@ -69,7 +69,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
           title: `Saved Palettes Collection (${savedPalettes.length}) — Chromora`,
           description:
             'Manage, export, and organize your saved color palettes and design system tokens.',
-          canonicalUrl: 'https://chromora.app/saved-palettes',
+          canonicalUrl: 'https://chromoraflow.vercel.app/saved-palettes',
           robots: 'noindex, follow',
         }}
       />
