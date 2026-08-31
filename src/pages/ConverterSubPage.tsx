@@ -102,7 +102,7 @@ export const ConverterSubPage: React.FC<{
         config={{
           title: data.title,
           description: data.metaDescription,
-          canonicalUrl: `https://chromora.app/${data.slug}`,
+          canonicalUrl: `https://chromoraflow.vercel.app/${data.slug}`,
           keywords: [data.primaryKeyword, 'color converter', 'css colors', 'web design', 'hex code', 'color conversion'],
           breadcrumbs: [
             { name: 'Color Converter', url: '/color-converter' },
