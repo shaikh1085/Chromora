@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chromora — Pro Color Studio &amp; Design System Platform</title>
+    <meta name="description" content="Turn any color into a complete design system with intelligent palette discovery, WCAG contrast verification, and instant tokens." />
+    <meta property="og:title" content="Chromora — Pro Color Studio" />
+    <meta property="og:description" content="Turn any color into a complete design system." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://chromora.app/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://chromora.app/og-image.png" />
+    <link rel="canonical" href="https://chromora.app/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <script>
+      (function () {
+        try {
+          var originalFetch = window.fetch;
+          var desc =
+            Object.getOwnPropertyDescriptor(window, 'fetch') ||
+            Object.getOwnPropertyDescriptor(Window.prototype, 'fetch');
+          if (!desc || !desc.set) {
+            var _fetch = originalFetch;
+            Object.defineProperty(window, 'fetch', {
+              get: function () {
+                return _fetch;
+              },
+              set: function (fn) {
+                _fetch = fn;
+              },
+              configurable: true,
+              enumerable: true,
+            });
+          }
+        } catch (err) {
+          // Fallback if property is strictly sealed
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <header style="display:none" aria-hidden="true">
+        <h1>Chromora — Pro Color Studio &amp; Design System Platform</h1>
+        <p>Turn any color into a complete design system with intelligent palette discovery, WCAG contrast verification, and instant tokens.</p>
+        <nav>
+          <ul>
+            <li><a href="/color-picker">Color Explorer</a></li>
+            <li><a href="/color-palette-generator">Palette Studio</a></li>
+            <li><a href="/ai-color-palette-generator">AI Prompt Generator</a></li>
+            <li><a href="/image-color-palette-generator">Image Extractor</a></li>
+            <li><a href="/color-contrast-checker">WCAG Contrast Checker</a></li>
+            <li><a href="/gradient-generator">Gradient Studio</a></li>
+            <li><a href="/color-converter">Color Converter</a></li>
+            <li><a href="/design-color-preview">Design Preview</a></li>
+            <li><a href="/colors">Named Colors Database</a></li>
+            <li><a href="/hex-to-rgb">HEX to RGB Converter</a></li>
+            <li><a href="/hex-to-hsl">HEX to HSL Converter</a></li>
+            <li><a href="/rgb-to-hex">RGB to HEX Converter</a></li>
+            <li><a href="/hsl-to-hex">HSL to HEX Converter</a></li>
+            <li><a href="/cmyk-to-rgb">CMYK to RGB Converter</a></li>
+            <li><a href="/cmyk-to-hex">CMYK to HEX Converter</a></li>
+            <li><a href="/oklch-to-hex">OKLCH to HEX Converter</a></li>
+            <li><a href="/hsv-to-rgb">HSV to RGB Converter</a></li>
+            <li><a href="/pastel-color-palette">Pastel Color Palettes</a></li>
+            <li><a href="/earth-tones-color-palette">Earth Tones Color Palettes</a></li>
+            <li><a href="/cyberpunk-neon-color-palette">Cyberpunk Neon Color Palettes</a></li>
+            <li><a href="/warm-minimalist-color-palette">Warm Minimalist Color Palettes</a></li>
+            <li><a href="/nordic-frost-color-palette">Nordic Frost Color Palettes</a></li>
+            <li><a href="/about">About Chromora</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
