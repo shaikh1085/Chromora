@@ -217,10 +217,6 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Centered Hero Header */}
           <div className="text-center max-w-4xl mx-auto mb-10 lg:mb-14 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--accent-border)] bg-[var(--accent-soft)] text-[var(--accent)] text-xs font-bold uppercase tracking-wider mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Accessible Color Intelligence &amp; Design System Studio</span>
-            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[var(--text-primary)] tracking-tight text-center">
               Turn Any Color Into a{' '}
               <span
@@ -259,16 +255,6 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                       QUICK EXPLORATION STUDIO
                     </p>
                   </div>
-                  <span
-                    className="px-2.5 py-1 text-xs font-bold rounded-lg uppercase tracking-wider font-mono border"
-                    style={{
-                      backgroundColor: 'var(--accent-soft)',
-                      color: 'var(--accent)',
-                      borderColor: 'var(--accent-border)',
-                    }}
-                  >
-                    Active Input
-                  </span>
                 </div>
 
                 {/* Input Color Box */}
