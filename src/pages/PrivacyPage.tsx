@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Lock } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 
@@ -22,19 +22,19 @@ export const PrivacyPage: React.FC<{ navigate: (route: string) => void }> = ({ n
         />
 
         <div className="my-8 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
             <Lock className="w-3.5 h-3.5" />
             <span>Zero Data Collection</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
             Privacy Policy
           </h1>
-          <p className="text-xs text-zinc-400">Last updated: January 2026</p>
+          <p className="text-xs text-[var(--text-muted)]">Last updated: January 2026</p>
         </div>
 
-        <div className="space-y-6 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed py-6 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="space-y-6 text-sm text-[var(--text-secondary)] leading-relaxed py-6 border-t border-[var(--border-glass)]">
           <section className="space-y-2">
-            <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
               1. Local-First Processing
             </h2>
             <p>
@@ -43,7 +43,7 @@ export const PrivacyPage: React.FC<{ navigate: (route: string) => void }> = ({ n
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
               2. Image Processing & Photos
             </h2>
             <p>
@@ -52,16 +52,16 @@ export const PrivacyPage: React.FC<{ navigate: (route: string) => void }> = ({ n
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
               3. Local Storage Persistence
             </h2>
             <p>
-              Your saved palettes, custom collections, and theme preferences (Dark / Light mode) are saved exclusively to your browser's local storage (<code className="font-mono text-xs bg-zinc-100 dark:bg-zinc-800 px-1 py-0.5 rounded">localStorage</code>). You retain full control to export or delete this data at any time.
+              Your saved palettes, custom collections, and theme preferences (Dark / Light mode) are saved exclusively to your browser's local storage (<code className="font-mono text-xs bg-[var(--surface-glass-card)] border border-[var(--border-glass-subtle)] text-[var(--text-primary)] px-1.5 py-0.5 rounded">localStorage</code>). You retain full control to export or delete this data at any time.
             </p>
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
               4. Contact & Security Inquiries
             </h2>
             <p>
