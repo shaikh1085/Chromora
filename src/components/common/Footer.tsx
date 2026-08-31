@@ -92,27 +92,11 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
             <p className="text-sm text-[var(--text-secondary)] max-w-sm leading-relaxed">
               Turn any color into a complete design system. Chromora empowers designers to discover accessible palettes, preview live designs, and generate theme tokens.
             </p>
-            <div className="pt-2 flex items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 text-xs text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full font-medium">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                100% Local & Private Processing
-              </span>
-            </div>
           </div>
 
           {/* Newsletter Form */}
           <div className="lg:col-span-8 glass-card p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col justify-between">
             <div>
-              <span
-                className="px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full inline-block mb-2"
-                style={{
-                  backgroundColor: 'var(--accent-soft)',
-                  color: 'var(--accent)',
-                  border: '1px solid var(--accent-border)',
-                }}
-              >
-                Color Intelligence
-              </span>
               <h3 className="text-base sm:text-lg font-bold text-[var(--text-primary)] tracking-tight">
                 Chromora Design System Digest
               </h3>
