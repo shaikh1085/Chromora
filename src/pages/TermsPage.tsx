@@ -20,15 +20,15 @@ export const TermsPage: React.FC<{ navigate: (route: string) => void }> = ({ nav
         />
 
         <div className="my-8 space-y-3">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
             Terms of Service
           </h1>
-          <p className="text-xs text-zinc-400">Effective Date: January 2026</p>
+          <p className="text-xs text-[var(--text-muted)]">Effective Date: January 2026</p>
         </div>
 
-        <div className="space-y-6 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed py-6 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="space-y-6 text-sm text-[var(--text-secondary)] leading-relaxed py-6 border-t border-[var(--border-glass)]">
           <section className="space-y-2">
-            <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
               1. Acceptance of Terms
             </h2>
             <p>
@@ -37,7 +37,7 @@ export const TermsPage: React.FC<{ navigate: (route: string) => void }> = ({ nav
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
               2. Intellectual Property of Generated Palettes
             </h2>
             <p>
@@ -46,7 +46,7 @@ export const TermsPage: React.FC<{ navigate: (route: string) => void }> = ({ nav
           </section>
 
           <section className="space-y-2">
-            <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
               3. Disclaimer of Warranty
             </h2>
             <p>
