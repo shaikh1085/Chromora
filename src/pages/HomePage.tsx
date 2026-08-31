@@ -188,7 +188,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
         config={{
           title: 'Chromora — Accessible Color Palette Generator & Design System Studio',
           description:
-            'Free accessible color palette generator for UI design. Test WCAG contrast, extract colors from images with HEX codes, convert HEX to OKLCH, and export Tailwind CSS design tokens.',
+            'Free accessible color palette generator for UI design. Test WCAG contrast, extract colors from images, convert to OKLCH, and export Tailwind design tokens.',
           keywords: [
             'accessible color palette generator for UI design',
             'color palette generator with contrast checker',
@@ -202,7 +202,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
             'cyberpunk neon color palette for UI',
             'free online color converter',
           ],
-          canonicalUrl: 'https://chromora.app',
+          canonicalUrl: 'https://chromoraflow.vercel.app',
           faqs: homeFaqs,
           softwareApp: {
             name: 'Chromora Color Platform',

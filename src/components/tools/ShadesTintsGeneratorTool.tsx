@@ -277,7 +277,7 @@ module.exports = {
     title: 'Color Shades Generator: Tailwind & Material 50-900 Scale Tool',
     description:
       'Generate a complete 10-step shade and tint scale from any HEX color. Export instantly to Tailwind CSS, CSS variables, and JSON design tokens.',
-    canonicalUrl: 'https://chromora.app/color-shades-generator',
+    canonicalUrl: 'https://chromoraflow.vercel.app/color-shades-generator',
     keywords: [
       'color shades generator',
       'tailwind color shades',
@@ -288,8 +288,8 @@ module.exports = {
       'oklch shade generator',
     ],
     breadcrumbs: [
-      { name: 'Home', url: 'https://chromora.app/' },
-      { name: 'Color Shades Generator', url: 'https://chromora.app/color-shades-generator' },
+      { name: 'Home', url: 'https://chromoraflow.vercel.app/' },
+      { name: 'Color Shades Generator', url: 'https://chromoraflow.vercel.app/color-shades-generator' },
     ],
     faqs: shadesFaqs,
     softwareApp: {

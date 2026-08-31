@@ -68,15 +68,15 @@ export const SEO: React.FC<{ config: SEOConfig }> = ({ config }) => {
       '@type': 'WebSite',
       name: siteName,
       alternateName: 'Chromora Color Platform',
-      url: 'https://chromora.app',
+      url: 'https://chromoraflow.vercel.app',
       description: 'Intelligent color discovery, palette generation, and WCAG accessibility contrast platform.',
     },
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Chromora',
-      url: 'https://chromora.app',
-      logo: 'https://chromora.app/logo.png',
+      url: 'https://chromoraflow.vercel.app',
+      logo: 'https://chromoraflow.vercel.app/logo.png',
       slogan: 'Create colors that work beautifully.',
     },
   ];

@@ -117,7 +117,7 @@ export const ColorBlindnessSimulatorTool: React.FC<{ navigate: (route: string) =
     title: 'Color Blindness Simulator: Test Protanopia, Deuteranopia & Tritanopia',
     description:
       'Free online color blindness simulator for UI designs and images. Accurately test Protanopia, Deuteranopia, Tritanopia, and Achromatopsia vision in real-time.',
-    canonicalUrl: 'https://chromora.app/color-blindness-simulator',
+    canonicalUrl: 'https://chromoraflow.vercel.app/color-blindness-simulator',
     keywords: [
       'color blindness simulator',
       'color blindness test',
@@ -129,8 +129,8 @@ export const ColorBlindnessSimulatorTool: React.FC<{ navigate: (route: string) =
       'wcag color vision',
     ],
     breadcrumbs: [
-      { name: 'Home', url: 'https://chromora.app/' },
-      { name: 'Color Blindness Simulator', url: 'https://chromora.app/color-blindness-simulator' },
+      { name: 'Home', url: 'https://chromoraflow.vercel.app/' },
+      { name: 'Color Blindness Simulator', url: 'https://chromoraflow.vercel.app/color-blindness-simulator' },
     ],
     faqs: simulatorFaqs,
     softwareApp: {

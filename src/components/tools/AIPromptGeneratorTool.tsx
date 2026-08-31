@@ -95,7 +95,7 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
         config={{
           title: 'AI Color Palette Generator from Text Prompts — Free UI Color Themes',
           description:
-            'Generate custom, production-ready color palettes from descriptive text prompts. Instant psychological color analysis, WCAG contrast verification, and design tokens export.',
+            'Generate custom, production-ready color palettes from text prompts. Get instant psychological color analysis, WCAG contrast checks, and design token export.',
           keywords: [
             'ai color palette generator from text prompts',
             'prompt to color palette generator free',
@@ -105,7 +105,7 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
             'cyberpunk neon color palette for UI',
             'ramadan color palette hex codes',
           ],
-          canonicalUrl: 'https://chromora.app/ai-palette-generator',
+          canonicalUrl: 'https://chromoraflow.vercel.app/ai-palette-generator',
           faqs: promptFaqs,
           softwareApp: {
             name: 'Chromora AI Palette Generator',

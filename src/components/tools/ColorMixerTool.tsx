@@ -127,7 +127,7 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
     title: 'Color Mixer Online: Blend Two Colors with Real-Time Steps & OKLCH',
     description:
       'Mix two colors online with custom blending ratios. Explore OKLCH, RGB, HSL, and physical paint subtractive mixing with smooth intermediate steps.',
-    canonicalUrl: 'https://chromora.app/color-mixer',
+    canonicalUrl: 'https://chromoraflow.vercel.app/color-mixer',
     keywords: [
       'color mixer online',
       'mix two colors',
@@ -139,8 +139,8 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
       'intermediate color steps',
     ],
     breadcrumbs: [
-      { name: 'Home', url: 'https://chromora.app/' },
-      { name: 'Color Mixer', url: 'https://chromora.app/color-mixer' },
+      { name: 'Home', url: 'https://chromoraflow.vercel.app/' },
+      { name: 'Color Mixer', url: 'https://chromoraflow.vercel.app/color-mixer' },
     ],
     faqs: mixerFaqs,
     softwareApp: {

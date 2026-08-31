@@ -218,7 +218,7 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
     // Footer
     ctx.fillStyle = '#52525b';
     ctx.font = '16px system-ui, sans-serif';
-    ctx.fillText('Created with Chromora • chromora.app', 60, height - 35);
+    ctx.fillText('Created with Chromora • chromoraflow.vercel.app', 60, height - 35);
 
     // Trigger download
     const dataUrl = canvas.toDataURL('image/png');
@@ -261,7 +261,7 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
         config={{
           title: 'Color Palette Generator — Free Accessible UI Palettes & Design Tokens',
           description:
-            'Generate harmonious, WCAG-accessible color palettes from any hex code. Explore 12 harmony models, lock colors, preview live UI designs, and export Tailwind CSS design tokens.',
+            'Generate harmonious, WCAG-accessible color palettes from any hex code. Explore 12 harmony models, lock colors, preview UI, and export Tailwind design tokens.',
           keywords: [
             'accessible color palette generator for UI design',
             'free color palette generator from one color',
@@ -271,7 +271,7 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
             'export design tokens figma tailwind',
             'hex color palette maker online free',
           ],
-          canonicalUrl: 'https://chromora.app/color-palette-generator',
+          canonicalUrl: 'https://chromoraflow.vercel.app/color-palette-generator',
           faqs: paletteFaqs,
           softwareApp: {
             name: 'Chromora Color Palette Generator',

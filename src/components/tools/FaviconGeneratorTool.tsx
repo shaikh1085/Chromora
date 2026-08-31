@@ -154,7 +154,7 @@ export const FaviconGeneratorTool: React.FC<{ navigate: (route: string) => void 
     title: 'Favicon Generator: Create ICO, PNG & Apple Touch Icons Free',
     description:
       'Free online favicon generator. Convert text, emojis, or logos into favicon.ico, 180x180 Apple Touch Icons, and site.webmanifest with instant ZIP download.',
-    canonicalUrl: 'https://chromora.app/favicon-generator',
+    canonicalUrl: 'https://chromoraflow.vercel.app/favicon-generator',
     keywords: [
       'favicon generator',
       'favicon maker',
@@ -166,8 +166,8 @@ export const FaviconGeneratorTool: React.FC<{ navigate: (route: string) => void 
       'convert png to ico',
     ],
     breadcrumbs: [
-      { name: 'Home', url: 'https://chromora.app/' },
-      { name: 'Favicon Generator', url: 'https://chromora.app/favicon-generator' },
+      { name: 'Home', url: 'https://chromoraflow.vercel.app/' },
+      { name: 'Favicon Generator', url: 'https://chromoraflow.vercel.app/favicon-generator' },
     ],
     faqs: faviconFaqs,
     softwareApp: {

@@ -70,7 +70,7 @@ export const DesignPreviewPage: React.FC<{ navigate: (route: string) => void }> 
           title: 'Real-Time Design System & UI Preview — Chromora',
           description:
             'Test your color palette in real-time across realistic SaaS dashboards, landing pages, mobile apps, and e-commerce UI components with live role mapping.',
-          canonicalUrl: 'https://chromora.app/design-preview',
+          canonicalUrl: 'https://chromoraflow.vercel.app/design-preview',
         }}
       />
 

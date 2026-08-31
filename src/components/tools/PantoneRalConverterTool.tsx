@@ -118,7 +118,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
     title: 'Pantone & RAL Color Converter: HEX to PMS & RAL Classic Match',
     description:
       'Convert HEX, RGB, and digital colors to the closest Pantone Solid Coated (PMS) and RAL Classic standards with accurate Delta E perceptual distance scores.',
-    canonicalUrl: 'https://chromora.app/pantone-color-converter',
+    canonicalUrl: 'https://chromoraflow.vercel.app/pantone-color-converter',
     keywords: [
       'pantone color converter',
       'hex to pantone',
@@ -130,8 +130,8 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
       'ral to hex converter',
     ],
     breadcrumbs: [
-      { name: 'Home', url: 'https://chromora.app/' },
-      { name: 'Pantone & RAL Color Converter', url: 'https://chromora.app/pantone-color-converter' },
+      { name: 'Home', url: 'https://chromoraflow.vercel.app/' },
+      { name: 'Pantone & RAL Color Converter', url: 'https://chromoraflow.vercel.app/pantone-color-converter' },
     ],
     faqs: pantoneFaqs,
     softwareApp: {

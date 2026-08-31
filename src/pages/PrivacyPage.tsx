@@ -65,7 +65,7 @@ export const PrivacyPage: React.FC<{ navigate: (route: string) => void }> = ({ n
               4. Contact & Security Inquiries
             </h2>
             <p>
-              For privacy or security inquiries regarding Chromora, reach out to security@chromora.app.
+              For privacy or security inquiries regarding Chromora, reach out to contact@chromoraflow.vercel.app.
             </p>
           </section>
         </div>

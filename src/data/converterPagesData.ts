@@ -563,7 +563,7 @@ export const CONVERTER_PAGES: Record<string, ConverterPageData> = {
     h1: 'HSL to RGB Converter',
     primaryKeyword: 'hsl to rgb converter',
     metaDescription:
-      'Free HSL to RGB converter and calculator. Convert HSL hue, saturation, and lightness percentages into standard 8-bit RGB decimal values with formulas and CSS code.',
+      'Free HSL to RGB converter and calculator. Convert HSL hue, saturation, and lightness into standard 8-bit RGB decimal values with formulas and CSS snippets.',
     formula: 'Chroma C = (1 - |2L - 1|) * S; X = C * (1 - |(H / 60) mod 2 - 1|); m = L - C/2; R, G, B = (R\' + m) * 255',
     sampleDefault: 'hsl(243, 75%, 59%)',
     intro:

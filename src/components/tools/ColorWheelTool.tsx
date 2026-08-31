@@ -313,7 +313,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
         config={{
           title: 'Interactive Color Wheel Online — Find Color Harmonies & Schemes',
           description:
-            'Free interactive color wheel tool online. Discover complementary, analogous, triadic, tetradic, and split-complementary color combinations with live hex codes and design tokens export.',
+            'Free interactive color wheel tool online. Discover complementary, analogous, triadic, and tetradic color combinations with live hex codes and token export.',
           keywords: [
             'interactive color wheel online',
             'color wheel for graphic design',
@@ -323,7 +323,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
             'color theory wheel with hex codes',
             'split complementary color wheel tool',
           ],
-          canonicalUrl: 'https://chromora.app/color-wheel',
+          canonicalUrl: 'https://chromoraflow.vercel.app/color-wheel',
           faqs: colorWheelFaqs,
           softwareApp: {
             name: 'Chromora Interactive Color Wheel Tool',

@@ -158,7 +158,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
         config={{
           title: 'Image to Color Palette Extractor — Extract HEX & RGB Codes from Photos',
           description:
-            'Extract dominant color palettes and color codes from any image or screenshot. Sample individual pixels with a live magnifying eyedropper. 100% private, client-side browser processing.',
+            'Extract dominant color palettes and color codes from any image or screenshot. Sample pixels with a magnifying eyedropper. 100% private browser processing.',
           keywords: [
             'extract color palette from image with hex codes',
             'image color picker online eyedropper',
@@ -167,7 +167,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
             'dominant colors from image generator',
             'picture to color palette converter',
           ],
-          canonicalUrl: 'https://chromora.app/image-color-palette',
+          canonicalUrl: 'https://chromoraflow.vercel.app/image-color-palette',
           faqs: extractorFaqs,
           softwareApp: {
             name: 'Chromora Image Color Extractor',

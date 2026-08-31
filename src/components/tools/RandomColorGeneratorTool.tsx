@@ -195,7 +195,7 @@ export const RandomColorGeneratorTool: React.FC<{ navigate: (route: string) => v
     title: 'Random Color Generator: Instant Palette & Mood Filters',
     description:
       'Generate random colors and harmonious 5-color palettes with mood filters (Pastel, Neon, Warm, Cool, Earthy). Spacebar to roll, one-click copy HEX & CSS.',
-    canonicalUrl: 'https://chromora.app/random-color-generator',
+    canonicalUrl: 'https://chromoraflow.vercel.app/random-color-generator',
     keywords: [
       'random color generator',
       'random color picker',
@@ -207,8 +207,8 @@ export const RandomColorGeneratorTool: React.FC<{ navigate: (route: string) => v
       'generate random rgb',
     ],
     breadcrumbs: [
-      { name: 'Home', url: 'https://chromora.app/' },
-      { name: 'Random Color Generator', url: 'https://chromora.app/random-color-generator' },
+      { name: 'Home', url: 'https://chromoraflow.vercel.app/' },
+      { name: 'Random Color Generator', url: 'https://chromoraflow.vercel.app/random-color-generator' },
     ],
     faqs: randomFaqs,
     softwareApp: {

@@ -94,7 +94,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
       <SEO
         config={{
           title: `Color Picker & Smart Explorer — ${colorData.name} (${colorData.hex.toUpperCase()})`,
-          description: `Analyze ${colorData.name} (${colorData.hex}). Convert between HEX, RGB, HSL, HSV, CMYK, and OKLCH color spaces, generate Tailwind 50-950 shades, and export production design tokens.`,
+          description: `Analyze ${colorData.name} (${colorData.hex}). Convert across HEX, RGB, HSL, CMYK, OKLCH, generate Tailwind 50-950 shades, and export production design tokens.`,
           keywords: [
             'color picker online with hex codes',
             'html color code finder and explorer',
@@ -103,7 +103,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
             'tailwind shade explorer',
             'css color inspector tool',
           ],
-          canonicalUrl: `https://chromora.app/color-picker`,
+          canonicalUrl: `https://chromoraflow.vercel.app/color-picker`,
           faqs: explorerFaqs,
           softwareApp: {
             name: 'Chromora Color Picker & Explorer',

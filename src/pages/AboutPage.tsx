@@ -11,7 +11,7 @@ export const AboutPage: React.FC<{ navigate: (route: string) => void }> = ({ nav
           title: 'About Chromora — Create Colors That Work Beautifully',
           description:
             'Discover the mission behind Chromora: zero-server private color science, WCAG 2.1 accessibility auditing, and unified design tokens.',
-          canonicalUrl: 'https://chromora.app/about',
+          canonicalUrl: 'https://chromoraflow.vercel.app/about',
         }}
       />
 

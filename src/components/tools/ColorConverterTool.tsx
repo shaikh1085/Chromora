@@ -113,7 +113,7 @@ export const ColorConverterTool: React.FC<{
         config={{
           title: `${pageTitle} — Free Multi-Format Color Space Converter`,
           description:
-            'Convert colors across HEX, RGB, HSL, HSV, CMYK, and OKLCH color spaces in real time. Instant mathematical precision for web developers, UI designers, and print specifications.',
+            'Convert colors across HEX, RGB, HSL, HSV, CMYK, and OKLCH spaces in real time. Precise color conversions for web developers, UI designers, and print media.',
           keywords: [
             'color converter online free',
             'hex to rgb converter tool',
@@ -123,7 +123,7 @@ export const ColorConverterTool: React.FC<{
             'rgb to hsl converter web development',
             'css color space translator',
           ],
-          canonicalUrl: `https://chromora.app${
+          canonicalUrl: `https://chromoraflow.vercel.app${
             defaultMode === 'hex-to-rgb'
               ? '/hex-to-rgb'
               : defaultMode === 'rgb-to-hex'

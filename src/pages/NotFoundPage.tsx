@@ -9,6 +9,7 @@ export const NotFoundPage: React.FC<{ navigate: (route: string) => void }> = ({ 
         config={{
           title: '404 - Page Not Found — Chromora',
           description: 'The requested color or tool could not be found.',
+          robots: 'noindex, nofollow',
         }}
       />
 

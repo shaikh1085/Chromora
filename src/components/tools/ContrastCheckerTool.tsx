@@ -130,7 +130,7 @@ export const ContrastCheckerTool: React.FC<{ navigate: (route: string) => void }
         config={{
           title: 'WCAG Color Contrast Checker & Accessible Palette Generator — Chromora',
           description:
-            'Free WCAG 2.1 AAA/AA color contrast checker. Audit contrast ratios in real time, simulate 8 color blindness vision deficiencies, auto-fix failing contrast, and test UI components.',
+            'Free WCAG 2.1 AAA/AA color contrast checker. Audit contrast ratios in real time, simulate color blindness, auto-fix failing contrast, and test UI components.',
           keywords: [
             'wcag color contrast checker',
             'wcag aaa accessible color palette generator',
@@ -140,7 +140,7 @@ export const ContrastCheckerTool: React.FC<{ navigate: (route: string) => void }
             'color blindness contrast simulator',
             'ada compliance color contrast tool',
           ],
-          canonicalUrl: 'https://chromora.app/contrast-checker',
+          canonicalUrl: 'https://chromoraflow.vercel.app/contrast-checker',
           faqs: contrastFaqs,
           softwareApp: {
             name: 'Chromora WCAG Contrast Checker',

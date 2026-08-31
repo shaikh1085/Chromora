@@ -11,7 +11,7 @@ interface SitemapEntry {
   lastmod?: string;
 }
 
-const BASE_URL = 'https://chromora.app';
+const BASE_URL = 'https://chromoraflow.vercel.app';
 const TODAY = new Date().toISOString().split('T')[0];
 
 function generateSitemapXml() {
@@ -80,28 +80,12 @@ function generateSitemapXml() {
   addRoute('/privacy', '0.3', 'yearly');
   addRoute('/terms', '0.3', 'yearly');
 
-  // Explicitly note: /saved-palettes and /saved-color-palettes are excluded (noindex)
-
-  // Build XML String
-  const xmlLines: string[] = [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
-  ];
-
+  // Build Compact & Standard XML String
+  let xmlContent = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   for (const entry of entries) {
-    xmlLines.push('  <url>');
-    xmlLines.push(`    <loc>${entry.loc}</loc>`);
-    if (entry.lastmod) {
-      xmlLines.push(`    <lastmod>${entry.lastmod}</lastmod>`);
-    }
-    xmlLines.push(`    <changefreq>${entry.changefreq}</changefreq>`);
-    xmlLines.push(`    <priority>${entry.priority}</priority>`);
-    xmlLines.push('  </url>');
+    xmlContent += `<url><loc>${entry.loc}</loc><lastmod>${entry.lastmod}</lastmod><changefreq>${entry.changefreq}</changefreq><priority>${entry.priority}</priority></url>\n`;
   }
-
-  xmlLines.push('</urlset>');
-
-  const xmlContent = xmlLines.join('\n');
+  xmlContent += '</urlset>';
   const publicDir = path.resolve(process.cwd(), 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });

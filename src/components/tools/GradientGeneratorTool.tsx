@@ -114,7 +114,7 @@ export const GradientGeneratorTool: React.FC<{ navigate: (route: string) => void
         config={{
           title: 'CSS Gradient Generator Online — Linear, Radial & Mesh CSS Code',
           description:
-            'Free online CSS gradient generator. Design custom linear, radial, and multi-stop CSS gradients with live preview, visual angle editor, and instant copy-paste CSS code.',
+            'Free online CSS gradient generator. Design custom linear, radial, and multi-stop gradients with live preview, visual angle editor, and copy-paste CSS code.',
           keywords: [
             'css gradient generator online',
             'linear gradient css generator',
@@ -123,7 +123,7 @@ export const GradientGeneratorTool: React.FC<{ navigate: (route: string) => void
             'smooth color gradient maker',
             'modern ui css gradient code',
           ],
-          canonicalUrl: 'https://chromora.app/gradient-generator',
+          canonicalUrl: 'https://chromoraflow.vercel.app/gradient-generator',
           faqs: gradientFaqs,
           softwareApp: {
             name: 'Chromora CSS Gradient Generator',

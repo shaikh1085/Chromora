@@ -5,4 +5,5 @@ Disallow: /colors?*
 Disallow: /saved-palettes
 Disallow: /saved-color-palettes
 
-Sitemap:https://chromoraflow.vercel.app/sitemap.xml
+Sitemap: https://chromoraflow.vercel.app/sitemap.xml
+

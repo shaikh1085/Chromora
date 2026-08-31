@@ -93,7 +93,7 @@ export const ColorSearchPage: React.FC<{
         config={{
           title: 'Color Names Directory & Hex Code Search — Browse 400+ Curated Shades',
           description:
-            'Browse our curated color names directory with exact HEX codes, RGB values, and color families. Search historical pigments, modern CSS named colors, and brand palette swatches.',
+            'Browse our curated color names directory with exact HEX codes and RGB values. Search historical pigments, modern CSS named colors, and brand color swatches.',
           keywords: [
             'color names list with hex codes',
             'html color code search engine',

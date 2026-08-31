@@ -2093,7 +2093,7 @@ export const COLLECTION_PAGES: Record<string, CollectionPageData> = {
     h1: 'Restaurant Color Palette Ideas',
     primaryKeyword: 'restaurant color palette',
     metaDescription:
-      'Explore appetizing restaurant color palettes for cafes, bakeries, pizzerias, fine dining, and fast-casual brands. Stimulate hunger and enhance dining ambiance.',
+      'Explore appetizing restaurant color palettes for cafes, bakeries, pizzerias, and fine dining. Stimulate hunger and enhance your dining ambiance.',
     category: 'Industry & Brand',
     intro:
       'Color psychology in dining design directly influences appetite, dwell time, and perceived flavor richness. Chromora’s Restaurant Color Palette Generator brings together appetite-stimulating warm tones, rustic organic neutrals, and opulent fine-dining accents for menus, interiors, websites, and takeout packaging.',
