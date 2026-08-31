@@ -1,0 +1,6 @@
+{
+  "name": "Chromora",
+  "description": "An intelligent color discovery, palette generation, WCAG accessibility contrast, image extraction, and design token platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
