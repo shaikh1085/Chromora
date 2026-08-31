@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /search
-Disallow: /colors?*
-Disallow: /saved-palettes
-Disallow: /saved-color-palettes
-
-Sitemap: https://chromora.app/sitemap.xml
