@@ -77,7 +77,7 @@ export const ColorDetailPage: React.FC<{
         config={{
           title: `${colorData.name} (${colorData.hex.toUpperCase()}) Color Codes & Shades`,
           description: `Explore ${colorData.name} (${colorData.hex}) shades, tints, and hex to color name info. Get RGB, HSL, CMYK, OKLCH codes, palettes, and WCAG contrast ratios.`,
-          canonicalUrl: `https://chromora.app/colors/${slug}`,
+          canonicalUrl: `https://chromoraflow.vercel.app/colors/${slug}`,
           faqs,
           breadcrumbs: [
             { name: 'Named Colors', url: '/colors' },
