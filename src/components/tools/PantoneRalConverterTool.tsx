@@ -156,10 +156,10 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
           <Printer className="w-3.5 h-3.5" />
           <span>Pantone Matching System (PMS) & RAL Classic Engine</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text-primary)]">
           Pantone & RAL Color Converter
         </h1>
-        <p className="mt-3 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
+        <p className="mt-3 text-sm sm:text-base text-[var(--text-secondary)] max-w-3xl leading-relaxed">
           Bridge digital UI design and physical print/manufacturing production. Match any digital HEX or RGB color to the closest standard Pantone PMS spot ink and RAL industrial coating.
         </p>
       </div>
@@ -304,7 +304,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
             </div>
 
             <div className="p-6 space-y-2 bg-white dark:bg-zinc-900">
-              <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100">
+              <h3 className="text-xl font-black text-[var(--text-primary)]">
                 {nearestPantoneList[0].item.code}
               </h3>
               <p className="text-xs text-zinc-500 font-medium">
@@ -365,7 +365,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
             </div>
 
             <div className="p-6 space-y-2 bg-white dark:bg-zinc-900">
-              <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100">
+              <h3 className="text-xl font-black text-[var(--text-primary)]">
                 {nearestRalList[0].item.code}
               </h3>
               <p className="text-xs text-zinc-500 font-medium">
@@ -385,7 +385,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
         {/* Top 6 Pantone Matches */}
         <div className="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-md space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-zinc-200 dark:border-zinc-800">
-            <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+            <h3 className="font-bold text-base text-[var(--text-primary)] flex items-center gap-2">
               <Printer className="w-4 h-4 text-amber-500" />
               <span>Top Pantone PMS Matches Ranked</span>
             </h3>
@@ -438,7 +438,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
         {/* Top 6 RAL Matches */}
         <div className="p-6 rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-md space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-zinc-200 dark:border-zinc-800">
-            <h3 className="font-bold text-base text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+            <h3 className="font-bold text-base text-[var(--text-primary)] flex items-center gap-2">
               <Layers className="w-4 h-4 text-blue-500" />
               <span>Top RAL Classic Matches Ranked</span>
             </h3>
@@ -491,7 +491,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
 
       {/* Related Tools Links */}
       <div className="my-12 p-8 rounded-3xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
-        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+        <h3 className="text-lg font-bold text-[var(--text-primary)] mb-4">
           Explore Related Color Conversion Tools
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

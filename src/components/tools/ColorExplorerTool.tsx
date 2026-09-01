@@ -125,13 +125,13 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
             <Sparkles className="w-3.5 h-3.5" />
             <span>Smart Color Intelligence</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
             {colorData.name}{' '}
-            <span className="text-zinc-400 font-mono font-normal text-2xl sm:text-3xl">
+            <span className="text-[var(--text-muted)] font-mono font-normal text-2xl sm:text-3xl">
               {colorData.hex.toUpperCase()}
             </span>
           </h1>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl">
+          <p className="mt-2 text-sm text-[var(--text-secondary)] max-w-2xl">
             Input any HEX, RGB, HSL, HSV, OKLCH, or CSS name to inspect color space coordinates, Tailwind shade scales, and exportable design tokens.
           </p>
         </div>
@@ -236,7 +236,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
           {/* Values Table (7 cols) */}
           <div className="lg:col-span-7 bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-base font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+              <h2 className="text-base font-bold text-[var(--text-primary)] flex items-center gap-2">
                 <Sliders className="w-4 h-4 text-indigo-500" />
                 <span>Color Space Transformations</span>
               </h2>
@@ -273,7 +273,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
           <div className="lg:col-span-5 space-y-6">
             {/* Quick Metrics Card */}
             <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
-              <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+              <h3 className="text-base font-bold text-[var(--text-primary)]">
                 Optical Properties
               </h3>
               <div className="grid grid-cols-2 gap-3">
@@ -342,7 +342,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
         <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm mb-12">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
             <div>
-              <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+              <h2 className="text-lg font-bold text-[var(--text-primary)]">
                 Tailwind CSS Shade Scale (50–950)
               </h2>
               <p className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -398,7 +398,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">Analogous Harmony</h3>
+              <h3 className="text-sm font-bold text-[var(--text-primary)]">Analogous Harmony</h3>
               <a
                 href="/color-palette-generator"
                 onClick={(e) => {
@@ -426,7 +426,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
 
           <div className="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">Complementary Set</h3>
+              <h3 className="text-sm font-bold text-[var(--text-primary)]">Complementary Set</h3>
               <a
                 href="/color-palette-generator"
                 onClick={(e) => {
@@ -454,7 +454,7 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
 
           <div className="p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">Triadic Balance</h3>
+              <h3 className="text-sm font-bold text-[var(--text-primary)]">Triadic Balance</h3>
               <a
                 href="/color-palette-generator"
                 onClick={(e) => {

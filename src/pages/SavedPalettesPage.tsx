@@ -83,14 +83,14 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
         {/* Page Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 my-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60 mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 mb-2">
               <Bookmark className="w-3.5 h-3.5" />
               <span>Workspace Palette Vault</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
               Saved Color Collections
             </h1>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="mt-1 text-sm text-[var(--text-secondary)]">
               Locally stored palettes with seamless JSON backup, export, and preview options.
             </p>
           </div>
@@ -106,7 +106,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
             />
             <button
               onClick={() => fileInputRef.current?.click()}
-              className="px-3.5 py-2 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-xs font-bold text-zinc-800 dark:text-zinc-200 transition-colors flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-xl border border-[var(--border-glass)] bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-hover)] text-xs font-bold text-[var(--text-primary)] transition-colors flex items-center gap-1.5"
             >
               <Upload className="w-3.5 h-3.5" />
               <span>Import JSON</span>
@@ -114,7 +114,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
 
             <button
               onClick={exportAllPalettesJson}
-              className="px-3.5 py-2 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-xs font-bold text-zinc-800 dark:text-zinc-200 transition-colors flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-xl border border-[var(--border-glass)] bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-hover)] text-xs font-bold text-[var(--text-primary)] transition-colors flex items-center gap-1.5"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Export JSON Backup</span>
@@ -140,7 +140,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
             {savedPalettes.map((palette) => (
               <div
                 key={palette.id}
-                className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 shadow-sm space-y-4 hover:shadow-md transition-shadow flex flex-col justify-between"
+                className="bg-[var(--surface-glass-card)] rounded-2xl border border-[var(--border-glass)] p-5 shadow-sm space-y-4 hover:shadow-md transition-shadow flex flex-col justify-between backdrop-blur-md"
               >
                 <div>
                   {/* Top Bar with Name & Actions */}
@@ -152,7 +152,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                           value={editingName}
                           onChange={(e) => setEditingName(e.target.value)}
                           onKeyDown={(e) => e.key === 'Enter' && handleSaveRename(palette.id)}
-                          className="w-full px-2.5 py-1 text-xs rounded-lg border border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100"
+                          className="w-full px-2.5 py-1 text-xs rounded-lg border border-[var(--border-glass)] bg-[var(--surface-glass-input)] text-[var(--text-primary)]"
                           autoFocus
                         />
                         <button
@@ -164,12 +164,12 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                       </div>
                     ) : (
                       <div className="flex items-center gap-2 flex-1 truncate">
-                        <h3 className="font-bold text-sm text-zinc-900 dark:text-zinc-100 truncate">
+                        <h3 className="font-bold text-sm text-[var(--text-primary)] truncate">
                           {palette.name}
                         </h3>
                         <button
                           onClick={() => handleStartRename(palette.id, palette.name)}
-                          className="p-1 rounded text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                          className="p-1 rounded text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
                           title="Rename palette"
                         >
                           <Edit2 className="w-3 h-3" />
@@ -183,7 +183,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                         className={`p-1.5 rounded-lg transition-colors ${
                           palette.isFavorite
                             ? 'text-amber-500 bg-amber-500/10'
-                            : 'text-zinc-400 hover:text-amber-500'
+                            : 'text-[var(--text-muted)] hover:text-amber-500'
                         }`}
                         title="Favorite"
                       >
@@ -191,7 +191,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                       </button>
                       <button
                         onClick={() => deleteSavedPalette(palette.id)}
-                        className="p-1.5 rounded-lg text-zinc-400 hover:text-rose-500 hover:bg-rose-500/10 transition-colors"
+                        className="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-rose-500 hover:bg-rose-500/10 transition-colors"
                         title="Delete palette"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -200,7 +200,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                   </div>
 
                   {/* Swatches strip */}
-                  <div className="flex h-16 rounded-xl overflow-hidden shadow-inner border border-zinc-200 dark:border-zinc-800">
+                  <div className="flex h-16 rounded-xl overflow-hidden shadow-inner border border-[var(--border-glass-subtle)]">
                     {palette.colors.map((hex, idx) => (
                       <div
                         key={idx}
@@ -217,7 +217,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                     {palette.tags.map((tag, i) => (
                       <span
                         key={i}
-                        className="text-[10px] font-semibold text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md"
+                        className="text-[10px] font-semibold text-[var(--text-secondary)] bg-[var(--surface-glass-hover)] border border-[var(--border-glass-subtle)] px-2 py-0.5 rounded-md"
                       >
                         {tag}
                       </span>
@@ -226,12 +226,12 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                 </div>
 
                 {/* Bottom Actions */}
-                <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between gap-2">
+                <div className="pt-4 border-t border-[var(--border-glass-subtle)] flex items-center justify-between gap-2">
                   <button
                     onClick={() => {
                       copyToClipboard(palette.colors.join(', '), 'Copied all HEX codes');
                     }}
-                    className="p-2 rounded-lg text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-xs font-semibold transition-colors flex items-center gap-1"
+                    className="p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-glass-hover)] text-xs font-semibold transition-colors flex items-center gap-1"
                     title="Copy all HEX codes"
                   >
                     <Copy className="w-3.5 h-3.5" />
@@ -245,7 +245,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
                       setPaletteFromHexList(palette.colors, palette.name);
                       navigate('/color-palette-generator');
                     }}
-                    className="px-3 py-1.5 rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 text-xs font-bold hover:opacity-90 transition-opacity flex items-center gap-1"
+                    className="px-3 py-1.5 rounded-lg bg-[var(--text-primary)] text-[var(--bg-page)] text-xs font-bold hover:opacity-90 transition-opacity flex items-center gap-1"
                   >
                     <span>Open in Studio</span>
                     <ArrowRight className="w-3 h-3" />
@@ -255,12 +255,12 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
             ))}
           </div>
         ) : (
-          <div className="p-16 text-center rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 mb-16 space-y-4">
-            <Bookmark className="w-10 h-10 mx-auto text-zinc-400" />
-            <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+          <div className="p-16 text-center rounded-3xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] mb-16 space-y-4 backdrop-blur-md">
+            <Bookmark className="w-10 h-10 mx-auto text-[var(--text-muted)]" />
+            <h3 className="text-lg font-bold text-[var(--text-primary)]">
               No saved palettes yet
             </h3>
-            <p className="text-xs text-zinc-500 max-w-sm mx-auto">
+            <p className="text-xs text-[var(--text-secondary)] max-w-sm mx-auto">
               Save color harmonies from the Palette Generator, AI Prompt engine, or Image Extractor to build your custom library.
             </p>
             <a

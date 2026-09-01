@@ -120,41 +120,41 @@ export const ColorSearchPage: React.FC<{
 
         {/* Page Header */}
         <div className="my-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/60 mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 mb-2">
             <Layers className="w-3.5 h-3.5" />
             <span>Curated Pigment Encyclopedia</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
             Named Colors Directory
           </h1>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl">
+          <p className="mt-2 text-sm text-[var(--text-secondary)] max-w-2xl">
             Search 400+ curated shades, historical pigments, and UI design standards. Click any swatch for full coordinate breakdowns.
           </p>
         </div>
 
         {/* Search & Filter Bar */}
-        <div className="p-4 sm:p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm mb-8 space-y-4">
+        <div className="p-4 sm:p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm mb-8 space-y-4 backdrop-blur-md">
           <div className="flex flex-col sm:flex-row items-center gap-3">
             {/* Search Input */}
             <div className="relative flex-1 w-full">
-              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
+              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--text-muted)]" />
               <input
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search color by name, hex (e.g. #0b4f6c), or tag..."
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-[var(--border-glass)] bg-[var(--surface-glass-input)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--accent)]"
               />
             </div>
 
             {/* Tone filter */}
-            <div className="flex items-center gap-1 bg-zinc-100 dark:bg-zinc-950 p-1 rounded-xl border border-zinc-200 dark:border-zinc-800 shrink-0 self-start sm:self-auto">
+            <div className="flex items-center gap-1 bg-[var(--surface-glass-input)] p-1 rounded-xl border border-[var(--border-glass)] shrink-0 self-start sm:self-auto">
               <button
                 onClick={() => setToneFilter('all')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                   toneFilter === 'all'
-                    ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-xs'
-                    : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'
+                    ? 'bg-[var(--surface-glass-card)] text-[var(--text-primary)] shadow-xs border border-[var(--border-glass-subtle)]'
+                    : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
                 }`}
               >
                 All Tones
@@ -163,8 +163,8 @@ export const ColorSearchPage: React.FC<{
                 onClick={() => setToneFilter('light')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                   toneFilter === 'light'
-                    ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-xs'
-                    : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'
+                    ? 'bg-[var(--surface-glass-card)] text-[var(--text-primary)] shadow-xs border border-[var(--border-glass-subtle)]'
+                    : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
                 }`}
               >
                 Light
@@ -173,8 +173,8 @@ export const ColorSearchPage: React.FC<{
                 onClick={() => setToneFilter('dark')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors ${
                   toneFilter === 'dark'
-                    ? 'bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-xs'
-                    : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100'
+                    ? 'bg-[var(--surface-glass-card)] text-[var(--text-primary)] shadow-xs border border-[var(--border-glass-subtle)]'
+                    : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
                 }`}
               >
                 Dark
@@ -190,8 +190,8 @@ export const ColorSearchPage: React.FC<{
                 onClick={() => setSelectedFamily(fam.id)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors shrink-0 ${
                   selectedFamily === fam.id
-                    ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 shadow-sm'
-                    : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800'
+                    ? 'bg-[var(--text-primary)] text-[var(--bg-page)] shadow-sm'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-glass-hover)] border border-[var(--border-glass-subtle)]'
                 }`}
               >
                 {fam.label}
@@ -201,9 +201,9 @@ export const ColorSearchPage: React.FC<{
         </div>
 
         {/* Results Counter */}
-        <div className="flex items-center justify-between mb-6 text-xs text-zinc-500 dark:text-zinc-400">
+        <div className="flex items-center justify-between mb-6 text-xs text-[var(--text-muted)]">
           <span>
-            Showing <strong className="text-zinc-900 dark:text-zinc-100">{filteredColors.length}</strong> matching colors
+            Showing <strong className="text-[var(--text-primary)]">{filteredColors.length}</strong> matching colors
           </span>
           {query && (
             <button
@@ -229,7 +229,7 @@ export const ColorSearchPage: React.FC<{
                     setActiveHex(color.hex);
                     navigate(`/colors/${slug}`);
                   }}
-                  className="group rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 overflow-hidden shadow-xs hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between block"
+                  className="group rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] hover:border-[var(--accent)] overflow-hidden shadow-xs hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between block backdrop-blur-md"
                 >
                   {/* Swatch Head */}
                   <div
@@ -239,7 +239,7 @@ export const ColorSearchPage: React.FC<{
                     <button
                       type="button"
                       onClick={(e) => handleCopy(color.hex, e)}
-                      className="p-1.5 rounded-lg bg-black/30 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/50"
+                      className="p-1.5 rounded-lg bg-black/40 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/60"
                       title="Copy HEX"
                     >
                       {copiedHex === color.hex ? (
@@ -252,10 +252,10 @@ export const ColorSearchPage: React.FC<{
 
                   {/* Details Bottom */}
                   <div className="p-3 space-y-1">
-                    <h3 className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <h3 className="text-xs font-bold text-[var(--text-primary)] truncate group-hover:text-indigo-500 transition-colors">
                       {color.name}
                     </h3>
-                    <div className="flex items-center justify-between text-[10px] font-mono text-zinc-400">
+                    <div className="flex items-center justify-between text-[10px] font-mono text-[var(--text-muted)]">
                       <span className="uppercase">{color.hex}</span>
                       <span className="capitalize">{color.family}</span>
                     </div>
@@ -265,12 +265,12 @@ export const ColorSearchPage: React.FC<{
             })}
           </div>
         ) : (
-          <div className="p-12 text-center rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 mb-16 space-y-3">
-            <Layers className="w-8 h-8 mx-auto text-zinc-400" />
-            <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+          <div className="p-12 text-center rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] mb-16 space-y-3 backdrop-blur-md">
+            <Layers className="w-8 h-8 mx-auto text-[var(--text-muted)]" />
+            <h3 className="text-base font-bold text-[var(--text-primary)]">
               No matching colors found
             </h3>
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-[var(--text-secondary)]">
               Try adjusting your query or family filter to discover other shades.
             </p>
             <button
@@ -279,7 +279,7 @@ export const ColorSearchPage: React.FC<{
                 setSelectedFamily('all');
                 setToneFilter('all');
               }}
-              className="px-4 py-2 rounded-xl bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 text-xs font-bold"
+              className="px-4 py-2 rounded-xl bg-[var(--text-primary)] text-[var(--bg-page)] text-xs font-bold"
             >
               Reset Filters
             </button>

@@ -192,10 +192,10 @@ export const FaviconGeneratorTool: React.FC<{ navigate: (route: string) => void 
           <Globe className="w-3.5 h-3.5" />
           <span>Production-Ready Favicon & Web Manifest Suite</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text-primary)]">
           Favicon Generator & App Icon Maker
         </h1>
-        <p className="mt-3 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
+        <p className="mt-3 text-sm sm:text-base text-[var(--text-secondary)] max-w-3xl leading-relaxed">
           Create complete production favicon suites for desktop browsers, iOS Apple Touch Icons, and Android PWA manifests from text, emojis, or uploaded logos.
         </p>
       </div>
@@ -551,7 +551,7 @@ export const FaviconGeneratorTool: React.FC<{ navigate: (route: string) => void 
 
       {/* Related Tools Links */}
       <div className="my-12 p-8 rounded-3xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
-        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+        <h3 className="text-lg font-bold text-[var(--text-primary)] mb-4">
           Explore Related Design Asset Tools
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

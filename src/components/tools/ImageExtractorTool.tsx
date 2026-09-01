@@ -185,14 +185,14 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
 
         {/* Page Header */}
         <div className="my-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 mb-2">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Zero-Server Pixel Analysis</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
             Image Color Palette Extractor
           </h1>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl">
+          <p className="mt-2 text-sm text-[var(--text-secondary)] max-w-2xl">
             Extract dominant color harmonies directly from photography, UI screenshots, and artwork.
           </p>
         </div>
@@ -200,19 +200,19 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
         {/* Upload Dropzone & Sample Gallery */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-10">
           {/* Left Canvas Preview (7 cols) */}
-          <div className="lg:col-span-7 bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between">
+          <div className="lg:col-span-7 bg-[var(--surface-glass-card)] p-6 rounded-2xl border border-[var(--border-glass)] shadow-sm flex flex-col justify-between backdrop-blur-md">
             <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] flex items-center gap-1.5">
                 <Pipette className="w-3.5 h-3.5 text-emerald-500" />
                 <span>Hover image to sample pixels • Click to copy</span>
               </span>
               {hoveredPixelColor && (
-                <div className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
+                <div className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-[var(--surface-glass-input)] border border-[var(--border-glass-subtle)]">
                   <div
                     className="w-4 h-4 rounded-full border border-white/40"
                     style={{ backgroundColor: hoveredPixelColor }}
                   />
-                  <span className="text-xs font-mono font-bold text-zinc-800 dark:text-zinc-200 uppercase">
+                  <span className="text-xs font-mono font-bold text-[var(--text-primary)] uppercase">
                     {hoveredPixelColor}
                   </span>
                 </div>
@@ -220,7 +220,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
             </div>
 
             {/* Interactive Canvas */}
-            <div className="relative rounded-xl overflow-hidden bg-zinc-950 flex items-center justify-center min-h-[300px] max-h-[440px] border border-zinc-200 dark:border-zinc-800 cursor-crosshair">
+            <div className="relative rounded-xl overflow-hidden bg-black/80 flex items-center justify-center min-h-[300px] max-h-[440px] border border-[var(--border-glass)] cursor-crosshair">
               {loading && (
                 <div className="absolute inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-10 text-white gap-2 text-xs font-bold">
                   <RefreshCw className="w-4 h-4 animate-spin" />
@@ -236,7 +236,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
             </div>
 
             {/* Upload Button */}
-            <div className="mt-4 flex items-center justify-between pt-4 border-t border-zinc-100 dark:border-zinc-800">
+            <div className="mt-4 flex items-center justify-between pt-4 border-t border-[var(--border-glass-subtle)]">
               <input
                 ref={fileInputRef}
                 type="file"
@@ -246,25 +246,25 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
               />
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="px-4 py-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-xs font-bold text-zinc-800 dark:text-zinc-200 transition-colors flex items-center gap-2"
+                className="px-4 py-2.5 rounded-xl bg-[var(--surface-glass-input)] hover:bg-[var(--surface-glass-hover)] text-xs font-bold text-[var(--text-primary)] border border-[var(--border-glass-subtle)] transition-colors flex items-center gap-2"
               >
                 <UploadCloud className="w-4 h-4 text-emerald-500" />
                 <span>Upload Your Image</span>
               </button>
 
-              <span className="text-[11px] text-zinc-400">JPG, PNG, WebP up to 25MB</span>
+              <span className="text-[11px] text-[var(--text-muted)]">JPG, PNG, WebP up to 25MB</span>
             </div>
           </div>
 
           {/* Right: Extracted Swatches & Actions (5 cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             {/* Extracted Swatches Box */}
-            <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
+            <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm space-y-4 backdrop-blur-md">
               <div className="flex items-center justify-between">
-                <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+                <h3 className="text-base font-bold text-[var(--text-primary)]">
                   Extracted Palette
                 </h3>
-                <span className="text-xs text-zinc-400 font-mono">
+                <span className="text-xs text-[var(--text-muted)] font-mono">
                   {extractedHexes.length} colors
                 </span>
               </div>
@@ -276,7 +276,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
                   return (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl border border-zinc-100 dark:border-zinc-800 flex items-center justify-between gap-3 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
+                      className="p-3 rounded-xl border border-[var(--border-glass-subtle)] bg-[var(--surface-glass-input)] flex items-center justify-between gap-3 hover:border-[var(--border-glass)] transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <div
@@ -284,10 +284,10 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
                           style={{ backgroundColor: hex }}
                         />
                         <div>
-                          <p className="text-xs font-bold text-zinc-900 dark:text-zinc-100">
+                          <p className="text-xs font-bold text-[var(--text-primary)]">
                             {data.name}
                           </p>
-                          <p className="text-[11px] font-mono text-zinc-500 uppercase">{hex}</p>
+                          <p className="text-[11px] font-mono text-[var(--text-muted)] uppercase">{hex}</p>
                         </div>
                       </div>
 
@@ -297,7 +297,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
                             setActiveHex(hex);
                             copyToClipboard(hex, `Copied ${hex}`);
                           }}
-                          className="p-2 rounded-lg text-zinc-400 hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                          className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-glass-hover)] transition-colors"
                           title="Copy HEX"
                           aria-label={`Copy HEX ${hex}`}
                         >
@@ -318,7 +318,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
                     setPaletteFromHexList(extractedHexes, 'Image Extraction');
                     navigate('/color-palette-generator');
                   }}
-                  className="w-full py-3 rounded-xl bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-bold text-xs hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full py-3 rounded-xl bg-[var(--text-primary)] text-[var(--bg-page)] font-bold text-xs hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm"
                 >
                   <Palette className="w-4 h-4" />
                   <span>Open in Palette Generator</span>
@@ -332,7 +332,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
                       'Dominant',
                     ])
                   }
-                  className="w-full py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 rounded-xl border border-[var(--border-glass)] hover:bg-[var(--surface-glass-hover)] text-[var(--text-primary)] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
                 >
                   <Bookmark className="w-3.5 h-3.5" />
                   <span>Save to Collection</span>
@@ -341,8 +341,8 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
             </div>
 
             {/* Sample Photography Presets */}
-            <div className="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 space-y-3">
-              <span className="text-xs font-bold text-zinc-500 dark:text-zinc-400">
+            <div className="p-5 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] space-y-3 backdrop-blur-md">
+              <span className="text-xs font-bold text-[var(--text-secondary)]">
                 Or try preset photography:
               </span>
               <div className="grid grid-cols-2 gap-2">
@@ -353,7 +353,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
                       setImageUrl(sample.url);
                       setIsCustomUpload(false);
                     }}
-                    className="p-2 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:border-emerald-500 text-left text-xs font-medium text-zinc-800 dark:text-zinc-200 truncate transition-colors"
+                    className="p-2 rounded-xl bg-[var(--surface-glass-input)] border border-[var(--border-glass-subtle)] hover:border-emerald-500 text-left text-xs font-medium text-[var(--text-primary)] truncate transition-colors"
                   >
                     {sample.name}
                   </button>

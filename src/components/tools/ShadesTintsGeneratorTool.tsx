@@ -314,10 +314,10 @@ module.exports = {
           <Layers className="w-3.5 h-3.5" />
           <span>Tailwind 50–900 & Material Design Token Scale</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text-primary)]">
           Color Shades & Tints Generator
         </h1>
-        <p className="mt-3 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
+        <p className="mt-3 text-sm sm:text-base text-[var(--text-secondary)] max-w-3xl leading-relaxed">
           Input any base color to automatically calculate a perceptually uniform 10-step tint and shade palette. Complete with WCAG contrast ratings, CSS variables, and one-click Tailwind config export.
         </p>
       </div>
@@ -490,7 +490,7 @@ module.exports = {
       {/* Main 10-Step Interactive Swatch Grid */}
       <div className="mb-14">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+          <h2 className="text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
             <span>Generated 11-Step Tonal Swatches</span>
             <span className="text-xs font-normal text-zinc-500">
               (Click any swatch to copy HEX & RGB)
@@ -642,7 +642,7 @@ ${stepsData.map((s) => `  --color-${s.step}: ${s.hex};`).join('\n')}
 
       {/* Related Tools Navigation Links */}
       <div className="my-12 p-8 rounded-3xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
-        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+        <h3 className="text-lg font-bold text-[var(--text-primary)] mb-4">
           Explore Related Design & Color Tools
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

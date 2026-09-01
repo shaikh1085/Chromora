@@ -146,10 +146,10 @@ export const GradientGeneratorTool: React.FC<{ navigate: (route: string) => void
               <Sparkles className="w-3.5 h-3.5" />
               <span>CSS3 Visual Studio</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
               CSS Gradient Studio & Generator
             </h1>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="mt-1 text-sm text-[var(--text-secondary)]">
               Fine-tune linear angles, color stop positions, and copy instant CSS rules.
             </p>
           </div>
@@ -344,10 +344,10 @@ export const GradientGeneratorTool: React.FC<{ navigate: (route: string) => void
         {/* Curated Preset Gradient Gallery */}
         <div className="my-12">
           <div className="mb-6">
-            <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-xl font-bold text-[var(--text-primary)]">
               Curated Gradient Presets
             </h2>
-            <p className="text-xs text-zinc-500 dark:text-zinc-400">
+            <p className="text-xs text-[var(--text-secondary)]">
               Click any preset to load into the gradient editor
             </p>
           </div>

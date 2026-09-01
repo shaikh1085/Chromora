@@ -165,10 +165,10 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
           <Droplets className="w-3.5 h-3.5" />
           <span>Dual Color Blending & Intermediate Ramps</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text-primary)]">
           Color Mixer Online
         </h1>
-        <p className="mt-3 text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
+        <p className="mt-3 text-sm sm:text-base text-[var(--text-secondary)] max-w-3xl leading-relaxed">
           Blend two colors in real-time with customizable mixing ratios and color spaces. View intermediate step gradients and export palette swatches instantly.
         </p>
       </div>
@@ -355,7 +355,7 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
 
       {/* Hero Mixed Color Result Card */}
       <div className="mb-12">
-        <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4">
           Resulting Mixed Color
         </h2>
 
@@ -437,10 +437,10 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
       <div className="mb-14">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
           <div>
-            <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-xl font-bold text-[var(--text-primary)]">
               Intermediate Step Transition Swatches
             </h2>
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-[var(--text-secondary)]">
               Evenly interpolated steps between {cleanColor1} and {cleanColor2} in {mixingMode.toUpperCase()} mode.
             </p>
           </div>
@@ -523,7 +523,7 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
 
       {/* Related Tools Links */}
       <div className="my-12 p-8 rounded-3xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
-        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+        <h3 className="text-lg font-bold text-[var(--text-primary)] mb-4">
           Explore Related Color Tools
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

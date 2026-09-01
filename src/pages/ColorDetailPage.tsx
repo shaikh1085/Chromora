@@ -147,57 +147,57 @@ export const ColorDetailPage: React.FC<{
 
         {/* Quick Conversion Coordinates Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-12">
-          <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">HEX</span>
-            <p className="text-sm font-mono font-bold text-zinc-900 dark:text-zinc-100 mt-1 uppercase">
+          <div className="p-4 rounded-xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm backdrop-blur-md">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">HEX</span>
+            <p className="text-sm font-mono font-bold text-[var(--text-primary)] mt-1 uppercase">
               {colorData.hex}
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">RGB</span>
-            <p className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 mt-1">
+          <div className="p-4 rounded-xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm backdrop-blur-md">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">RGB</span>
+            <p className="text-xs font-mono font-bold text-[var(--text-primary)] mt-1">
               {colorData.rgb.r}, {colorData.rgb.g}, {colorData.rgb.b}
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">HSL</span>
-            <p className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 mt-1">
+          <div className="p-4 rounded-xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm backdrop-blur-md">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">HSL</span>
+            <p className="text-xs font-mono font-bold text-[var(--text-primary)] mt-1">
               {colorData.hsl.h}°, {colorData.hsl.s}%, {colorData.hsl.l}%
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">HSV</span>
-            <p className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 mt-1">
+          <div className="p-4 rounded-xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm backdrop-blur-md">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">HSV</span>
+            <p className="text-xs font-mono font-bold text-[var(--text-primary)] mt-1">
               {colorData.hsv.h}°, {colorData.hsv.s}%, {colorData.hsv.v}%
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">CMYK</span>
-            <p className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 mt-1">
+          <div className="p-4 rounded-xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm backdrop-blur-md">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">CMYK</span>
+            <p className="text-xs font-mono font-bold text-[var(--text-primary)] mt-1">
               {colorData.cmyk.c}, {colorData.cmyk.m}, {colorData.cmyk.y}, {colorData.cmyk.k}
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">OKLCH</span>
-            <p className="text-xs font-mono font-bold text-zinc-900 dark:text-zinc-100 mt-1">
+          <div className="p-4 rounded-xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm backdrop-blur-md">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)]">OKLCH</span>
+            <p className="text-xs font-mono font-bold text-[var(--text-primary)] mt-1">
               {colorData.oklch.l} {colorData.oklch.c}
             </p>
           </div>
         </div>
 
         {/* Tailwind Shade Curve 50-950 */}
-        <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm mb-12">
+        <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm mb-12 backdrop-blur-md">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+              <h2 className="text-lg font-bold text-[var(--text-primary)]">
                 Tailwind CSS Shade Scale
               </h2>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+              <p className="text-xs text-[var(--text-secondary)]">
                 Lightness step curve for {colorData.name}
               </p>
             </div>
@@ -222,14 +222,14 @@ export const ColorDetailPage: React.FC<{
                   setActiveHex(s.hex);
                   copyToClipboard(s.hex, `Copied shade ${s.step}: ${s.hex}`);
                 }}
-                className="flex flex-col rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800 text-left transition-transform hover:scale-105"
+                className="flex flex-col rounded-xl overflow-hidden border border-[var(--border-glass-subtle)] text-left transition-transform hover:scale-105"
               >
                 <div className="h-14 w-full" style={{ backgroundColor: s.hex }} />
-                <div className="p-2 bg-zinc-50 dark:bg-zinc-950 flex flex-col">
-                  <span className="text-[11px] font-bold text-zinc-900 dark:text-zinc-100">
+                <div className="p-2 bg-[var(--surface-glass-input)] flex flex-col">
+                  <span className="text-[11px] font-bold text-[var(--text-primary)]">
                     {s.step}
                   </span>
-                  <span className="text-[10px] font-mono text-zinc-500 uppercase">{s.hex}</span>
+                  <span className="text-[10px] font-mono text-[var(--text-muted)] uppercase">{s.hex}</span>
                 </div>
               </button>
             ))}
@@ -239,9 +239,9 @@ export const ColorDetailPage: React.FC<{
         {/* Contrast Score on Light & Dark Backgrounds */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* On White */}
-          <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
+          <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm space-y-4 backdrop-blur-md">
             <div className="flex items-center justify-between">
-              <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+              <h3 className="text-base font-bold text-[var(--text-primary)]">
                 Contrast on Pure White (#FFFFFF)
               </h3>
               <span
@@ -256,19 +256,19 @@ export const ColorDetailPage: React.FC<{
             </div>
             <div
               className="p-5 rounded-xl border flex items-center justify-center font-bold text-base"
-              style={{ backgroundColor: '#ffffff', color: colorData.hex, borderColor: '#e2e8f0' }}
+              style={{ backgroundColor: '#ffffff', color: colorData.hex, borderColor: 'var(--border-glass-subtle)' }}
             >
               The quick brown fox jumps over the lazy dog.
             </div>
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-[var(--text-muted)]">
               WCAG AA Normal: {contrastOnWhite.normalAA ? 'PASS' : 'FAIL'} • WCAG AAA: {contrastOnWhite.normalAAA ? 'PASS' : 'FAIL'}
             </p>
           </div>
 
           {/* On Black */}
-          <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4">
+          <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm space-y-4 backdrop-blur-md">
             <div className="flex items-center justify-between">
-              <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+              <h3 className="text-base font-bold text-[var(--text-primary)]">
                 Contrast on Pure Black (#000000)
               </h3>
               <span
@@ -283,24 +283,24 @@ export const ColorDetailPage: React.FC<{
             </div>
             <div
               className="p-5 rounded-xl border flex items-center justify-center font-bold text-base"
-              style={{ backgroundColor: '#000000', color: colorData.hex, borderColor: '#334155' }}
+              style={{ backgroundColor: '#000000', color: colorData.hex, borderColor: 'rgba(255,255,255,0.1)' }}
             >
               The quick brown fox jumps over the lazy dog.
             </div>
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-[var(--text-muted)]">
               WCAG AA Normal: {contrastOnBlack.normalAA ? 'PASS' : 'FAIL'} • WCAG AAA: {contrastOnBlack.normalAAA ? 'PASS' : 'FAIL'}
             </p>
           </div>
         </div>
 
         {/* Harmonies & Matching Palettes */}
-        <div className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm mb-12 space-y-6">
+        <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] shadow-sm mb-12 space-y-6 backdrop-blur-md">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+              <h2 className="text-lg font-bold text-[var(--text-primary)]">
                 Harmonic Color Pairings
               </h2>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+              <p className="text-xs text-[var(--text-secondary)]">
                 Mathematical combinations anchored on {colorData.name}
               </p>
             </div>
@@ -322,10 +322,10 @@ export const ColorDetailPage: React.FC<{
           {/* Harmonies rows */}
           <div className="space-y-4">
             <div>
-              <span className="text-xs font-bold text-zinc-700 dark:text-zinc-300 block mb-2">
+              <span className="text-xs font-bold text-[var(--text-secondary)] block mb-2">
                 Analogous Sequence
               </span>
-              <div className="flex h-14 rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
+              <div className="flex h-14 rounded-xl overflow-hidden border border-[var(--border-glass-subtle)]">
                 {analogous.map((hex, i) => (
                   <div
                     key={i}
@@ -342,10 +342,10 @@ export const ColorDetailPage: React.FC<{
             </div>
 
             <div>
-              <span className="text-xs font-bold text-zinc-700 dark:text-zinc-300 block mb-2">
+              <span className="text-xs font-bold text-[var(--text-secondary)] block mb-2">
                 Complementary Set
               </span>
-              <div className="flex h-14 rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
+              <div className="flex h-14 rounded-xl overflow-hidden border border-[var(--border-glass-subtle)]">
                 {complementary.map((hex, i) => (
                   <div
                     key={i}

@@ -350,10 +350,10 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
               <Compass className="w-3.5 h-3.5" />
               <span>Interactive 360° Color Theory Engine</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
               Color Wheel & Harmony Generator
             </h1>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl">
+            <p className="mt-2 text-sm text-[var(--text-secondary)] max-w-2xl">
               Rotate through the full 360° HSL color wheel to discover perfect complementary, analogous, triadic, split-complementary, and tetradic color combinations.
             </p>
           </div>
@@ -685,7 +685,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
                   <span className="text-xs font-bold text-zinc-500 uppercase tracking-wider block">
                     Active Seed Color
                   </span>
-                  <h3 className="text-xl font-extrabold text-zinc-900 dark:text-zinc-100">
+                  <h3 className="text-xl font-extrabold text-[var(--text-primary)]">
                     {baseColorData.name}
                   </h3>
                 </div>
@@ -893,7 +893,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
               <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">
                 Calculated Harmony Combination
               </span>
-              <h2 className="text-2xl font-extrabold text-zinc-900 dark:text-zinc-100">
+              <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
                 {HARMONY_MODES.find((m) => m.id === harmonyMode)?.name} Palette ({harmonies.length} Colors)
               </h2>
             </div>
@@ -994,7 +994,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
                       <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 block uppercase tracking-wider">
                         {item.role}
                       </span>
-                      <h4 className="font-extrabold text-base text-zinc-900 dark:text-zinc-100 truncate">
+                      <h4 className="font-extrabold text-base text-[var(--text-primary)] truncate">
                         {item.data.name}
                       </h4>
                     </div>
@@ -1059,7 +1059,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
             <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">
               Real-World Application
             </span>
-            <h3 className="text-xl font-extrabold text-zinc-900 dark:text-zinc-100">
+            <h3 className="text-xl font-extrabold text-[var(--text-primary)]">
               Live Harmony Preview in Digital UI
             </h3>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
@@ -1178,7 +1178,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
 
         {/* Related Tools Links */}
         <div className="my-12 p-8 rounded-3xl bg-zinc-100 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
-          <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+          <h3 className="text-lg font-bold text-[var(--text-primary)] mb-4">
             Explore Related Color Tools
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

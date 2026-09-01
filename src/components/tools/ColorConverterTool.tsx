@@ -157,10 +157,10 @@ export const ColorConverterTool: React.FC<{
             <Repeat className="w-3.5 h-3.5" />
             <span>Mathematical Color Space Engine</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
             {pageTitle}
           </h1>
-          <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl">
+          <p className="mt-1 text-sm text-[var(--text-secondary)] max-w-2xl">
             Live interactive transformation between web, digital display, CSS color levels, and print representations.
           </p>
         </div>
@@ -175,7 +175,7 @@ export const ColorConverterTool: React.FC<{
         {/* Main Swatch & Interactive Controls Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
           {/* Swatch & Quick Summary (4 cols) */}
-          <div className="lg:col-span-4 bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-4 bg-[var(--surface-glass-card)] p-6 rounded-2xl border border-[var(--border-glass)] shadow-sm flex flex-col justify-between space-y-6 backdrop-blur-md">
             <div>
               <div
                 className="w-full h-48 rounded-xl shadow-inner border border-black/10 transition-colors flex items-end p-4 mb-4"
@@ -193,10 +193,10 @@ export const ColorConverterTool: React.FC<{
               </div>
 
               <div className="space-y-1">
-                <p className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+                <p className="text-xl font-bold text-[var(--text-primary)]">
                   {colorData.name}
                 </p>
-                <p className="text-xs text-zinc-400 font-mono">
+                <p className="text-xs text-[var(--text-muted)] font-mono">
                   {colorData.hex.toUpperCase()} • {colorData.family} family
                 </p>
               </div>
@@ -210,7 +210,7 @@ export const ColorConverterTool: React.FC<{
                   setActiveHex(colorData.hex);
                   navigate('/color-picker');
                 }}
-                className="w-full py-2.5 rounded-xl bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-bold text-xs hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                className="w-full py-2.5 rounded-xl bg-[var(--text-primary)] text-[var(--bg-page)] font-bold text-xs hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
               >
                 <span>Inspect in Smart Explorer</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -219,11 +219,11 @@ export const ColorConverterTool: React.FC<{
           </div>
 
           {/* Interactive Format Inputs (8 cols) */}
-          <div className="lg:col-span-8 bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-5">
+          <div className="lg:col-span-8 bg-[var(--surface-glass-card)] p-6 rounded-2xl border border-[var(--border-glass)] shadow-sm space-y-5 backdrop-blur-md">
             {/* HEX Input */}
-            <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 space-y-2">
+            <div className="p-4 rounded-xl border border-[var(--border-glass-subtle)] bg-[var(--surface-glass-input)] space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-700 dark:text-zinc-300">
+                <span className="text-xs font-bold text-[var(--text-secondary)]">
                   HEX Code (Base-16)
                 </span>
                 <button
@@ -238,14 +238,14 @@ export const ColorConverterTool: React.FC<{
                 type="text"
                 value={hexInput.toUpperCase()}
                 onChange={(e) => handleHexChange(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 font-mono text-sm uppercase text-zinc-900 dark:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-4 py-2.5 rounded-lg border border-[var(--border-glass)] bg-[var(--surface-glass-card)] font-mono text-sm uppercase text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
               />
             </div>
 
             {/* RGB Sliders */}
-            <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 space-y-3">
+            <div className="p-4 rounded-xl border border-[var(--border-glass-subtle)] bg-[var(--surface-glass-input)] space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-700 dark:text-zinc-300">
+                <span className="text-xs font-bold text-[var(--text-secondary)]">
                   RGB Channels (0–255)
                 </span>
                 <button
@@ -259,7 +259,7 @@ export const ColorConverterTool: React.FC<{
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="space-y-1">
-                  <div className="flex justify-between text-xs font-mono">
+                  <div className="flex justify-between text-xs font-mono text-[var(--text-secondary)]">
                     <span className="text-rose-500 font-bold">Red</span>
                     <span>{rgbR}</span>
                   </div>
@@ -274,7 +274,7 @@ export const ColorConverterTool: React.FC<{
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex justify-between text-xs font-mono">
+                  <div className="flex justify-between text-xs font-mono text-[var(--text-secondary)]">
                     <span className="text-emerald-500 font-bold">Green</span>
                     <span>{rgbG}</span>
                   </div>
@@ -289,7 +289,7 @@ export const ColorConverterTool: React.FC<{
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex justify-between text-xs font-mono">
+                  <div className="flex justify-between text-xs font-mono text-[var(--text-secondary)]">
                     <span className="text-sky-500 font-bold">Blue</span>
                     <span>{rgbB}</span>
                   </div>
@@ -306,9 +306,9 @@ export const ColorConverterTool: React.FC<{
             </div>
 
             {/* HSL Sliders */}
-            <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 space-y-3">
+            <div className="p-4 rounded-xl border border-[var(--border-glass-subtle)] bg-[var(--surface-glass-input)] space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-700 dark:text-zinc-300">
+                <span className="text-xs font-bold text-[var(--text-secondary)]">
                   HSL Coordinate Values
                 </span>
                 <button
@@ -322,7 +322,7 @@ export const ColorConverterTool: React.FC<{
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="space-y-1">
-                  <div className="flex justify-between text-xs font-mono">
+                  <div className="flex justify-between text-xs font-mono text-[var(--text-secondary)]">
                     <span className="text-amber-500 font-bold">Hue</span>
                     <span>{hslH}°</span>
                   </div>
@@ -337,7 +337,7 @@ export const ColorConverterTool: React.FC<{
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex justify-between text-xs font-mono">
+                  <div className="flex justify-between text-xs font-mono text-[var(--text-secondary)]">
                     <span className="text-indigo-500 font-bold">Saturation</span>
                     <span>{hslS}%</span>
                   </div>
@@ -352,7 +352,7 @@ export const ColorConverterTool: React.FC<{
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex justify-between text-xs font-mono">
+                  <div className="flex justify-between text-xs font-mono text-[var(--text-secondary)]">
                     <span className="text-purple-500 font-bold">Lightness</span>
                     <span>{hslL}%</span>
                   </div>
@@ -370,31 +370,31 @@ export const ColorConverterTool: React.FC<{
 
             {/* Read-Only CMYK & OKLCH row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 flex items-center justify-between">
+              <div className="p-4 rounded-xl border border-[var(--border-glass-subtle)] bg-[var(--surface-glass-input)] flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold text-zinc-500">CMYK (Print)</span>
-                  <p className="font-mono text-xs font-bold text-zinc-900 dark:text-zinc-100 mt-1">
+                  <span className="text-xs font-bold text-[var(--text-muted)]">CMYK (Print)</span>
+                  <p className="font-mono text-xs font-bold text-[var(--text-primary)] mt-1">
                     cmyk({colorData.cmyk.c}%, {colorData.cmyk.m}%, {colorData.cmyk.y}%, {colorData.cmyk.k}%)
                   </p>
                 </div>
                 <button
                   onClick={() => copy('cmyk', `cmyk(${colorData.cmyk.c}%, ${colorData.cmyk.m}%, ${colorData.cmyk.y}%, ${colorData.cmyk.k}%)`)}
-                  className="p-1.5 text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="p-1.5 text-[var(--text-muted)] hover:text-[var(--text-primary)]"
                 >
                   <Copy className="w-3.5 h-3.5" />
                 </button>
               </div>
 
-              <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 flex items-center justify-between">
+              <div className="p-4 rounded-xl border border-[var(--border-glass-subtle)] bg-[var(--surface-glass-input)] flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold text-zinc-500">OKLCH (Perceptual)</span>
-                  <p className="font-mono text-xs font-bold text-zinc-900 dark:text-zinc-100 mt-1">
+                  <span className="text-xs font-bold text-[var(--text-muted)]">OKLCH (Perceptual)</span>
+                  <p className="font-mono text-xs font-bold text-[var(--text-primary)] mt-1">
                     oklch({colorData.oklch.l} {colorData.oklch.c} {colorData.oklch.h})
                   </p>
                 </div>
                 <button
                   onClick={() => copy('oklch', `oklch(${colorData.oklch.l} ${colorData.oklch.c} ${colorData.oklch.h})`)}
-                  className="p-1.5 text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  className="p-1.5 text-[var(--text-muted)] hover:text-[var(--text-primary)]"
                 >
                   <Copy className="w-3.5 h-3.5" />
                 </button>
@@ -407,7 +407,7 @@ export const ColorConverterTool: React.FC<{
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-4">
             <ArrowRightLeft className="w-4 h-4 text-[var(--accent)]" />
-            <h2 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+            <h2 className="text-lg font-bold text-[var(--text-primary)]">
               Dedicated Format Converters
             </h2>
           </div>
@@ -420,20 +420,20 @@ export const ColorConverterTool: React.FC<{
                   e.preventDefault();
                   navigate(`/${conv.slug}`);
                 }}
-                className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:border-[var(--accent)] hover:shadow-md transition-all group flex flex-col justify-between"
+                className="p-4 rounded-xl border border-[var(--border-glass)] bg-[var(--surface-glass-card)] hover:border-[var(--accent)] hover:shadow-md transition-all group flex flex-col justify-between backdrop-blur-md"
               >
                 <div>
                   <span className="text-[11px] font-bold font-mono uppercase tracking-wider text-[var(--accent)]">
                     {conv.fromFormat.toUpperCase()} → {conv.toFormat.toUpperCase()}
                   </span>
-                  <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-[var(--accent)] transition-colors mt-0.5">
+                  <h3 className="text-sm font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors mt-0.5">
                     {conv.h1}
                   </h3>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 line-clamp-2">
+                  <p className="text-xs text-[var(--text-secondary)] mt-1 line-clamp-2">
                     {conv.metaDescription}
                   </p>
                 </div>
-                <div className="mt-3 pt-2 border-t border-zinc-100 dark:border-zinc-800/60 flex items-center justify-between text-xs font-semibold text-[var(--accent)]">
+                <div className="mt-3 pt-2 border-t border-[var(--border-glass-subtle)] flex items-center justify-between text-xs font-semibold text-[var(--accent)]">
                   <span>Open Converter</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </div>

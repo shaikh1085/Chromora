@@ -294,10 +294,10 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
               <Sparkles className="w-3.5 h-3.5" />
               <span>Harmonic Generator & Token Engine</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
               Color Palette Generator
             </h1>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="mt-1 text-sm text-[var(--text-secondary)]">
               Explore 12 mathematical harmonies, lock favorite swatches, and inspect 50–950 shade curves. Press{' '}
               <kbd className="px-1.5 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 border text-[11px] font-mono">
                 Space
@@ -602,7 +602,7 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">
+                      <h3 className="text-base font-bold text-[var(--text-primary)]">
                         {activeColor.name} ({activeColor.hex.toUpperCase()}) — Tailwind Shades 50–950
                       </h3>
                       <p className="text-xs text-zinc-500 dark:text-zinc-400">
@@ -658,7 +658,7 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
         <div className="my-12">
           <div className="mb-6 flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 flex items-center gap-2">
+              <h2 className="text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
                 <Globe className="w-5 h-5 text-indigo-500" />
                 <span>Asian & Cultural Presets</span>
               </h2>

@@ -19,13 +19,13 @@ export const NotFoundPage: React.FC<{ navigate: (route: string) => void }> = ({ 
         </div>
 
         <div className="space-y-2">
-          <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-zinc-900 dark:text-zinc-100">
+          <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-[var(--text-primary)]">
             404
           </h1>
-          <h2 className="text-lg font-bold text-zinc-800 dark:text-zinc-200">
+          <h2 className="text-lg font-bold text-[var(--text-primary)]">
             Color or Page Not Found
           </h2>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          <p className="text-xs text-[var(--text-secondary)]">
             The color code, palette link, or path you entered does not exist or may have been relocated.
           </p>
         </div>
@@ -49,7 +49,7 @@ export const NotFoundPage: React.FC<{ navigate: (route: string) => void }> = ({ 
               e.preventDefault();
               navigate('/color-picker');
             }}
-            className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-xs font-bold text-zinc-800 dark:text-zinc-200 transition-colors flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-xs font-bold text-[var(--text-primary)] transition-colors flex items-center justify-center gap-2"
           >
             <Palette className="w-3.5 h-3.5 text-indigo-500" />
             <span>Explore Color Tools</span>
