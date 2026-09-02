@@ -10,7 +10,8 @@ import { DesignPreviewModal } from './components/tools/DesignPreviewModal';
 import { QuickSearchModal } from './components/common/QuickSearchModal';
 import { VisualSettingsModal } from './components/common/VisualSettingsModal';
 import { CONVERTER_PAGES } from './data/converterPagesData';
-import { COLLECTION_PAGES } from './data/collectionPagesData';
+import { COLLECTION_PAGES, getCollectionPageData } from './data/collectionPagesData';
+import { HUB_CATEGORIES } from './data/seoKeywordMap';
 
 // Lazy Loaded Pages & Tools for Code Splitting & Performance
 const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })));
@@ -74,6 +75,16 @@ const ConverterSubPage = lazy(() =>
 const PaletteCollectionPage = lazy(() =>
   import('./pages/PaletteCollectionPage').then((m) => ({ default: m.PaletteCollectionPage }))
 );
+const PaletteCollectionsDirectoryPage = lazy(() =>
+  import('./pages/PaletteCollectionsDirectoryPage').then((m) => ({ default: m.PaletteCollectionsDirectoryPage }))
+);
+const GuidesHubPage = lazy(() =>
+  import('./pages/GuidesHubPage').then((m) => ({ default: m.GuidesHubPage }))
+);
+const GuideDetailPage = lazy(() =>
+  import('./pages/GuideDetailPage').then((m) => ({ default: m.GuideDetailPage }))
+);
+const HubPage = lazy(() => import('./pages/HubPage').then((m) => ({ default: m.HubPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage })));
 const TermsPage = lazy(() => import('./pages/TermsPage').then((m) => ({ default: m.TermsPage })));
@@ -155,6 +166,8 @@ export function AppContent() {
     }
 
     if (
+      path === '/image-color-extractor' ||
+      path === '/color-palette-from-image' ||
       path === '/image-color-palette-generator' ||
       path === '/image-color-palette' ||
       path === '/image-palette' ||
@@ -163,7 +176,12 @@ export function AppContent() {
       return <ImageExtractorTool navigate={navigate} />;
     }
 
-    if (path === '/color-contrast-checker' || path === '/contrast-checker' || path === '/color-contrast') {
+    if (
+      path === '/wcag-contrast-checker' ||
+      path === '/color-contrast-checker' ||
+      path === '/contrast-checker' ||
+      path === '/color-contrast'
+    ) {
       return <ContrastCheckerTool navigate={navigate} />;
     }
 
@@ -239,6 +257,24 @@ export function AppContent() {
       return <SavedPalettesPage navigate={navigate} />;
     }
 
+    if (path === '/palettes' || path === '/palette-collections') {
+      return <PaletteCollectionsDirectoryPage navigate={navigate} />;
+    }
+
+    if (path.startsWith('/palettes/')) {
+      const palSlug = path.replace('/palettes/', '');
+      return <PaletteCollectionPage key={palSlug} slug={palSlug} navigate={navigate} />;
+    }
+
+    if (path === '/guides' || path === '/articles' || path === '/learn') {
+      return <GuidesHubPage navigate={navigate} />;
+    }
+
+    if (path.startsWith('/guides/')) {
+      const guideSlug = path.replace('/guides/', '');
+      return <GuideDetailPage key={guideSlug} slug={guideSlug} navigate={navigate} />;
+    }
+
     if (path === '/design-token-generator' || path === '/tokens' || path === '/export-tokens') {
       return <PaletteGeneratorTool navigate={navigate} />;
     }
@@ -249,8 +285,13 @@ export function AppContent() {
     }
 
     // Check if route is one of the Curated Collection Pages
-    if (COLLECTION_PAGES[slug]) {
+    if (getCollectionPageData(slug)) {
       return <PaletteCollectionPage key={slug} slug={slug} navigate={navigate} />;
+    }
+
+    // Check if route is one of the Category Hub Pages
+    if (HUB_CATEGORIES[slug]) {
+      return <HubPage key={slug} categorySlug={slug} navigate={navigate} />;
     }
 
     if (path === '/about') {

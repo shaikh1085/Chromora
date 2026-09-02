@@ -15,6 +15,10 @@ export const SEO: React.FC<{ config: SEOConfig }> = ({ config }) => {
     softwareApp,
   } = config;
 
+  const absoluteOgImage = ogImage.startsWith('http')
+    ? ogImage
+    : `https://chromoraflow.vercel.app${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
+
   const siteName = 'Chromora';
   const fullTitle = title.includes('Chromora') ? title : `${title} | ${siteName}`;
   const keywordsString = keywords ? keywords.join(', ') : '';
@@ -42,12 +46,12 @@ export const SEO: React.FC<{ config: SEOConfig }> = ({ config }) => {
     setMeta('og:title', fullTitle, true);
     setMeta('og:description', description, true);
     setMeta('og:type', ogType, true);
-    setMeta('og:image', ogImage, true);
+    setMeta('og:image', absoluteOgImage, true);
     setMeta('og:site_name', siteName, true);
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', fullTitle);
     setMeta('twitter:description', description);
-    setMeta('twitter:image', ogImage);
+    setMeta('twitter:image', absoluteOgImage);
 
     // Canonical link
     if (canonicalUrl) {
@@ -59,7 +63,7 @@ export const SEO: React.FC<{ config: SEOConfig }> = ({ config }) => {
       }
       link.setAttribute('href', canonicalUrl);
     }
-  }, [fullTitle, description, canonicalUrl, ogType, ogImage, robots, keywordsString]);
+  }, [fullTitle, description, canonicalUrl, ogType, absoluteOgImage, robots, keywordsString]);
 
   // Construct JSON-LD schemas
   const schemas: object[] = [
@@ -105,7 +109,7 @@ export const SEO: React.FC<{ config: SEOConfig }> = ({ config }) => {
         '@type': 'ListItem',
         position: idx + 1,
         name: b.name,
-        item: b.url,
+        item: b.url.startsWith('http') ? b.url : `https://chromoraflow.vercel.app${b.url.startsWith('/') ? '' : '/'}${b.url}`,
       })),
     });
   }

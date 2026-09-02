@@ -25,9 +25,13 @@ import {
   Layers,
   Code2,
   Shield,
+  BookOpen,
+  FolderHeart,
 } from 'lucide-react';
 import { SEO } from '../components/common/SEO';
 import { FAQSection } from '../components/common/FAQSection';
+import { GUIDES_DATABASE } from '../data/guidesData';
+import { COLLECTION_PAGES } from '../data/collectionPagesData';
 
 export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navigate }) => {
   const {
@@ -100,15 +104,15 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
       accent: 'from-indigo-500 to-cyan-500',
     },
     {
-      title: 'Smart Color Explorer',
-      description: 'Analyze HEX, RGB, HSL, HSV, CMYK, OKLCH, and generate Tailwind 50–950 shade curves.',
+      title: 'Online Color Picker & Explorer',
+      description: 'Inspect HEX, RGB, HSL, HSV, CMYK, OKLCH, and generate Tailwind 50–950 shade curves.',
       route: '/color-picker',
       icon: Compass,
       badge: 'Core Engine',
       accent: 'from-violet-500 to-indigo-600',
     },
     {
-      title: 'Palette Generator',
+      title: 'Color Palette Generator',
       description: 'Orchestrate 12 harmonic geometries, lock favorite colors, and shuffle swatches.',
       route: '/color-palette-generator',
       icon: Palette,
@@ -116,9 +120,9 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
       accent: 'from-fuchsia-500 to-violet-600',
     },
     {
-      title: 'Image to Palette',
-      description: 'Extract dominant color palettes from any photo with 100% private, client-side processing.',
-      route: '/image-color-palette',
+      title: 'Image Color Extractor',
+      description: 'Extract dominant color palettes and sample pixels from any photo with 100% private browser processing.',
+      route: '/image-color-extractor',
       icon: ImageIcon,
       badge: 'Zero Server',
       accent: 'from-emerald-500 to-teal-600',
@@ -126,7 +130,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
     {
       title: 'WCAG Contrast Checker',
       description: 'Audit AA & AAA legibility with live interactive component simulators and auto-fixing.',
-      route: '/contrast-checker',
+      route: '/wcag-contrast-checker',
       icon: CheckCircle,
       badge: 'WCAG 2.1',
       accent: 'from-amber-500 to-orange-600',
@@ -150,6 +154,11 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
   ];
 
   const homeFaqs = [
+    {
+      question: 'What is Chromora and what free color tools are included?',
+      answer:
+        'Chromora is a comprehensive suite of free color tools for UI/UX designers, frontend developers, and digital creators. It features an interactive Color Picker, Harmonic Palette Generator, WCAG 2.1 Contrast Checker, Image Palette Extractor, Multi-Space Color Converter (HEX, RGB, HSL, CMYK, OKLCH), CSS Gradient Studio, Tailwind Shades Generator, Color Blindness Simulator, Color Wheel, and Design Token Exporter.',
+    },
     {
       question: 'How do I generate an accessible color palette for UI design with WCAG compliance?',
       answer:
@@ -186,10 +195,11 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
     <div className="min-h-screen bg-transparent text-[var(--text-primary)]">
       <SEO
         config={{
-          title: 'Chromora — Accessible Color Palette Generator & Design System Studio',
+          title: 'Free Color Tools for Designers & Developers — Chromora',
           description:
-            'Free accessible color palette generator for UI design. Test WCAG contrast, extract colors from images, convert to OKLCH, and export Tailwind design tokens.',
+            'Chromora is a comprehensive suite of free color tools for designers and developers. Generate accessible palettes, check WCAG contrast, extract colors from images, convert HEX to OKLCH & RGB, and export Tailwind tokens.',
           keywords: [
+            'free color tools for designers and developers',
             'accessible color palette generator for UI design',
             'color palette generator with contrast checker',
             'hex to oklch converter online',
@@ -198,15 +208,13 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
             'CSS design tokens generator',
             'tailwind color shades generator',
             'color blindness simulator for UI design',
-            'ramadan color palette hex codes',
-            'cyberpunk neon color palette for UI',
             'free online color converter',
           ],
-          canonicalUrl: 'https://chromoraflow.vercel.app',
+          canonicalUrl: 'https://chromoraflow.vercel.app/',
           faqs: homeFaqs,
           softwareApp: {
             name: 'Chromora Color Platform',
-            description: 'Accessible color palette generator, WCAG contrast checker, and design token studio.',
+            description: 'Accessible color palette generator, WCAG contrast checker, and design token studio for designers and developers.',
             applicationCategory: 'DesignApplication',
           },
         }}
@@ -218,18 +226,18 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
           {/* Centered Hero Header */}
           <div className="text-center max-w-4xl mx-auto mb-10 lg:mb-14 space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[var(--text-primary)] tracking-tight text-center">
-              Turn Any Color Into a{' '}
+              Free Color Tools for{' '}
               <span
                 className="text-transparent bg-clip-text"
                 style={{
                   backgroundImage: `linear-gradient(135deg, var(--accent), #d946ef, #38bdf8)`,
                 }}
               >
-                Complete Design System.
+                Designers &amp; Developers.
               </span>
             </h1>
             <p className="text-[var(--text-secondary)] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed text-center">
-              Generate WCAG AAA accessible palettes, convert HEX to OKLCH &amp; CMYK, extract colors from images, and export production-ready Tailwind CSS &amp; Figma design tokens.
+              Powerful color tools for palettes, conversions, accessibility, gradients, and image color extraction — free and easy to use.
             </p>
           </div>
 
@@ -249,7 +257,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                 <div className="flex items-center justify-between">
                   <div>
                     <h2 className="text-xl sm:text-2xl font-extrabold text-[var(--text-primary)] flex items-center gap-2.5">
-                      <span>Color Input & Generator</span>
+                      <span>Color Input &amp; Fast Generator</span>
                     </h2>
                     <p className="text-xs sm:text-sm text-[var(--text-muted)] font-mono mt-1 font-semibold">
                       QUICK EXPLORATION STUDIO
@@ -260,7 +268,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                 {/* Input Color Box */}
                 <form onSubmit={handleQuickExplore} className="flex flex-col gap-3.5">
                   <label className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">
-                    Input Color (HEX, RGB, OKLCH)
+                    Input Color (HEX, RGB, OKLCH, HSL)
                   </label>
                   <div className="flex gap-2">
                     <div className="relative flex-1 flex items-center">
@@ -343,10 +351,10 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                 {/* 2 Bottom Feature Cards matching Right column's 2 cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
                   <a
-                    href="/contrast-checker"
+                    href="/wcag-contrast-checker"
                     onClick={(e) => {
                       e.preventDefault();
-                      navigate('/contrast-checker');
+                      navigate('/wcag-contrast-checker');
                     }}
                     className="p-4 sm:p-5 glass-card rounded-2xl hover:border-[var(--accent)] transition-colors text-left group flex flex-col justify-between"
                   >
@@ -357,9 +365,9 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                       >
                         <CheckCircle className="w-4 h-4" />
                       </div>
-                      <h3 className="font-bold text-[var(--text-primary)] mb-1 text-sm">WCAG Contrast</h3>
+                      <h3 className="font-bold text-[var(--text-primary)] mb-1 text-sm">WCAG Contrast Checker</h3>
                       <p className="text-xs text-[var(--text-muted)] leading-relaxed">
-                        Automated WCAG AAA & AA accessibility test suite.
+                        Automated WCAG AAA &amp; AA accessibility audit suite with auto-fixing.
                       </p>
                     </div>
                     <span className="text-xs font-bold text-[var(--accent)] mt-3 flex items-center gap-1">
@@ -382,7 +390,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                       </div>
                       <h3 className="font-bold text-[var(--text-primary)] mb-1 text-sm">Design Preview</h3>
                       <p className="text-xs text-[var(--text-muted)] leading-relaxed">
-                        Simulate palettes on real UI buttons & dashboards.
+                        Simulate palettes on real UI buttons, SaaS cards &amp; dashboards.
                       </p>
                     </div>
                     <span className="text-xs font-bold text-indigo-400 mt-3 flex items-center gap-1">
@@ -489,10 +497,10 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                       <div className="h-2 w-3/4 bg-[var(--surface-glass-active)] rounded-full" />
                       <div className="h-2 w-1/2 bg-[var(--surface-glass-active)] rounded-full" />
                       <a
-                        href="/contrast-checker"
+                        href="/wcag-contrast-checker"
                         onClick={(e) => {
                           e.preventDefault();
-                          navigate('/contrast-checker');
+                          navigate('/wcag-contrast-checker');
                         }}
                         className="mt-3 w-full p-2.5 rounded-xl flex items-center justify-center text-xs sm:text-sm font-bold shadow-sm transition-transform hover:scale-[1.02]"
                         style={{
@@ -845,6 +853,151 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                 Your images, palette formulas, and design assets never leave your browser. Zero backend telemetry, 100% private and offline-capable.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Curated Palette Collections Hub Section */}
+      <section className="py-16 border-t border-[var(--border-glass)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
+                Curated Schemes
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mt-1">
+                Explore Palette Collections
+              </h2>
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1">
+                Handcrafted color collections designed for digital interfaces, branding, art, and modern products.
+              </p>
+            </div>
+            <a
+              href="/palettes"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/palettes');
+              }}
+              className="text-xs font-bold flex items-center gap-1 self-start sm:self-auto hover:underline"
+              style={{ color: 'var(--accent)' }}
+            >
+              <span>View All 20+ Collections</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {Object.values(COLLECTION_PAGES).slice(0, 8).map((col) => (
+              <a
+                key={col.slug}
+                href={`/${col.slug}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(`/${col.slug}`);
+                }}
+                className="glass-card rounded-2xl p-5 hover:border-[var(--accent)] hover:-translate-y-1 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--surface-glass-card)] text-[var(--text-muted)] border border-[var(--border-glass)]">
+                      {col.category}
+                    </span>
+                    <span className="text-[11px] font-medium text-[var(--text-muted)]">
+                      {col.samplePalettes.length} palettes
+                    </span>
+                  </div>
+
+                  <h3 className="font-bold text-sm text-[var(--text-primary)] group-hover:opacity-85 transition-opacity">
+                    {col.title.replace(' Color Palettes', '').replace(' — 50+ Curated Color Codes', '')}
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] mt-1.5 line-clamp-2 leading-relaxed">
+                    {col.intro}
+                  </p>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-[var(--border-glass-subtle)]">
+                  {col.samplePalettes[0] && (
+                    <div className="flex h-6 rounded-lg overflow-hidden border border-black/10 dark:border-white/10">
+                      {col.samplePalettes[0].colors.map((hex, i) => (
+                        <div key={i} className="flex-1 h-full" style={{ backgroundColor: hex }} />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Guides & Color Theory Section */}
+      <section className="py-16 border-t border-[var(--border-glass)] bg-[var(--surface-glass)] backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
+                Educational Articles
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mt-1">
+                Color Guides, Theory &amp; Standards
+              </h2>
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)] mt-1">
+                Deep dives into color spaces, WCAG accessibility mathematics, dark mode architectures, and UI palette systems.
+              </p>
+            </div>
+            <a
+              href="/guides"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/guides');
+              }}
+              className="text-xs font-bold flex items-center gap-1 self-start sm:self-auto hover:underline"
+              style={{ color: 'var(--accent)' }}
+            >
+              <span>Explore All Guides</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {Object.values(GUIDES_DATABASE).slice(0, 6).map((guide) => (
+              <a
+                key={guide.slug}
+                href={`/guides/${guide.slug}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(`/guides/${guide.slug}`);
+                }}
+                className="glass-card rounded-2xl p-6 hover:border-[var(--accent)] hover:-translate-y-1 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--surface-glass-card)] text-[var(--text-muted)] border border-[var(--border-glass)]">
+                      {guide.category}
+                    </span>
+                    <span className="text-xs text-[var(--text-muted)] font-mono">{guide.readTime}</span>
+                  </div>
+
+                  <h3 className="font-bold text-base text-[var(--text-primary)] group-hover:opacity-85 transition-opacity line-clamp-2">
+                    {guide.title}
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] mt-2 line-clamp-3 leading-relaxed">
+                    {guide.summary}
+                  </p>
+                </div>
+
+                <div
+                  className="mt-6 pt-4 border-t border-[var(--border-glass-subtle)] flex items-center justify-between text-xs font-bold transition-all"
+                  style={{ color: 'var(--accent)' }}
+                >
+                  <span className="flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5" />
+                    <span>Read Article</span>
+                  </span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

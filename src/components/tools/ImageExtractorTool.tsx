@@ -141,14 +141,24 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
 
   const extractorFaqs = [
     {
-      question: 'How does the client-side color extraction algorithm work?',
+      question: 'How does client-side color extraction work in Chromora?',
       answer:
         'Chromora draws the image to an offscreen HTML5 canvas, downsamples it into a discrete pixel grid, bins color coordinates into 3D RGB cubes, and identifies dominant clusters with high visual variance and harmonious distribution.',
     },
     {
-      question: 'Are my uploaded images sent to any remote server?',
+      question: 'Are my uploaded images sent to any remote server or cloud AI?',
       answer:
-        'Never. All pixel processing and color clustering runs 100% locally inside your web browser. No photos or pixel buffers ever leave your machine.',
+        'Never. All pixel sampling, color clustering, and image rendering execute 100% locally inside your web browser. No photos, EXIF data, or pixel buffers ever leave your machine.',
+    },
+    {
+      question: 'How do I extract a palette from an uploaded photo or screenshot?',
+      answer:
+        'Click "Upload Image" or drag and drop any PNG, JPG, or WebP file into the dropzone. Chromora immediately computes the 5 most dominant harmonic tones. You can then hover anywhere on the image with the precision loupe eyedropper to sample specific pixels.',
+    },
+    {
+      question: 'Can I export the extracted image colors into design tokens or Tailwind CSS?',
+      answer:
+        'Yes! Click "Open in Palette Generator" to refine, lock, or reorder the colors, or export them directly as Tailwind config objects, CSS custom properties, SCSS, or Flutter color tokens.',
     },
   ];
 
@@ -167,7 +177,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
             'dominant colors from image generator',
             'picture to color palette converter',
           ],
-          canonicalUrl: 'https://chromoraflow.vercel.app/image-color-palette',
+          canonicalUrl: 'https://chromoraflow.vercel.app/image-color-extractor',
           faqs: extractorFaqs,
           softwareApp: {
             name: 'Chromora Image Color Extractor',
@@ -179,7 +189,7 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs
-          items={[{ name: 'Image Color Extractor', url: '/image-color-palette', isCurrent: true }]}
+          items={[{ name: 'Image Color Extractor', url: '/image-color-extractor', isCurrent: true }]}
           onNavigate={navigate}
         />
 
@@ -363,12 +373,103 @@ export const ImageExtractorTool: React.FC<{ navigate: (route: string) => void }>
           </div>
         </div>
 
+        {/* Technical Guide & Extraction Workflow */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12 pt-8 border-t border-[var(--border-glass)]">
+          <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] backdrop-blur-md">
+            <h3 className="text-base font-bold text-[var(--text-primary)] mb-2">
+              1. Local Canvas Sampling
+            </h3>
+            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+              When an image is loaded, Chromora draws it to a secure off-screen HTML5 canvas element. No data is transmitted to cloud APIs or remote servers.
+            </p>
+          </div>
+          <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] backdrop-blur-md">
+            <h3 className="text-base font-bold text-[var(--text-primary)] mb-2">
+              2. 3D Color Quantization
+            </h3>
+            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+              Pixels are mapped across RGB and perceptual color spaces. K-means clustering isolates dominant hue clusters while filtering out uniform backgrounds and visual noise.
+            </p>
+          </div>
+          <div className="p-6 rounded-2xl bg-[var(--surface-glass-card)] border border-[var(--border-glass)] backdrop-blur-md">
+            <h3 className="text-base font-bold text-[var(--text-primary)] mb-2">
+              3. Precision Loupe Eyedropper
+            </h3>
+            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+              Move your cursor across any region of the image to inspect pixel-perfect hexadecimal and RGB values. Click once to copy or inspect in the Chromora Color Explorer.
+            </p>
+          </div>
+        </div>
+
         {/* FAQs */}
         <FAQSection
           faqs={extractorFaqs}
           title="Image Palette Extraction Science"
           subtitle="Everything about privacy, pixel sampling, and visual clustering algorithms."
         />
+
+        {/* Related Tools */}
+        <div className="mt-16 pt-10 border-t border-[var(--border-glass)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h3 className="text-xl font-bold text-[var(--text-primary)]">
+                Related Color & Image Tools
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] mt-1">
+                Explore tools to generate harmonies, check accessibility, and convert extracted colors.
+              </p>
+            </div>
+            <button
+              onClick={() => navigate('/image-color-tools')}
+              className="text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1 self-start"
+            >
+              <span>View All Image Tools</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: 'Color Palette Generator',
+                desc: 'Refine, reorder, lock, and export your extracted colors into cohesive design systems.',
+                route: '/color-palette-generator',
+              },
+              {
+                title: 'WCAG Contrast Checker',
+                desc: 'Verify if your extracted photo colors meet AA/AAA readability guidelines.',
+                route: '/wcag-contrast-checker',
+              },
+              {
+                title: 'CSS Gradient Studio',
+                desc: 'Blend extracted photo tones into multi-stop linear and radial CSS gradients.',
+                route: '/gradient-generator',
+              },
+              {
+                title: 'Color Converter',
+                desc: 'Convert extracted HEX codes into RGB, HSL, OKLCH, HSV, and CMYK formats.',
+                route: '/color-converter',
+              },
+            ].map((tool, idx) => (
+              <div
+                key={idx}
+                onClick={() => navigate(tool.route)}
+                className="p-5 rounded-2xl border border-[var(--border-glass)] bg-[var(--surface-glass-card)] hover:border-[var(--accent)] cursor-pointer transition-all group"
+              >
+                <h4 className="text-sm font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+                  {tool.title}
+                </h4>
+                <p className="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed">
+                  {tool.desc}
+                </p>
+                <div className="mt-4 flex items-center text-xs font-semibold text-[var(--accent)]">
+                  <span>Open Tool</span>
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

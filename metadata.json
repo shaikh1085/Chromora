@@ -1,6 +1,6 @@
 {
   "name": "Chromora",
-  "description": "Generate accessible color palettes for UI design, check WCAG contrast in real time, extract colors from images with HEX codes, convert OKLCH to HEX, and export CSS design tokens.",
+  "description": "Free Color Tools for Designers & Developers — Accessible Color Palette Generator, WCAG Contrast Checker, Image Palette Extractor, OKLCH Color Converter, and Design Tokens Studio.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

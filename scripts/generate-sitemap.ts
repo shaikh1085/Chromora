@@ -3,6 +3,7 @@ import path from 'path';
 import { COLOR_NAMES_DB, hexToSlug } from '../src/data/colorNames';
 import { CONVERTER_PAGES } from '../src/data/converterPagesData';
 import { COLLECTION_PAGES } from '../src/data/collectionPagesData';
+import { isColorIndexable } from '../src/data/colorQualityAudit';
 
 interface SitemapEntry {
   loc: string;
@@ -65,10 +66,13 @@ function generateSitemapXml() {
     addRoute(`/${slug}`, '0.8', 'monthly');
   });
 
-  // 5. Named Color Pages (all indexed named colors)
+  // 5. Named Color Pages (only indexable Tier A & Tier B named colors)
   const seenColorSlugs = new Set<string>();
   COLOR_NAMES_DB.forEach((color) => {
+    if (!isColorIndexable(color.name)) return;
+
     const slug = hexToSlug(color.name, color.hex);
+
     if (!seenColorSlugs.has(slug)) {
       seenColorSlugs.add(slug);
       addRoute(`/colors/${slug}`, '0.6', 'monthly');

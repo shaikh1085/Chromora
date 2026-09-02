@@ -34,6 +34,8 @@ import {
   History,
   Copy,
   Trash2,
+  BookOpen,
+  FolderHeart,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -134,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, navigate, onOpenSe
         { label: 'Interactive Color Wheel', route: '/color-wheel', icon: Compass, desc: '360° HSL wheel & 12 harmonies' },
         { label: 'AI Palette Generator', route: '/ai-palette-generator', icon: Sparkles, badge: 'AI', desc: 'Natural prompt to palette' },
         { label: 'Design Preview Studio', route: '/design-preview', icon: Layout, desc: 'Live UI components in your palette' },
-        { label: 'Image Color Extractor', route: '/image-color-palette', icon: ImageIcon, desc: 'Extract palettes from photos' },
+        { label: 'Image Color Extractor', route: '/image-color-extractor', icon: ImageIcon, desc: 'Extract palettes from photos' },
         { label: 'Color Shades Generator', route: '/color-shades-generator', icon: Layers, desc: 'Tailwind 50-900 tonal scales' },
         { label: 'Color Mixer Online', route: '/color-mixer', icon: Droplets, desc: 'OKLCH & physical blend simulator' },
         { label: 'Random Color Generator', route: '/random-color-generator', icon: Shuffle, desc: 'Spacebar rolling & mood filters' },
@@ -143,7 +145,9 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, navigate, onOpenSe
     {
       title: 'Design, Standards & Assets',
       tools: [
-        { label: 'WCAG Contrast Checker', route: '/contrast-checker', icon: CheckCircle, desc: 'WCAG 2.1 AA/AAA compliance audit' },
+        { label: 'Palette Collections', route: '/palettes', icon: FolderHeart, desc: 'Curated UI, brand & cultural schemes' },
+        { label: 'Guides & Theory', route: '/guides', icon: BookOpen, desc: 'Deep color theory & WCAG tutorials' },
+        { label: 'WCAG Contrast Checker', route: '/wcag-contrast-checker', icon: CheckCircle, desc: 'WCAG 2.1 AA/AAA compliance audit' },
         { label: 'Color Blindness Simulator', route: '/color-blindness-simulator', icon: Eye, desc: 'Test Protanopia & Deuteranopia' },
         { label: 'Pantone & RAL Converter', route: '/pantone-color-converter', icon: Printer, desc: 'Digital to PMS & RAL match' },
         { label: 'Favicon & App Icon Maker', route: '/favicon-generator', icon: Globe, desc: 'ICO, PNG & webmanifest package' },

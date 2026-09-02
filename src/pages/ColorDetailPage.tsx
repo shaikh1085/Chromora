@@ -22,6 +22,7 @@ import {
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { FAQSection } from '../components/common/FAQSection';
+import { isColorIndexable } from '../data/colorQualityAudit';
 
 export const ColorDetailPage: React.FC<{
   slug?: string;
@@ -71,6 +72,8 @@ export const ColorDetailPage: React.FC<{
     },
   ];
 
+  const indexable = isColorIndexable(slug) && isColorIndexable(colorData.name);
+
   return (
     <div className="min-h-screen py-8">
       <SEO
@@ -78,6 +81,7 @@ export const ColorDetailPage: React.FC<{
           title: `${colorData.name} (${colorData.hex.toUpperCase()}) Color Codes & Shades`,
           description: `Explore ${colorData.name} (${colorData.hex}) shades, tints, and hex to color name info. Get RGB, HSL, CMYK, OKLCH codes, palettes, and WCAG contrast ratios.`,
           canonicalUrl: `https://chromoraflow.vercel.app/colors/${slug}`,
+          robots: indexable ? 'index, follow' : 'noindex, follow',
           faqs,
           breadcrumbs: [
             { name: 'Named Colors', url: '/colors' },

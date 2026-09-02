@@ -30,8 +30,8 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
 
   const conversionAndCodeTools = [
     { label: 'Design Preview Studio', route: '/design-preview' },
-    { label: 'Image Color Extractor', route: '/image-color-palette' },
-    { label: 'WCAG Contrast Checker', route: '/contrast-checker' },
+    { label: 'Image Color Extractor', route: '/image-color-extractor' },
+    { label: 'WCAG Contrast Checker', route: '/wcag-contrast-checker' },
     { label: 'Multi-Way Color Converter', route: '/color-converter' },
     { label: 'Color Blindness Simulator', route: '/color-blindness-simulator' },
     { label: 'Pantone & RAL Converter', route: '/pantone-color-converter' },
@@ -50,9 +50,28 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
     { label: 'Earthy Tones', route: '/colors?family=brown' },
   ];
 
+  const toolHubCategories = [
+    { label: 'Palette Collections Hub', route: '/palettes' },
+    { label: 'Color Tools Hub', route: '/color-tools' },
+    { label: 'Palette Tools Hub', route: '/palette-tools' },
+    { label: 'Accessibility Tools Hub', route: '/accessibility-tools' },
+    { label: 'Developer Color Tools Hub', route: '/developer-color-tools' },
+    { label: 'Image Color Tools Hub', route: '/image-color-tools' },
+  ];
+
+  const guideArticles = [
+    { label: 'All Color Guides & Theory', route: '/guides' },
+    { label: 'HEX vs RGB vs HSL Explained', route: '/guides/hex-vs-rgb-vs-hsl' },
+    { label: 'Color Theory for UI Designers', route: '/guides/color-theory-for-designers' },
+    { label: 'WCAG Accessible Color Palettes', route: '/guides/accessible-color-palettes-wcag' },
+    { label: 'Modern OKLCH Color Space', route: '/guides/oklch-color-space-guide' },
+    { label: 'Creating UI Dark Mode Palettes', route: '/guides/creating-dark-mode-color-palettes' },
+  ];
+
   const legalLinks = [
     { label: 'About Chromora', route: '/about' },
     { label: 'Saved Palettes Studio', route: '/saved-palettes' },
+    { label: 'Named Colors Search', route: '/colors' },
     { label: 'HEX to RGB Converter', route: '/hex-to-rgb' },
     { label: 'RGB to HEX Converter', route: '/rgb-to-hex' },
     { label: 'HEX to HSL Converter', route: '/hex-to-hsl' },
@@ -139,7 +158,7 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
         </div>
 
         {/* Links Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-[var(--border-glass-subtle)]">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-8 border-t border-[var(--border-glass-subtle)]">
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] mb-4">
               Core Color Tools
@@ -186,10 +205,54 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] mb-4">
-              Color Families
+              Category & Palettes
             </h4>
             <ul className="space-y-2.5 text-xs">
-              {colorFamilies.map((fam) => (
+              {toolHubCategories.map((link) => (
+                <li key={link.route}>
+                  <a
+                    href={link.route}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(link.route);
+                    }}
+                    className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors inline-block font-medium"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] mb-4">
+              Guides & Theory
+            </h4>
+            <ul className="space-y-2.5 text-xs">
+              {guideArticles.map((art) => (
+                <li key={art.route}>
+                  <a
+                    href={art.route}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(art.route);
+                    }}
+                    className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors inline-block"
+                  >
+                    {art.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] mb-4">
+              Color Families & Legal
+            </h4>
+            <ul className="space-y-2.5 text-xs">
+              {colorFamilies.slice(0, 4).map((fam) => (
                 <li key={fam.route}>
                   <a
                     href={fam.route}
@@ -203,15 +266,7 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
                   </a>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] mb-4">
-              Platform & Legal
-            </h4>
-            <ul className="space-y-2.5 text-xs">
-              {legalLinks.map((link) => (
+              {legalLinks.slice(0, 4).map((link) => (
                 <li key={link.route}>
                   <a
                     href={link.route}
@@ -219,7 +274,7 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
                       e.preventDefault();
                       navigate(link.route);
                     }}
-                    className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors inline-block"
+                    className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors inline-block text-[11px] opacity-85"
                   >
                     {link.label}
                   </a>

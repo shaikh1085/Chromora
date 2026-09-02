@@ -2556,4 +2556,501 @@ export const COLLECTION_PAGES: Record<string, CollectionPageData> = {
     ],
     relatedSlugs: ['luxury-color-palette-generator', 'brand-color-palette-generator', 'website-color-palette-generator', 'ui-color-palette-generator'],
   },
+
+  'blue-color-palette': {
+    slug: 'blue-color-palette',
+    title: 'Blue Color Palette Ideas — 15+ Aesthetic Blue Schemes | Chromora',
+    h1: 'Blue Color Palette Ideas',
+    primaryKeyword: 'blue color palette',
+    metaDescription:
+      'Discover aesthetic blue color palettes for UI design, branding, and websites. Ocean blues, royal sapphire, navy, pastel sky, and electric cobalt palettes with hex codes.',
+    category: 'UI & Systems',
+    intro:
+      'Blue is the world’s most versatile and trusted color in UI/UX design. From deep oceanic navies to refreshing sky pastels and electric tech indigos, explore curated blue color combinations crafted for digital interfaces and modern brands.',
+    guideSections: [
+      {
+        title: 'The Psychological Impact of Blue in Digital Design',
+        content:
+          'Blue evokes deep trust, stability, logical clarity, and security. It is the gold standard for SaaS software, enterprise platforms, and healthcare applications because it reduces visual fatigue during extended screen use.',
+      },
+      {
+        title: 'Harmonizing Blue with Accent Warmth',
+        content:
+          'While monochromatic blue scales are clean, pairing blue with warm complementary accents like amber (#F59E0B), coral (#FF6B6B), or emerald (#10B981) brings dynamic conversion focus to CTA buttons and active highlights.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Deep Oceanic Sapphire',
+        colors: ['#0b132b', '#1c2541', '#3a506b', '#00b4d8', '#caf0f8'],
+        useCase: 'Modern tech landing pages, data dashboards, and mobile banking apps.',
+      },
+      {
+        name: 'Royal Cobalt & Clean Ice',
+        colors: ['#03045e', '#023e8a', '#0077b6', '#0096c7', '#ade8f4'],
+        useCase: 'Corporate websites, cloud infrastructure, and enterprise software.',
+      },
+      {
+        name: 'Pastel Sky & Cotton Cloud',
+        colors: ['#1e293b', '#60a5fa', '#93c5fd', '#bfdbfe', '#eff6ff'],
+        useCase: 'Wellness apps, educational portals, and personal blogs.',
+      },
+      {
+        name: 'Midnight Navy & Electric Cyan',
+        colors: ['#0f172a', '#1e293b', '#0284c7', '#06b6d4', '#f8fafc'],
+        useCase: 'Developer developer tools, crypto platforms, and modern AI UI.',
+      },
+      {
+        name: 'Nordic Denim & Mineral Slate',
+        colors: ['#1c2833', '#2e4053', '#5d6d7e', '#aeb6bf', '#ebedef'],
+        useCase: 'Architecture portfolios, Scandinavian lifestyle, and apparel stores.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What colors pair best with a blue palette?',
+        answer:
+          'Warm amber, sunset orange, emerald green, and crisp off-white provide stunning contrast against cool blue tones.',
+      },
+      {
+        question: 'How do I test my blue palette for accessibility?',
+        answer:
+          'Use Chromora’s WCAG Contrast Checker to guarantee at least 4.5:1 contrast between your blue text and background surfaces.',
+      },
+    ],
+    relatedSlugs: ['green-color-palette', 'purple-color-palette', 'pastel-color-palette', 'brand-color-palette-generator'],
+  },
+
+  'green-color-palette': {
+    slug: 'green-color-palette',
+    title: 'Green Color Palette Ideas — Nature, Sage & Emerald Schemes | Chromora',
+    h1: 'Green Color Palette Ideas',
+    primaryKeyword: 'green color palette',
+    metaDescription:
+      'Explore beautiful green color palettes featuring forest green, matcha sage, vibrant emerald, botanical olive, and fresh mint schemes with hex codes.',
+    category: 'Aesthetics',
+    intro:
+      'Green represents vitality, organic balance, growth, and renewal. These curated green schemes provide calming visual harmony for sustainable brands, organic products, fintech wealth tools, and wellness apps.',
+    guideSections: [
+      {
+        title: 'Balancing Sage, Forest, and Emerald Tones',
+        content:
+          'Sage and matcha greens (#709775, #A1CCA5) deliver peaceful organic softness, while deep forest and pine tones (#14532D, #052E16) ground layouts with natural elegance.',
+      },
+      {
+        title: 'Fintech and Wealth Design Systems',
+        content:
+          'In financial user interfaces, vibrant emerald green (#10B981) communicates positive growth metrics, successful transactions, and portfolio gains.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Botanical Matcha & Cream',
+        colors: ['#1c2826', '#3b5a45', '#709775', '#a1cca5', '#fefae0'],
+        useCase: 'Organic skincare, tea packaging, and sustainable lifestyle brands.',
+      },
+      {
+        name: 'Deep Forest Pine & Moss',
+        colors: ['#052e16', '#14532d', '#166534', '#22c55e', '#f0fdf4'],
+        useCase: 'Outdoor gear branding, conservation non-profits, and nature blogs.',
+      },
+      {
+        name: 'Emerald Wealth & Obsidian',
+        colors: ['#09090b', '#064e3b', '#059669', '#10b981', '#f8fafc'],
+        useCase: 'Fintech investment dashboards, mobile wallets, and luxury real estate.',
+      },
+      {
+        name: 'Soft Sage & Linen Mist',
+        colors: ['#283618', '#606c38', '#dda15e', '#bc6c25', '#fefae0'],
+        useCase: 'Interior design portfolios, artisan bakeries, and ceramics shops.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What neutral backgrounds work best with green palettes?',
+        answer:
+          'Warm linen ivory (#FEFAE0) and soft cream (#FAF7F2) enhance the natural warmth of green tones better than pure sterile white.',
+      },
+    ],
+    relatedSlugs: ['blue-color-palette', 'neutral-color-palette', 'pastel-color-palette'],
+  },
+
+  'purple-color-palette': {
+    slug: 'purple-color-palette',
+    title: 'Purple Color Palette Ideas — Lavender, Plum & Cyber Violet | Chromora',
+    h1: 'Purple Color Palette Ideas',
+    primaryKeyword: 'purple color palette',
+    metaDescription:
+      'Curated purple color palettes featuring royal amethyst, soft lavender, cyber neon violet, and rich plum. Includes hex codes and CSS tokens.',
+    category: 'Aesthetics',
+    intro:
+      'Purple bridges the calm stability of blue and the energetic passion of red. From delicate pastel lavenders to neon cyber violets and regal plums, explore curated purple schemes for creative studios, AI tools, and luxury branding.',
+    guideSections: [
+      {
+        title: 'Purple in Modern AI and Creative Software',
+        content:
+          'Modern generative AI applications and creative SaaS tools heavily utilize electric violet (#7C3AED) and neon fuchsia (#D946EF) to represent future-forward innovation and imagination.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Royal Velvet & Amethyst',
+        colors: ['#1e1035', '#3c1874', '#892cdc', '#bc6ff1', '#f9f6fd'],
+        useCase: 'Luxury cosmetics, creative studio portfolios, and event branding.',
+      },
+      {
+        name: 'Soft Lavender & Linen Cloud',
+        colors: ['#2e1065', '#5b21b6', '#8b5cf6', '#c4b5fd', '#faf5ff'],
+        useCase: 'Meditation apps, boutique skincare, and editorial magazines.',
+      },
+      {
+        name: 'Cyber Violet & Electric Neon',
+        colors: ['#09090b', '#4c1d95', '#7c3aed', '#ec4899', '#ffffff'],
+        useCase: 'AI tech platforms, Web3 applications, and modern developer portfolios.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do I ensure purple text has high contrast?',
+        answer:
+          'Use deep eggplant (#2E1065) for text over light backgrounds, or bright lavender (#C4B5FD) on dark slate surfaces to pass WCAG AA.',
+      },
+    ],
+    relatedSlugs: ['blue-color-palette', 'pastel-color-palette', 'dark-mode-color-palette'],
+  },
+
+  'pastel-color-palette': {
+    slug: 'pastel-color-palette',
+    title: 'Pastel Color Palette Ideas — Soft, Aesthetic & Calming Schemes | Chromora',
+    h1: 'Pastel Color Palette Ideas',
+    primaryKeyword: 'pastel color palette',
+    metaDescription:
+      'Discover soft pastel color palettes for aesthetic websites, stationery, lifestyle branding, and UI designs. Powder blue, blush pink, mint, and butter yellow.',
+    category: 'Aesthetics',
+    intro:
+      'Pastel palettes offer gentle, low-saturation hues with high lightness, creating friendly, approachable, and calming digital spaces.',
+    guideSections: [
+      {
+        title: 'Contrast Rules for Pastel Web Design',
+        content:
+          'Because pastel colors have high lightness, never use white text on pastel backgrounds. Pair pastel cards with deep charcoal (#1E293B) typography to guarantee crisp accessibility.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Dreamy Pastel Sunset',
+        colors: ['#1f2937', '#ffd1dc', '#ffdfba', '#ffffba', '#baffc9'],
+        useCase: 'Lifestyle e-commerce, baby products, and spring campaigns.',
+      },
+      {
+        name: 'Nordic Pastel Mist',
+        colors: ['#111827', '#a7c5eb', '#cbe7e3', '#fcd1d1', '#ece2d0'],
+        useCase: 'Personal portfolios, lifestyle blogs, and wellness apps.',
+      },
+      {
+        name: 'Matcha & Strawberry Cream',
+        colors: ['#2d3748', '#d4e09b', '#f6f4d2', '#cbdfbd', '#f19cbb'],
+        useCase: 'Bakery menus, artisan confectionary, and cute UI widgets.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can pastel palettes pass WCAG accessibility?',
+        answer:
+          'Yes, by using deep high-contrast text (#18181B) and dark container borders against soft pastel surface backgrounds.',
+      },
+    ],
+    relatedSlugs: ['neutral-color-palette', 'minimalist-color-palette', 'blue-color-palette'],
+  },
+
+  'neutral-color-palette': {
+    slug: 'neutral-color-palette',
+    title: 'Neutral Color Palette Ideas — Minimal Warm & Cool Grays | Chromora',
+    h1: 'Neutral Color Palette Ideas',
+    primaryKeyword: 'neutral color palette',
+    metaDescription:
+      'Explore timeless neutral color palettes featuring warm stone, Scandinavian taupe, architectural slate, and limestone beige with hex codes.',
+    category: 'Aesthetics',
+    intro:
+      'Neutral color palettes form the foundational canvas of premium modern interfaces, interior architecture, and luxury editorial design.',
+    guideSections: [
+      {
+        title: 'Warm vs Cool Neutrals in UI Systems',
+        content:
+          'Warm neutrals (warm stone, oat, linen) evoke organic comfort and hospitality. Cool neutrals (slate, titanium, zinc) project technical precision and modern enterprise clarity.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Warm Travertine Stone & Linen',
+        colors: ['#1c1917', '#44403c', '#a8a29e', '#e7e5e4', '#fafaf9'],
+        useCase: 'Architectural studios, luxury furniture brands, and ceramics portfolios.',
+      },
+      {
+        name: 'Architectural Cool Slate & Mist',
+        colors: ['#0f172a', '#334155', '#64748b', '#cbd5e1', '#f8fafc'],
+        useCase: 'SaaS applications, engineering portals, and technical documentation.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Why should I tint my neutral grays?',
+        answer:
+          'Adding 3% of your primary brand hue into neutral grays harmonizes your whole layout and eliminates cold sterile tones.',
+      },
+    ],
+    relatedSlugs: ['minimalist-color-palette', 'modern-saas-color-palette', 'dark-mode-color-palette'],
+  },
+
+  'dark-mode-color-palette': {
+    slug: 'dark-mode-color-palette',
+    title: 'Dark Mode Color Palette Ideas — OLED & Cinema UI Schemes | Chromora',
+    h1: 'Dark Mode Color Palette Ideas',
+    primaryKeyword: 'dark mode color palette',
+    metaDescription:
+      'Curated dark mode color palettes for mobile apps, SaaS dashboards, code editors, and gaming platforms. Tested for zero eye strain.',
+    category: 'UI & Systems',
+    intro:
+      'Effective dark mode design goes far beyond #000000. Discover layered surface elevations, soft glowing accents, and eye-friendly dark color systems.',
+    guideSections: [
+      {
+        title: 'Layered Surface Elevation Hierarchy',
+        content:
+          'Use progressively lighter dark tones for higher visual elevation: #09090B for page canvas, #18181B for cards, #27272A for hover dropdowns, and #3F3F46 for borders.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Obsidian Velvet & Neon Indigo',
+        colors: ['#09090b', '#18181b', '#27272a', '#6366f1', '#f4f4f5'],
+        useCase: 'Developer SaaS tools, analytics portals, and code IDE themes.',
+      },
+      {
+        name: 'Deep Midnight Slate & Emerald',
+        colors: ['#0f172a', '#1e293b', '#334155', '#10b981', '#f8fafc'],
+        useCase: 'Crypto trading dashboards, mobile wallets, and telemetry systems.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Why should I avoid pure black (#000000) for dark mode?',
+        answer:
+          'Pure black causes harsh optical contrast with pure white text. Deep dark slate (#09090B or #0F172A) reduces eye strain and enables subtle surface elevation shadows.',
+      },
+    ],
+    relatedSlugs: ['modern-saas-color-palette', 'neutral-color-palette', 'brand-color-palette-generator'],
+  },
+
+  'minimalist-color-palette': {
+    slug: 'minimalist-color-palette',
+    title: 'Minimalist Color Palette Ideas — Clean, Simple & Focused Schemes | Chromora',
+    h1: 'Minimalist Color Palette Ideas',
+    primaryKeyword: 'minimalist color palette',
+    metaDescription:
+      'Discover clean, high-impact minimalist color palettes for portfolios, architecture, fashion, and modern branding with hex codes.',
+    category: 'Aesthetics',
+    intro:
+      'Minimalist color palettes eliminate visual noise, letting typography, spatial geometry, and core imagery take center stage.',
+    guideSections: [
+      {
+        title: 'The Art of Monochromatic Contrast',
+        content:
+          'Pairing pure charcoal (#18181B) with warm ivory (#FAFAF9) and a single subtle accent creates timeless editorial sophistication.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Monochrome Studio & Titanium',
+        colors: ['#121212', '#282828', '#505050', '#dcdcdc', '#ffffff'],
+        useCase: 'Photography portfolios, typography showcases, and art galleries.',
+      },
+      {
+        name: 'Editorial Charcoal & Bone White',
+        colors: ['#1c1917', '#57534e', '#a8a29e', '#e7e5e4', '#fdfbf7'],
+        useCase: 'Fashion lookbooks, boutique architecture, and design magazines.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do I add personality to a minimalist palette?',
+        answer:
+          'Use subtle texture, deliberate negative space, and one single high-chroma micro-accent (such as an orange dot or blue badge).',
+      },
+    ],
+    relatedSlugs: ['neutral-color-palette', 'modern-saas-color-palette', 'pastel-color-palette'],
+  },
+
+  'modern-saas-color-palette': {
+    slug: 'modern-saas-color-palette',
+    title: 'Modern SaaS Color Palette Ideas — High-Clarity UI Schemes | Chromora',
+    h1: 'Modern SaaS Color Palette Ideas',
+    primaryKeyword: 'modern saas color palette',
+    metaDescription:
+      'Explore high-converting modern SaaS color schemes for tech startups, product landing pages, dashboards, and mobile web apps.',
+    category: 'UI & Systems',
+    intro:
+      'Modern SaaS color schemes balance high data legibility with vibrant conversion accents that make product interfaces enjoyable to use all day.',
+    guideSections: [
+      {
+        title: 'Optimizing Data Density with Clean Neutrals',
+        content:
+          'Keep table grids and card borders subtle (#E2E8F0 in light mode, #27272A in dark mode) so live metrics and charts remain the visual heroes.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Modern Cloud Indigo & Electric Violet',
+        colors: ['#0f172a', '#1e293b', '#6366f1', '#a855f7', '#f8fafc'],
+        useCase: 'B2B SaaS landing pages, AI developer platforms, and cloud consoles.',
+      },
+      {
+        name: 'Fintech Trust Blue & Emerald Growth',
+        colors: ['#0a192f', '#1e3a8a', '#3b82f6', '#10b981', '#ffffff'],
+        useCase: 'Accounting software, payment portals, and investment trackers.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do I export my SaaS palette to Tailwind CSS?',
+        answer:
+          'Use Chromora’s Design Token Generator to copy ready-to-paste Tailwind color shade configs with one click.',
+      },
+    ],
+    relatedSlugs: ['dark-mode-color-palette', 'blue-color-palette', 'ui-color-palette-generator'],
+  },
+
+  'business-corporate-color-palette': {
+    slug: 'business-corporate-color-palette',
+    title: 'Business & Corporate Color Palette Ideas — Professional Schemes | Chromora',
+    h1: 'Business & Corporate Color Palette Ideas',
+    primaryKeyword: 'business color palette',
+    metaDescription:
+      'Explore professional business color palettes for corporate consulting, law firms, financial institutions, and enterprise branding.',
+    category: 'Industry & Brand',
+    intro:
+      'Corporate color schemes establish immediate fiduciary credibility, authority, and international institutional trust.',
+    guideSections: [
+      {
+        title: 'The Cornerstone Corporate Colors: Navy, Slate, and Gold',
+        content:
+          'Deep navy (#0C2340) and charcoal slate convey institutional stability, while subtle warm gold (#C5A059) conveys bespoke prestige.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Global Advisory Navy & Gold',
+        colors: ['#0a192f', '#172a45', '#3b82f6', '#c5a059', '#fdfbf7'],
+        useCase: 'Management consulting, private wealth firms, and corporate annual reports.',
+      },
+      {
+        name: 'Legal Counsel Slate & Burgundy',
+        colors: ['#18181b', '#3f3f46', '#780016', '#a4133c', '#ffffff'],
+        useCase: 'Law practices, accounting firms, and governance portals.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What color inspires the most business trust?',
+        answer:
+          'Deep navy blue combined with clean white surfaces and slate grays is statistically proven to inspire the highest commercial trust.',
+      },
+    ],
+    relatedSlugs: ['modern-saas-color-palette', 'blue-color-palette', 'neutral-color-palette'],
+  },
+
+  'portfolio-creative-color-palette': {
+    slug: 'portfolio-creative-color-palette',
+    title: 'Portfolio & Creative Color Palette Ideas — Designer Schemes | Chromora',
+    h1: 'Portfolio & Creative Color Palette Ideas',
+    primaryKeyword: 'portfolio color palette',
+    metaDescription:
+      'Discover dynamic color palettes for UI/UX designer portfolios, creative developer showcases, photography blogs, and agency websites.',
+    category: 'Industry & Brand',
+    intro:
+      'Your portfolio color palette frames your work. A bold yet disciplined color palette highlights your case studies without distracting from your craft.',
+    guideSections: [
+      {
+        title: 'Framing Case Studies with High-Contrast Canvas Surfaces',
+        content:
+          'Use crisp neutral backgrounds so screenshot imagery pops, reserving vibrant accents for interactive case study links and contact buttons.',
+      },
+    ],
+    samplePalettes: [
+      {
+        name: 'Creative Horizon Neon & Dark Canvas',
+        colors: ['#09090b', '#18181b', '#ec4899', '#8b5cf6', '#fafafa'],
+        useCase: 'Product designer portfolios, agency homepages, and creative director showcases.',
+      },
+      {
+        name: 'Warm Scandinavian Editorial',
+        colors: ['#1c1917', '#44403c', '#d97706', '#fbbf24', '#fdfbf7'],
+        useCase: 'Architect portfolios, editorial writers, and branding consultants.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Should my portfolio have a light or dark theme?',
+        answer:
+          'Providing an instant theme toggle allows visitors and hiring managers to view your work in their preferred viewing environment.',
+      },
+    ],
+    relatedSlugs: ['minimalist-color-palette', 'modern-saas-color-palette', 'neutral-color-palette'],
+  },
 };
+
+// Comprehensive slug and alias resolver
+export function getCollectionPageData(slug: string): CollectionPageData | undefined {
+  if (!slug) return undefined;
+  const cleanSlug = slug.toLowerCase().trim();
+
+  // 1. Direct key match
+  if (COLLECTION_PAGES[cleanSlug]) {
+    return COLLECTION_PAGES[cleanSlug];
+  }
+
+  // 2. Alias mapping for short topics & palette routes
+  const aliasMap: Record<string, string> = {
+    blue: 'blue-color-palette',
+    'blue-palettes': 'blue-color-palette',
+    green: 'green-color-palette',
+    'green-palettes': 'green-color-palette',
+    purple: 'purple-color-palette',
+    'purple-palettes': 'purple-color-palette',
+    neutral: 'neutral-color-palette',
+    'neutral-palettes': 'neutral-color-palette',
+    pastel: 'pastel-color-palette',
+    'pastel-palettes': 'pastel-color-palette',
+    dark: 'dark-mode-color-palette',
+    'dark-mode': 'dark-mode-color-palette',
+    minimal: 'minimalist-color-palette',
+    minimalist: 'minimalist-color-palette',
+    modern: 'modern-saas-color-palette',
+    saas: 'modern-saas-color-palette',
+    business: 'business-corporate-color-palette',
+    corporate: 'business-corporate-color-palette',
+    portfolio: 'portfolio-creative-color-palette',
+    creative: 'portfolio-creative-color-palette',
+  };
+
+  if (aliasMap[cleanSlug] && COLLECTION_PAGES[aliasMap[cleanSlug]]) {
+    return COLLECTION_PAGES[aliasMap[cleanSlug]];
+  }
+
+  // 3. Fallback matching with "-color-palette" or "-palette" appended
+  const withColorPalette = `${cleanSlug}-color-palette`;
+  if (COLLECTION_PAGES[withColorPalette]) {
+    return COLLECTION_PAGES[withColorPalette];
+  }
+
+  const withPalette = `${cleanSlug}-palette`;
+  if (COLLECTION_PAGES[withPalette]) {
+    return COLLECTION_PAGES[withPalette];
+  }
+
+  const withGenerator = `${cleanSlug}-generator`;
+  if (COLLECTION_PAGES[withGenerator]) {
+    return COLLECTION_PAGES[withGenerator];
+  }
+
+  return undefined;
+}

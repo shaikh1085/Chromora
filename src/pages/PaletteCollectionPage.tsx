@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { COLLECTION_PAGES, CollectionPageData, SamplePalette } from '../data/collectionPagesData';
+import { getCollectionPageData, COLLECTION_PAGES, CollectionPageData, SamplePalette } from '../data/collectionPagesData';
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { FAQSection } from '../components/common/FAQSection';
@@ -23,7 +23,7 @@ export const PaletteCollectionPage: React.FC<{
   slug: string;
   navigate: (route: string) => void;
 }> = ({ slug, navigate }) => {
-  const data: CollectionPageData | undefined = COLLECTION_PAGES[slug];
+  const data: CollectionPageData | undefined = getCollectionPageData(slug);
   const { setPaletteFromHexList, setActiveHex, copyToClipboard, showToast } = usePalette();
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
@@ -33,10 +33,10 @@ export const PaletteCollectionPage: React.FC<{
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Collection Not Found</h1>
         <p className="mt-2 text-sm text-[var(--text-secondary)]">The requested collection does not exist.</p>
         <a
-          href="/saved-palettes"
+          href="/palettes"
           onClick={(e) => {
             e.preventDefault();
-            navigate('/saved-palettes');
+            navigate('/palettes');
           }}
           className="mt-6 inline-block px-4 py-2 rounded-xl btn-accent font-bold text-xs"
         >
@@ -74,7 +74,7 @@ export const PaletteCollectionPage: React.FC<{
             'design tokens',
           ],
           breadcrumbs: [
-            { name: 'Color Collections', url: '/saved-color-palettes' },
+            { name: 'Palette Collections', url: '/palettes' },
             { name: data.h1, url: `/${data.slug}` },
           ],
           faqs: data.faqs,
@@ -89,7 +89,7 @@ export const PaletteCollectionPage: React.FC<{
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs
           items={[
-            { name: 'Color Collections', url: '/saved-color-palettes' },
+            { name: 'Palette Collections', url: '/palettes' },
             { name: data.h1, url: `/${data.slug}`, isCurrent: true },
           ]}
           onNavigate={navigate}
@@ -253,11 +253,11 @@ export const PaletteCollectionPage: React.FC<{
                     <Eye className="w-3.5 h-3.5" />
                   </a>
                   <a
-                    href="/contrast-checker"
+                    href="/wcag-contrast-checker"
                     onClick={(e) => {
                       e.preventDefault();
                       handleApplyPalette(palette);
-                      navigate('/contrast-checker');
+                      navigate('/wcag-contrast-checker');
                     }}
                     className="p-2 rounded-xl hover:bg-[var(--surface-glass-active)] text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors inline-flex items-center justify-center"
                     title="Check WCAG Contrast"
@@ -366,10 +366,10 @@ export const PaletteCollectionPage: React.FC<{
               <p className="text-[11px] text-[var(--text-muted)] mt-1">Simulate colors on real UI components & mockups.</p>
             </a>
             <a
-              href="/contrast-checker"
+              href="/wcag-contrast-checker"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/contrast-checker');
+                navigate('/wcag-contrast-checker');
               }}
               className="p-4 rounded-2xl bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-active)] border border-[var(--border-glass-subtle)] text-left transition-all hover:border-[var(--accent)] block"
             >
@@ -377,10 +377,10 @@ export const PaletteCollectionPage: React.FC<{
               <p className="text-[11px] text-[var(--text-muted)] mt-1">Verify text accessibility and compliance.</p>
             </a>
             <a
-              href="/design-tokens"
+              href="/color-palette-generator"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/design-tokens');
+                navigate('/color-palette-generator');
               }}
               className="p-4 rounded-2xl bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-active)] border border-[var(--border-glass-subtle)] text-left transition-all hover:border-[var(--accent)] block"
             >

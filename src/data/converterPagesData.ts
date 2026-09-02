@@ -492,7 +492,67 @@ export const CONVERTER_PAGES: Record<string, ConverterPageData> = {
           'Click the "Contrast Checker" link to test foreground and background readability against WCAG 2.1 AA and AAA standards.',
       },
     ],
-    relatedSlugs: ['hex-to-oklch', 'hsl-to-hex', 'rgb-to-hex', 'cmyk-to-hex'],
+    relatedSlugs: ['oklch-converter', 'hex-to-oklch', 'hsl-to-hex', 'rgb-to-hex', 'cmyk-to-hex'],
+  },
+
+  'oklch-converter': {
+    slug: 'oklch-converter',
+    fromFormat: 'hex',
+    toFormat: 'oklch',
+    title: 'OKLCH Color Converter — Perceptual Color Space Tool | Chromora',
+    h1: 'OKLCH Color Converter',
+    primaryKeyword: 'oklch color converter',
+    metaDescription:
+      'Free OKLCH color converter and explorer. Convert HEX, RGB, and HSL to modern CSS OKLCH values with perceptual lightness, chroma, and hue angle math.',
+    formula: 'RGB -> linear RGB -> Oklab (L, a, b) -> OKLCH (L, C = sqrt(a² + b²), H = atan2(b, a))',
+    sampleDefault: '#6366F1',
+    intro:
+      'The OKLCH Color Converter transforms standard screen colors (HEX, RGB, HSL) into CSS Color Module Level 4 OKLCH coordinates, giving designers and developers predictable perceptual lightness and wide-gamut vibrancy.',
+    guideSections: [
+      {
+        title: 'What Is the OKLCH Color Model?',
+        content:
+          'OKLCH is a cylindrical representation of the Oklab color space designed by Björn Ottosson in 2020. It models human vision with extraordinary mathematical precision by decoupling perceived lightness (L), chroma/saturation (C), and hue angle (H).',
+      },
+      {
+        title: 'Why OKLCH Outperforms HSL for Design Systems',
+        content:
+          'In HSL, blue at 50% lightness appears dramatically darker to human eyes than yellow at 50% lightness. In OKLCH, all colors with L=0.70 have the exact same perceived brightness. This makes automated shade generation, dark mode contrast calculation, and accessible UI palette generation mathematically foolproof.',
+      },
+      {
+        title: 'Using OKLCH in Tailwind CSS and Modern Web Apps',
+        content:
+          'Tailwind CSS v4 and all modern browsers (Chrome 111+, Safari 15.4+, Firefox 113+) support OKLCH natively. Defining your design tokens in OKLCH enables wide-gamut Display P3 colors on mobile devices and HDR monitors.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do I use OKLCH colors in CSS stylesheets?',
+        answer:
+          'Simply write `color: oklch(0.62 0.22 264);` or add opacity with `background-color: oklch(0.62 0.22 264 / 0.8);` directly in your CSS files.',
+      },
+      {
+        question: 'What is the maximum Chroma value in OKLCH?',
+        answer:
+          'Chroma typically ranges from 0.0 (neutral gray) to ~0.37 for the most intense sRGB/P3 colors, though higher values are theoretically possible in extreme HDR gamuts.',
+      },
+      {
+        question: 'Does OKLCH work across all modern web browsers?',
+        answer:
+          'Yes, OKLCH has baseline support across Chrome, Safari, Firefox, Edge, and iOS Safari.',
+      },
+      {
+        question: 'Can I convert OKLCH back to standard HEX and RGB?',
+        answer:
+          'Yes, use the OKLCH to HEX converter or click the reciprocal conversion links on this page.',
+      },
+      {
+        question: 'How do I build accessible dark mode themes with OKLCH?',
+        answer:
+          'Because lightness is perceptually linear in OKLCH, you can reliably calculate dark mode background and surface contrast by adjusting the L parameter systematically.',
+      },
+    ],
+    relatedSlugs: ['hex-to-oklch', 'oklch-to-hex', 'hex-to-rgb', 'rgb-to-hex'],
   },
 
   'rgb-to-hsl': {

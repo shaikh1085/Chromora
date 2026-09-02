@@ -305,10 +305,10 @@ export const ColorExplorerTool: React.FC<{ navigate: (route: string) => void }> 
 
               <div className="pt-2 flex flex-col gap-2">
                 <a
-                  href="/contrast-checker"
+                  href="/wcag-contrast-checker"
                   onClick={(e) => {
                     e.preventDefault();
-                    navigate('/contrast-checker');
+                    navigate('/wcag-contrast-checker');
                   }}
                   className="w-full flex items-center justify-between p-3 rounded-xl bg-zinc-50 dark:bg-zinc-950 hover:bg-zinc-100 dark:hover:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-800 text-xs font-semibold text-zinc-800 dark:text-zinc-200 transition-colors"
                 >

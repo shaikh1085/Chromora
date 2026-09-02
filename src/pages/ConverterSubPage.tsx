@@ -229,11 +229,11 @@ export const ConverterSubPage: React.FC<{
               {/* Action Links */}
               <div className="flex items-center gap-2 pt-1 flex-wrap">
                 <a
-                  href="/contrast-checker"
+                  href="/wcag-contrast-checker"
                   onClick={(e) => {
                     e.preventDefault();
                     setActiveHex(colorData.hex);
-                    navigate('/contrast-checker');
+                    navigate('/wcag-contrast-checker');
                   }}
                   className="text-xs font-semibold text-[var(--accent)] hover:underline flex items-center gap-1"
                 >
@@ -392,10 +392,10 @@ export const ConverterSubPage: React.FC<{
               <p className="text-[11px] text-[var(--text-muted)] mt-1">Generate 2 to 10 color harmonious palettes.</p>
             </a>
             <a
-              href="/contrast-checker"
+              href="/wcag-contrast-checker"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('/contrast-checker');
+                navigate('/wcag-contrast-checker');
               }}
               className="p-4 rounded-2xl bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-active)] border border-[var(--border-glass-subtle)] text-left transition-all hover:border-[var(--accent)] block"
             >

@@ -140,7 +140,7 @@ export const ContrastCheckerTool: React.FC<{ navigate: (route: string) => void }
             'color blindness contrast simulator',
             'ada compliance color contrast tool',
           ],
-          canonicalUrl: 'https://chromoraflow.vercel.app/contrast-checker',
+          canonicalUrl: 'https://chromoraflow.vercel.app/wcag-contrast-checker',
           faqs: contrastFaqs,
           softwareApp: {
             name: 'Chromora WCAG Contrast Checker',
@@ -152,7 +152,7 @@ export const ContrastCheckerTool: React.FC<{ navigate: (route: string) => void }
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs
-          items={[{ name: 'Contrast Checker', url: '/contrast-checker', isCurrent: true }]}
+          items={[{ name: 'WCAG Contrast Checker', url: '/wcag-contrast-checker', isCurrent: true }]}
           onNavigate={navigate}
         />
 
@@ -574,6 +574,69 @@ export const ContrastCheckerTool: React.FC<{ navigate: (route: string) => void }
           title="Color Accessibility & WCAG Standard FAQ"
           subtitle="Learn how to architect WCAG 2.1 AA/AAA compliant digital experiences."
         />
+
+        {/* Related Accessibility & Design Tools */}
+        <div className="mt-16 pt-10 border-t border-[var(--border-glass)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h3 className="text-xl font-bold text-[var(--text-primary)]">
+                Related Accessibility & Color Tools
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] mt-1">
+                Complementary tools to audit, generate, and test color systems.
+              </p>
+            </div>
+            <button
+              onClick={() => navigate('/accessibility-tools')}
+              className="text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1 self-start"
+            >
+              <span>View All Accessibility Tools</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: 'Color Blindness Simulator',
+                desc: 'Simulate 8 visual spectrum variations on UI palettes and images.',
+                route: '/color-blindness-simulator',
+              },
+              {
+                title: 'Color Palette Generator',
+                desc: 'Build accessible 5-color harmonies with locking and export.',
+                route: '/color-palette-generator',
+              },
+              {
+                title: 'Design Preview Studio',
+                desc: 'Preview accessible contrast pairings across realistic UI prototypes.',
+                route: '/design-preview',
+              },
+              {
+                title: 'Tailwind Shades Generator',
+                desc: 'Generate 50-950 color scales optimized for digital accessibility.',
+                route: '/color-shades-generator',
+              },
+            ].map((tool, idx) => (
+              <div
+                key={idx}
+                onClick={() => navigate(tool.route)}
+                className="p-5 rounded-2xl border border-[var(--border-glass)] bg-[var(--surface-glass-card)] hover:border-[var(--accent)] cursor-pointer transition-all group"
+              >
+                <h4 className="text-sm font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+                  {tool.title}
+                </h4>
+                <p className="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed">
+                  {tool.desc}
+                </p>
+                <div className="mt-4 flex items-center text-xs font-semibold text-[var(--accent)]">
+                  <span>Open Tool</span>
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

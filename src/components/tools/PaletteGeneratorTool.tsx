@@ -701,6 +701,69 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
           title="Palette Generation Science & FAQ"
           subtitle="Learn how to orchestrate harmonious palettes and scale them into design tokens."
         />
+
+        {/* Related Tools & Palette Hub */}
+        <div className="mt-16 pt-10 border-t border-[var(--border-glass)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h3 className="text-xl font-bold text-[var(--text-primary)]">
+                Related Palette & Color Tools
+              </h3>
+              <p className="text-xs text-[var(--text-secondary)] mt-1">
+                Explore more tools to discover, extract, and convert harmonious colors.
+              </p>
+            </div>
+            <button
+              onClick={() => navigate('/palette-tools')}
+              className="text-xs font-bold text-[var(--accent)] hover:underline flex items-center gap-1 self-start"
+            >
+              <span>View All Palette Tools</span>
+              <span>→</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: 'AI Color Palette Generator',
+                desc: 'Generate contextual schemes from natural language descriptions.',
+                route: '/ai-palette-generator',
+              },
+              {
+                title: 'Interactive Color Wheel',
+                desc: 'Explore 360° chromatic wheels with real-time harmony geometries.',
+                route: '/color-wheel',
+              },
+              {
+                title: 'Image to Palette Extractor',
+                desc: 'Upload any photo or UI mockup to extract dominant color swatches.',
+                route: '/image-color-extractor',
+              },
+              {
+                title: 'CSS Gradient Studio',
+                desc: 'Design linear, radial, and conic CSS gradients with multi-stop blending.',
+                route: '/gradient-generator',
+              },
+            ].map((tool, idx) => (
+              <div
+                key={idx}
+                onClick={() => navigate(tool.route)}
+                className="p-5 rounded-2xl border border-[var(--border-glass)] bg-[var(--surface-glass-card)] hover:border-[var(--accent)] cursor-pointer transition-all group"
+              >
+                <h4 className="text-sm font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors">
+                  {tool.title}
+                </h4>
+                <p className="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed">
+                  {tool.desc}
+                </p>
+                <div className="mt-4 flex items-center text-xs font-semibold text-[var(--accent)]">
+                  <span>Open Tool</span>
+                  <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Share & Social Cards Modal */}

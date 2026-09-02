@@ -1225,12 +1225,53 @@ export function hexToSlug(name: string, hex: string): string {
 }
 
 export function parseSlugToHex(slug: string): string {
-  const parts = slug.split('-');
+  if (!slug) return '#0b4f6c';
+
+  const cleanSlug = slug.toLowerCase().trim();
+
+  // 1. Direct hex match (e.g. "6366f1" or "#6366f1")
+  const directHex = cleanSlug.replace('#', '');
+  if (/^[0-9a-fA-F]{6}$/.test(directHex) || /^[0-9a-fA-F]{3}$/.test(directHex)) {
+    return `#${directHex.toLowerCase()}`;
+  }
+
+  // 2. Trailing hex in slug (e.g. "navy-blue-000080" or "deep-ocean-blue-0b4f6c")
+  const parts = cleanSlug.split('-');
   const lastPart = parts[parts.length - 1];
   if (/^[0-9a-fA-F]{6}$/.test(lastPart) || /^[0-9a-fA-F]{3}$/.test(lastPart)) {
     return `#${lastPart.toLowerCase()}`;
   }
-  return '#0b4f6c'; // Fallback default
+
+  // 3. CSS Named color match without dashes (e.g. "royalblue", "navy", "coral", "forestgreen")
+  const noDash = cleanSlug.replace(/-/g, '');
+  if (CSS_NAMED_COLORS[noDash]) {
+    return CSS_NAMED_COLORS[noDash];
+  }
+
+  // 4. Match in COLOR_NAMES_DB by slugified color name
+  const found = COLOR_NAMES_DB.find((item) => {
+    const itemSlug = item.name
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-');
+    return itemSlug === cleanSlug;
+  });
+
+  if (found) {
+    return found.hex;
+  }
+
+  // 5. Partial/Fuzzy lookup in COLOR_NAMES_DB
+  const partial = COLOR_NAMES_DB.find((item) =>
+    cleanSlug.split('-').every((word) => item.name.toLowerCase().includes(word))
+  );
+
+  if (partial) {
+    return partial.hex;
+  }
+
+  return '#0b4f6c'; // Safe fallback default
 }
 
 // Suggest accessible color variants for contrast

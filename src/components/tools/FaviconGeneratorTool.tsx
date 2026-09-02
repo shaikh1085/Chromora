@@ -590,10 +590,10 @@ export const FaviconGeneratorTool: React.FC<{ navigate: (route: string) => void 
           </a>
 
           <a
-            href="/contrast-checker"
+            href="/wcag-contrast-checker"
             onClick={(e) => {
               e.preventDefault();
-              navigate('/contrast-checker');
+              navigate('/wcag-contrast-checker');
             }}
             className="p-4 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:border-indigo-500 transition-colors block group"
           >
