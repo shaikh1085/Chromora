@@ -292,7 +292,7 @@
 /* Mobile backdrop performance optimizations */
 @media (max-width: 640px) {
   :root {
-    --glass-blur: 14px;
+    --glass-blur: 8px;
   }
 }
 

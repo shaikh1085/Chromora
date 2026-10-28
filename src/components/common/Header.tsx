@@ -890,6 +890,19 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, navigate, onOpenSe
               <span>{t.exportTokens}</span>
             </button>
 
+            {/* 7. Open Color Picker CTA */}
+            <a
+              href="/color-picker"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNav('/color-picker');
+              }}
+              className="hidden sm:flex items-center gap-1.5 px-3 xl:px-3.5 py-1.5 rounded-xl text-xs font-bold border border-[var(--accent-border)] bg-[var(--accent-soft)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-all shadow-xs whitespace-nowrap shrink-0"
+            >
+              <Compass className="w-3.5 h-3.5" />
+              <span>Open Color Picker</span>
+            </a>
+
             {/* Mobile menu toggle button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

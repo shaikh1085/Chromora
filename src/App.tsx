@@ -152,7 +152,7 @@ export function AppContent() {
     const slug = path.replace(/^\//, '');
 
     if (path === '/' || path === '/home') {
-      return <HomePage navigate={navigate} />;
+      return <HomePage navigate={navigate} onOpenSearch={() => setIsQuickSearchOpen(true)} />;
     }
 
     // Core Tool Routes & Aliases
