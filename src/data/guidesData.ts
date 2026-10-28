@@ -394,7 +394,7 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
         badge: 'Preview',
       },
     ],
-    relatedGuides: ['how-to-choose-website-colors', 'what-is-oklch', 'color-theory-for-web-design'],
+    relatedGuides: ['color-blind-friendly-palettes', 'how-to-choose-website-colors', 'what-is-oklch', 'color-theory-for-web-design'],
     faqs: [
       {
         question: 'Does placeholder text in form inputs need to meet WCAG AA contrast?',
@@ -671,7 +671,7 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
     h1: 'Color Theory for Web Design: Psychology, Contrast & Harmony',
     primaryKeyword: 'color theory for web design',
     metaDescription:
-      'Learn fundamental color theory applied to web design and UI development. Discover additive vs subtractive color, visual weight, emotional psychology, and UI contrast.',
+      'Learn fundamental color theory applied to web design and UI development, with practical color theory tools and examples. Discover additive vs subtractive color, visual weight, emotional psychology, and UI contrast.',
     readTime: '8 min read',
     category: 'Color Theory',
     publishDate: '2026-09-01',
@@ -718,6 +718,174 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
         question: 'Why do so many tech websites use blue?',
         answer:
           'Blue is universally associated with calm, security, logic, and dependability. It also boasts the highest color vision accessibility rates among all chromatic hues.',
+      },
+    ],
+  },
+
+  'color-blind-friendly-palettes': {
+    slug: 'color-blind-friendly-palettes',
+    title: 'Color-Blind-Friendly Palettes — Design Palettes Everyone Can Read',
+    h1: 'Color-Blind-Friendly Palettes: Designing for Color Vision Deficiency',
+    primaryKeyword: 'color blind friendly palette generator',
+    metaDescription:
+      'Learn how to design color-blind-friendly palettes that stay readable for people with protanopia, deuteranopia, and tritanopia. Safe color combinations, contrast rules, and testing tips.',
+    readTime: '6 min read',
+    category: 'Accessibility',
+    publishDate: '2026-10-27',
+    lastUpdated: '2026-10-27',
+    summary:
+      'Around 8% of men and 0.5% of women live with color vision deficiency. A palette that looks perfect to you can be unreadable to them — this guide shows how to pick combinations that work for everyone.',
+    sections: [
+      {
+        id: 'what-it-means',
+        heading: 'What Makes a Palette Color-Blind-Friendly?',
+        content:
+          'A color-blind-friendly palette keeps its meaning even when some hues become hard to tell apart. The most common deficiencies shift red-green perception (protanopia and deuteranopia) and, more rarely, blue-yellow perception (tritanopia). A friendly palette therefore never relies on red-vs-green alone: it varies lightness and uses labels, icons, or patterns as a second signal.',
+        callout: {
+          type: 'tip',
+          title: 'The One Rule',
+          text: 'If removing color from your design also removes meaning, the palette is not accessible yet. Add a second cue — an icon, a label, or a pattern — alongside every color-coded state.',
+        },
+      },
+      {
+        id: 'safe-combinations',
+        heading: 'Safe Color Combinations (and Combinations to Avoid)',
+        content:
+          '• Safe pairs: blue + orange, blue + vermilion, purple + yellow-green, black + white, dark blue + sky blue.\n• Risky pairs: red + green, green + brown, blue + purple, pink + gray, light green + yellow.\n• The classic color-blind-safe set used in scientific charts is: black (#000000), orange (#E69F00), sky blue (#56B4E9), bluish green (#009E73), yellow (#F0E442), blue (#0072B2), vermilion (#D55E00), and reddish purple (#CC79A7).',
+      },
+      {
+        id: 'contrast-and-lightness',
+        heading: 'Use Lightness, Not Just Hue',
+        content:
+          'Two colors can look identical to a color-blind viewer even when their hues differ, if their lightness is the same. Keep a clear lightness gap between colors that must be distinguished — for example, pair a dark blue with a light orange rather than a mid blue with a mid orange. Then verify the pair passes WCAG AA contrast (4.5:1 for normal text) regardless of hue.',
+      },
+      {
+        id: 'testing',
+        heading: 'How to Test Your Palette Before Shipping',
+        content:
+          'Run every palette through a simulator for protanopia, deuteranopia, tritanopia, and achromatopsia, and check the result in grayscale. If two swatches merge into one in any simulation, change one of them — shift its lightness first, then its hue. Re-test after every change, because fixing one pair can break another.',
+      },
+    ],
+    relatedTools: [
+      {
+        name: 'Color Blindness Simulator',
+        route: '/color-blindness-simulator',
+        description: 'Simulate your palette under 8 color vision deficiencies.',
+        badge: 'Daltonism',
+      },
+      {
+        name: 'WCAG Contrast Checker',
+        route: '/wcag-contrast-checker',
+        description: 'Verify AA/AAA contrast for every color pair in your palette.',
+        badge: 'Accessibility',
+      },
+      {
+        name: 'Color Palette Generator',
+        route: '/color-palette-generator',
+        description: 'Build accessible palettes with live contrast auditing.',
+        badge: 'Generator',
+      },
+    ],
+    relatedGuides: ['color-contrast-accessibility', 'how-to-choose-website-colors', 'color-theory-for-web-design'],
+    faqs: [
+      {
+        question: 'What is a color-blind-friendly palette?',
+        answer:
+          'A palette whose colors stay distinguishable for people with color vision deficiency. It avoids relying on red-vs-green differences, keeps a clear lightness gap between colors, and pairs color cues with icons or labels.',
+      },
+      {
+        question: 'Which color combinations should I avoid?',
+        answer:
+          'Avoid red with green, green with brown, blue with purple, and pink with gray — these are the pairs most often confused under protanopia and deuteranopia. Prefer blue with orange, or blue with vermilion, which stay distinct across deficiencies.',
+      },
+      {
+        question: 'How do I test if my palette is color-blind-friendly?',
+        answer:
+          'Simulate it under protanopia, deuteranopia, tritanopia, and achromatopsia, and also view it in grayscale. If any two swatches become indistinguishable in a simulation, adjust the lightness of one swatch and test again.',
+      },
+    ],
+  },
+
+  'diwali-decoration-colors': {
+    slug: 'diwali-decoration-colors',
+    title: 'Diwali Decoration Colors — Traditional & Modern Diwali Color Ideas',
+    h1: 'Diwali Decoration Colors: Traditional Meanings & Modern Combinations',
+    primaryKeyword: 'diwali decoration colors',
+    metaDescription:
+      'Discover the colors of Diwali decorations: marigold yellow, vermilion red, molten gold, and peacock green. Meanings, traditional combinations, and modern palettes for homes and designs.',
+    readTime: '5 min read',
+    category: 'UI & Web Design',
+    publishDate: '2026-10-27',
+    lastUpdated: '2026-10-27',
+    summary:
+      'Diwali decorations glow with marigold garlands, clay diyas, rangoli powders, and fireworks. This guide explains what each traditional color means and how to combine them for homes, events, and festive designs.',
+    sections: [
+      {
+        id: 'traditional-colors',
+        heading: 'What Colors Are Commonly Used in Diwali Decorations?',
+        content:
+          'The classic Diwali palette is warm and luminous: marigold yellow (#FBBF24) from garlands, vermilion red (#E11D48) from sindoor and rangoli, molten gold (#FFD700) from diya flames and ornaments, deep green (#059669) from mango leaves, and peacock blue (#0C4A6E) from rangoli art. These colors are set against twilight navy or warm cream backgrounds so the lights stand out.',
+      },
+      {
+        id: 'meanings',
+        heading: 'What Each Traditional Color Means',
+        content:
+          '• Marigold yellow and orange: prosperity, happiness, and the warmth of welcoming guests.\n• Red and vermilion: energy, celebration, and good fortune.\n• Gold: wealth, light over darkness, and the glow of diyas.\n• Green: nature, harmony, and fresh beginnings.\n• White and cream: purity and calm — used to balance the brighter festive tones.',
+      },
+      {
+        id: 'rangoli-and-diyas',
+        heading: 'Rangoli and Diya Color Combinations',
+        content:
+          'Rangoli designs pair jewel tones — peacock blue, deep fuchsia, emerald green, and turmeric yellow — in balanced geometric blocks so the pattern stays readable from a distance. Diya arrangements work best with flame oranges and golds on a dark surface, such as midnight navy or deep brown, which makes the flames appear brighter.',
+      },
+      {
+        id: 'modern-combinations',
+        heading: 'Modern Diwali Palettes for Homes and Designs',
+        content:
+          'For a contemporary look, pair deep navy with gold foiling and a single jewel highlight for luxury, or use cream, blush pink, and soft gold for a calm modern home. For posters and packaging, keep one dominant warm color, one deep contrast color, and one metallic accent — more than three strong colors quickly turns festive into cluttered.',
+        callout: {
+          type: 'tip',
+          title: 'Design Tip',
+          text: 'Use gold sparingly as an accent. A little metallic gold reads as festive luxury; too much gold on gold disappears.',
+        },
+      },
+    ],
+    relatedTools: [
+      {
+        name: 'Color Palette Generator',
+        route: '/color-palette-generator',
+        description: 'Turn Diwali color ideas into complete festive palettes.',
+        badge: 'Generator',
+      },
+      {
+        name: 'Color Mixer',
+        route: '/color-mixer',
+        description: 'Blend marigold, gold, and jewel tones into custom festive shades.',
+        badge: 'Mixer',
+      },
+      {
+        name: 'Color Picker & Explorer',
+        route: '/color-picker',
+        description: 'Inspect exact hex codes for every Diwali shade.',
+        badge: 'Explorer',
+      },
+    ],
+    relatedGuides: ['color-theory-for-web-design', 'how-to-create-a-color-palette', 'color-contrast-accessibility'],
+    faqs: [
+      {
+        question: 'What colors are commonly used in Diwali decorations?',
+        answer:
+          'Marigold yellow, vermilion red, molten gold, deep green, and peacock blue are the most common Diwali decoration colors. They come from marigold garlands, rangoli powders, clay diya flames, and festive fabrics, usually set against twilight navy or warm cream.',
+      },
+      {
+        question: 'What color combinations work best for Diwali?',
+        answer:
+          'Marigold yellow with deep red, gold with midnight navy, and peacock blue with fuchsia and emerald are classic combinations. For a modern look, pair cream with blush pink and soft gold, or navy with gold foiling and one jewel highlight.',
+      },
+      {
+        question: 'Which Diwali colors should I use for a poster or invitation?',
+        answer:
+          'Pick one dominant warm color (marigold or red), one deep contrast color (navy or dark brown), and one metallic accent (gold). This keeps the design festive but readable, and works for both print and social media.',
       },
     ],
   },

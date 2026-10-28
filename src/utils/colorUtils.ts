@@ -621,6 +621,32 @@ export function getNearestColorName(hex: string): { name: string; hex: string; d
   return closest;
 }
 
+// Find the N closest human-readable names from the database, sorted by
+// the same weighted Euclidean RGB distance used by getNearestColorName.
+export function getNearestColorNames(
+  hex: string,
+  count = 5
+): { name: string; hex: string; distance: number }[] {
+  const targetRgb = hexToRgb(hex);
+  const scored = COLOR_NAMES_DB.map((item) => {
+    const itemRgb = hexToRgb(item.hex);
+    const dr = targetRgb.r - itemRgb.r;
+    const dg = targetRgb.g - itemRgb.g;
+    const db = targetRgb.b - itemRgb.b;
+    const dist = Math.sqrt(2 * dr * dr + 4 * dg * dg + 3 * db * db);
+    return { name: item.name, hex: item.hex, distance: Math.round(dist) };
+  });
+  scored.sort((a, b) => a.distance - b.distance);
+  const seen = new Set<string>();
+  const unique = scored.filter((entry) => {
+    const key = `${entry.name.toLowerCase()}|${entry.hex.toLowerCase()}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  return unique.slice(0, count);
+}
+
 // Classify color into high-level visual family
 export function getColorFamily(rgb: RGB, hsl: HSL): ColorFamily {
   const { s, l } = hsl;

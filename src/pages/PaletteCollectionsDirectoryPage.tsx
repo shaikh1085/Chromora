@@ -191,7 +191,7 @@ export const PaletteCollectionsDirectoryPage: React.FC<{
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <button
-              onClick={() => navigate('/generator')}
+              onClick={() => navigate('/color-palette-generator')}
               className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-md transition-all flex items-center gap-2"
             >
               <Sparkles className="w-3.5 h-3.5" />

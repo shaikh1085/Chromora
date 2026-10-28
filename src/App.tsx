@@ -42,6 +42,9 @@ const ShadesTintsGeneratorTool = lazy(() =>
 const ColorMixerTool = lazy(() =>
   import('./components/tools/ColorMixerTool').then((m) => ({ default: m.ColorMixerTool }))
 );
+const ColorNameFinderTool = lazy(() =>
+  import('./components/tools/ColorNameFinderTool').then((m) => ({ default: m.ColorNameFinderTool }))
+);
 const ColorBlindnessSimulatorTool = lazy(() =>
   import('./components/tools/ColorBlindnessSimulatorTool').then((m) => ({ default: m.ColorBlindnessSimulatorTool }))
 );
@@ -93,7 +96,7 @@ const NotFoundPage = lazy(() =>
 );
 
 const PageLoadingFallback: React.FC = () => (
-  <div className="min-h-[50vh] flex flex-col items-center justify-center p-8 space-y-3" role="status" aria-live="polite">
+  <div className="min-h-svh flex flex-col items-center justify-center p-8 space-y-3" role="status" aria-live="polite">
     <div
       className="w-9 h-9 rounded-full border-2 border-[var(--border-glass)] border-t-[var(--accent)] animate-spin"
       aria-hidden="true"
@@ -204,6 +207,10 @@ export function AppContent() {
 
     if (path === '/color-mixer' || path === '/color-blend' || path === '/color-blender') {
       return <ColorMixerTool navigate={navigate} />;
+    }
+
+    if (path === '/color-name-finder' || path === '/find-color-name' || path === '/hex-to-color-name') {
+      return <ColorNameFinderTool navigate={navigate} />;
     }
 
     if (

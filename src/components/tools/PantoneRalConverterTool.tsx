@@ -117,7 +117,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
   const seoConfig: SEOConfig = {
     title: 'Pantone & RAL Color Converter: HEX to PMS & RAL Classic Match',
     description:
-      'Convert HEX, RGB, and digital colors to the closest Pantone Solid Coated (PMS) and RAL Classic standards with accurate Delta E perceptual distance scores.',
+      'Match any HEX or RGB color to the closest Pantone Solid Coated (PMS) and RAL Classic standards, with accurate Delta E perceptual distance scores — the fastest way to match RAL to Pantone or convert RGB to PMS.',
     canonicalUrl: 'https://chromoraflow.vercel.app/pantone-color-converter',
     keywords: [
       'pantone color converter',
@@ -128,6 +128,9 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
       'pms color finder',
       'pantone match online',
       'ral to hex converter',
+      'match ral to pantone',
+      'rgb to pms',
+      'rgb to pantone',
     ],
     breadcrumbs: [
       { name: 'Home', url: 'https://chromoraflow.vercel.app/' },

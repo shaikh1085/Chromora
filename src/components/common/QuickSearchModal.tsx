@@ -76,9 +76,9 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
     { title: 'Palette Collections Directory', route: '/palettes', icon: FolderHeart, category: 'Collection' },
     { title: 'Color Guides & Theory Articles', route: '/guides', icon: BookOpen, category: 'Guide' },
     { title: 'HEX vs RGB vs HSL Guide', route: '/guides/hex-vs-rgb-vs-hsl', icon: BookOpen, category: 'Guide' },
-    { title: 'Color Theory for UI Designers', route: '/guides/color-theory-for-designers', icon: BookOpen, category: 'Guide' },
-    { title: 'WCAG Accessible Color Palettes Guide', route: '/guides/accessible-color-palettes-wcag', icon: BookOpen, category: 'Guide' },
-    { title: 'Modern OKLCH Color Space Guide', route: '/guides/oklch-color-space-guide', icon: BookOpen, category: 'Guide' },
+    { title: 'Color Theory for Web Design', route: '/guides/color-theory-for-web-design', icon: BookOpen, category: 'Guide' },
+    { title: 'Color Contrast Accessibility Guide', route: '/guides/color-contrast-accessibility', icon: BookOpen, category: 'Guide' },
+    { title: 'What is OKLCH? Guide', route: '/guides/what-is-oklch', icon: BookOpen, category: 'Guide' },
     { title: 'Saved Palettes Vault', route: '/saved-palettes', icon: Bookmark, category: 'Tool' },
     { title: 'Named Colors Encyclopedia', route: '/colors', icon: Layers, category: 'Tool' },
   ];

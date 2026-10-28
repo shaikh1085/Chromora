@@ -62,10 +62,10 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
   const guideArticles = [
     { label: 'All Color Guides & Theory', route: '/guides' },
     { label: 'HEX vs RGB vs HSL Explained', route: '/guides/hex-vs-rgb-vs-hsl' },
-    { label: 'Color Theory for UI Designers', route: '/guides/color-theory-for-designers' },
-    { label: 'WCAG Accessible Color Palettes', route: '/guides/accessible-color-palettes-wcag' },
-    { label: 'Modern OKLCH Color Space', route: '/guides/oklch-color-space-guide' },
-    { label: 'Creating UI Dark Mode Palettes', route: '/guides/creating-dark-mode-color-palettes' },
+    { label: 'Color Theory for Web Design', route: '/guides/color-theory-for-web-design' },
+    { label: 'Color Contrast Accessibility (WCAG)', route: '/guides/color-contrast-accessibility' },
+    { label: 'What is OKLCH?', route: '/guides/what-is-oklch' },
+    { label: 'How to Create a Color Palette', route: '/guides/how-to-create-a-color-palette' },
   ];
 
   const legalLinks = [
@@ -286,7 +286,7 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
 
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-[var(--border-glass-subtle)] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[var(--text-muted)]">
-          <p>© {new Date().getFullYear()} Chromora Labs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Chromora Labs. All rights reserved. Last updated: 26 October 2026.</p>
           <div className="flex items-center gap-6">
             <a
               href="/privacy"
