@@ -490,6 +490,23 @@ export const ColorBlindnessSimulatorTool: React.FC<{ navigate: (route: string) =
           </a>
 
           <a
+            href="/guides/color-blind-friendly-palettes"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('/guides/color-blind-friendly-palettes');
+            }}
+            className="p-4 rounded-xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:border-indigo-500 transition-colors block group"
+          >
+            <div className="font-bold text-sm text-zinc-900 dark:text-zinc-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 flex items-center justify-between">
+              <span>Color-Blind-Friendly Palettes Guide</span>
+              <ArrowRight className="w-4 h-4 opacity-60 group-hover:translate-x-1 transition-transform" />
+            </div>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+              Learn safe color combinations that stay readable for all vision types.
+            </p>
+          </a>
+
+          <a
             href="/color-palette-generator"
             onClick={(e) => {
               e.preventDefault();

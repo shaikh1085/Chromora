@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { usePalette } from '../context/PaletteContext';
-import { trendingPalettes } from '../data/presetPalettes';
 import {
   getColorData,
   parseColorInput,
@@ -33,7 +32,7 @@ import { FAQSection } from '../components/common/FAQSection';
 import { GUIDES_DATABASE } from '../data/guidesData';
 import { COLLECTION_PAGES } from '../data/collectionPagesData';
 
-export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navigate }) => {
+export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearch?: () => void }> = ({ navigate, onOpenSearch }) => {
   const {
     activeHex,
     setActiveHex,
@@ -43,6 +42,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
   } = usePalette();
   const [quickInput, setQuickInput] = useState(activeHex);
   const [copiedToken, setCopiedToken] = useState(false);
+  const [copiedHex, setCopiedHex] = useState(false);
 
   const activeColorData = getColorData(activeHex);
   const activeShades = generateTailwindShades(activeHex);
@@ -80,6 +80,30 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
 
   const featureTools = [
     {
+      title: 'Online Color Picker & Explorer',
+      description: 'Inspect HEX, RGB, HSL, HSV, CMYK, OKLCH, and generate Tailwind 50–950 shade curves.',
+      route: '/color-picker',
+      icon: Compass,
+      badge: 'Core Engine',
+      accent: 'from-violet-500 to-indigo-600',
+    },
+    {
+      title: 'Color Palette Generator',
+      description: 'Orchestrate 12 harmonic geometries, lock favorite colors, and shuffle swatches.',
+      route: '/color-palette-generator',
+      icon: Palette,
+      badge: '12 Harmonies',
+      accent: 'from-fuchsia-500 to-violet-600',
+    },
+    {
+      title: 'WCAG Contrast Checker',
+      description: 'Audit AA & AAA legibility with live interactive component simulators and auto-fixing.',
+      route: '/wcag-contrast-checker',
+      icon: CheckCircle,
+      badge: 'WCAG 2.1',
+      accent: 'from-amber-500 to-orange-600',
+    },
+    {
       title: 'Interactive Color Wheel',
       description: 'Rotate the 360° HSL wheel to calculate complementary, analogous, triadic, and square harmonies.',
       route: '/color-wheel',
@@ -104,36 +128,12 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
       accent: 'from-indigo-500 to-cyan-500',
     },
     {
-      title: 'Online Color Picker & Explorer',
-      description: 'Inspect HEX, RGB, HSL, HSV, CMYK, OKLCH, and generate Tailwind 50–950 shade curves.',
-      route: '/color-picker',
-      icon: Compass,
-      badge: 'Core Engine',
-      accent: 'from-violet-500 to-indigo-600',
-    },
-    {
-      title: 'Color Palette Generator',
-      description: 'Orchestrate 12 harmonic geometries, lock favorite colors, and shuffle swatches.',
-      route: '/color-palette-generator',
-      icon: Palette,
-      badge: '12 Harmonies',
-      accent: 'from-fuchsia-500 to-violet-600',
-    },
-    {
       title: 'Image Color Extractor',
       description: 'Extract dominant color palettes and sample pixels from any photo with 100% private browser processing.',
       route: '/image-color-extractor',
       icon: ImageIcon,
       badge: 'Zero Server',
       accent: 'from-emerald-500 to-teal-600',
-    },
-    {
-      title: 'WCAG Contrast Checker',
-      description: 'Audit AA & AAA legibility with live interactive component simulators and auto-fixing.',
-      route: '/wcag-contrast-checker',
-      icon: CheckCircle,
-      badge: 'WCAG 2.1',
-      accent: 'from-amber-500 to-orange-600',
     },
     {
       title: 'CSS Gradient Studio',
@@ -152,6 +152,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
       accent: 'from-cyan-500 to-blue-600',
     },
   ];
+
+  const FEATURED_ROUTES = new Set(['/color-picker', '/color-palette-generator', '/wcag-contrast-checker']);
 
   const homeFaqs = [
     {
@@ -239,6 +241,20 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
             <p className="text-[var(--text-secondary)] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed text-center">
               Powerful color tools for palettes, conversions, accessibility, gradients, and image color extraction — free and easy to use.
             </p>
+            {onOpenSearch && (
+              <button
+                type="button"
+                onClick={onOpenSearch}
+                className="w-full max-w-xl mx-auto flex items-center gap-3 px-4 py-3 rounded-2xl glass-card text-left transition-colors hover:border-[var(--accent)]"
+                aria-label="Search tools, colors and guides"
+              >
+                <Search className="w-4 h-4 shrink-0 text-[var(--text-muted)]" />
+                <span className="flex-1 text-sm text-[var(--text-muted)]">Search tools, colors, guides…</span>
+                <kbd className="text-[10px] font-mono px-1.5 py-0.5 bg-[var(--surface-glass-hover)] rounded border border-[var(--border-glass)] text-[var(--text-secondary)]">
+                  /
+                </kbd>
+              </button>
+            )}
           </div>
 
           {/* 2 Equal Color Sections (50 / 50 Grid with Balanced Padding & Heights) */}
@@ -421,7 +437,31 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                         System-{activeColorData.family.slice(0, 3)}
                       </span>
                     </h2>
-                    <p className="text-xs sm:text-sm text-[var(--text-muted)] font-mono mt-1 font-semibold">{activeHex.toUpperCase()}</p>
+                    <p className="text-xs sm:text-sm text-[var(--text-muted)] font-mono mt-1 font-semibold flex items-center gap-2">
+                      <span>{activeHex.toUpperCase()}</span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          copyToClipboard(activeHex, `Copied ${activeHex}`);
+                          setCopiedHex(true);
+                          setTimeout(() => setCopiedHex(false), 2000);
+                        }}
+                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-[var(--border-glass)] bg-[var(--surface-glass-card)] text-[11px] font-sans font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors"
+                        title="Copy active hex"
+                      >
+                        {copiedHex ? (
+                          <>
+                            <Check className="w-3 h-3 text-emerald-500" />
+                            <span className="text-emerald-500">Copied!</span>
+                          </>
+                        ) : (
+                          <>
+                            <Copy className="w-3 h-3" />
+                            <span>Copy</span>
+                          </>
+                        )}
+                      </button>
+                    </p>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <div
@@ -588,6 +628,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featureTools.map((tool) => {
             const Icon = tool.icon;
+            const isFeatured = FEATURED_ROUTES.has(tool.route);
             return (
               <a
                 key={tool.route}
@@ -596,7 +637,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                   e.preventDefault();
                   navigate(tool.route);
                 }}
-                className="p-6 rounded-2xl glass-card text-left transition-all hover:shadow-2xl hover:-translate-y-1 group flex flex-col justify-between"
+                className={`p-6 rounded-2xl glass-card text-left transition-all hover:shadow-2xl hover:-translate-y-1 group flex flex-col justify-between ${isFeatured ? 'lg:col-span-2 ring-1 ring-[var(--accent-border)]' : ''}`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -605,12 +646,22 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                     >
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold text-[var(--text-secondary)] bg-[var(--surface-glass-card)] px-2.5 py-1 rounded-full border border-[var(--border-glass)]">
-                      {tool.badge}
+                    <span className="flex items-center gap-2">
+                      {isFeatured && (
+                        <span
+                          className="text-[11px] font-bold text-white px-2.5 py-1 rounded-full"
+                          style={{ backgroundColor: 'var(--accent)' }}
+                        >
+                          Most Popular
+                        </span>
+                      )}
+                      <span className="text-[11px] font-bold text-[var(--text-secondary)] bg-[var(--surface-glass-card)] px-2.5 py-1 rounded-full border border-[var(--border-glass)]">
+                        {tool.badge}
+                      </span>
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-[var(--text-primary)] group-hover:opacity-80 transition-opacity">
+                  <h3 className={`${isFeatured ? 'text-lg' : 'text-base'} font-bold text-[var(--text-primary)] group-hover:opacity-80 transition-opacity`}>
                     {tool.title}
                   </h3>
                   <p className="mt-2 text-xs text-[var(--text-secondary)] leading-relaxed">
@@ -631,87 +682,9 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
         </div>
       </section>
 
-      {/* Trending Curated Palettes Showcase */}
-      <section className="py-16 border-y border-[var(--border-glass)] bg-[var(--surface-glass)] backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
-                Curated Harmonies
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mt-1">
-                Trending Production Palettes
-              </h2>
-            </div>
-            <a
-              href="/color-palette-generator"
-              onClick={(e) => {
-                e.preventDefault();
-                navigate('/color-palette-generator');
-              }}
-              className="text-xs font-bold flex items-center gap-1 self-start sm:self-auto hover:underline"
-              style={{ color: 'var(--accent)' }}
-            >
-              <span>Explore All Palettes</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trendingPalettes.slice(0, 6).map((pal) => (
-              <div
-                key={pal.id}
-                className="glass-card rounded-2xl p-5 shadow-xl space-y-4"
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-sm text-[var(--text-primary)]">{pal.name}</h3>
-                  <span className="text-[10px] font-semibold text-[var(--text-muted)] bg-[var(--surface-glass-card)] px-2 py-0.5 rounded-full border border-[var(--border-glass)] capitalize">
-                    {pal.tags[0]}
-                  </span>
-                </div>
-
-                {/* Swatches Strip */}
-                <div className="flex h-16 rounded-xl overflow-hidden shadow-inner border border-[var(--border-glass)]">
-                  {pal.colors.map((hex, idx) => (
-                    <div
-                      key={idx}
-                      onClick={() => {
-                        setActiveHex(hex);
-                        copyToClipboard(hex, `Copied ${hex}`);
-                      }}
-                      className="flex-1 h-full cursor-pointer hover:opacity-85 transition-opacity"
-                      style={{ backgroundColor: hex }}
-                      title={`Click to copy ${hex}`}
-                    />
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between pt-1">
-                  <div className="flex items-center gap-1 text-[11px] font-mono text-[var(--text-muted)]">
-                    <span>{pal.colors.length} shades</span>
-                  </div>
-
-                  <a
-                    href="/color-palette-generator"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setPaletteFromHexList(pal.colors, pal.name);
-                      navigate('/color-palette-generator');
-                    }}
-                    className="px-3.5 py-1.5 rounded-xl bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-active)] border border-[var(--border-glass)] text-xs font-semibold text-[var(--text-primary)] transition-colors flex items-center gap-1"
-                  >
-                    <span>Open</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Popular Colors Section */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Popular Colors — compact strip (full directory lives at /colors) */}
+      <section className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
@@ -738,7 +711,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
           </a>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
           {[
             { name: 'Royal Indigo', hex: '#6366F1' },
             { name: 'Sunset Coral', hex: '#FF6B6B' },
@@ -746,12 +719,6 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
             { name: 'Deep Sapphire', hex: '#0B4F6C' },
             { name: 'Golden Amber', hex: '#F59E0B' },
             { name: 'Neon Fuchsia', hex: '#D946EF' },
-            { name: 'Midnight Slate', hex: '#1E293B' },
-            { name: 'Rose Velvet', hex: '#E11D48' },
-            { name: 'Teal Lagoon', hex: '#0D9488' },
-            { name: 'Electric Cyan', hex: '#06B6D4' },
-            { name: 'Warm Terracotta', hex: '#C2410C' },
-            { name: 'Soft Lavender', hex: '#8B5CF6' },
           ].map((col) => (
             <div
               key={col.hex}
@@ -767,7 +734,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void }> = ({ navi
                 className="w-full text-left block"
               >
                 <div
-                  className="w-full h-20 rounded-xl mb-3 shadow-inner border border-black/10 dark:border-white/10 group-hover:scale-[1.02] transition-transform"
+                  className="w-full h-12 rounded-xl mb-2 shadow-inner border border-black/10 dark:border-white/10 group-hover:scale-[1.02] transition-transform"
                   style={{ backgroundColor: col.hex }}
                 />
                 <div className="font-semibold text-xs text-[var(--text-primary)] truncate group-hover:opacity-80 transition-colors">

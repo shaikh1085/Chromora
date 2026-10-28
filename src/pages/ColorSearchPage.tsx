@@ -130,6 +130,19 @@ export const ColorSearchPage: React.FC<{
           <p className="mt-2 text-sm text-[var(--text-secondary)] max-w-2xl">
             Search 400+ curated shades, historical pigments, and UI design standards. Click any swatch for full coordinate breakdowns.
           </p>
+          <p className="mt-2 text-sm text-[var(--text-secondary)]">
+            Have a hex code but no name for it?{' '}
+            <a
+              href="/color-name-finder"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/color-name-finder');
+              }}
+              className="font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+            >
+              Try the Color Name Finder
+            </a>
+          </p>
         </div>
 
         {/* Search & Filter Bar */}

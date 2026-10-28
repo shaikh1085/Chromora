@@ -313,9 +313,11 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
         config={{
           title: 'Interactive Color Wheel Online — Find Color Harmonies & Schemes',
           description:
-            'Free interactive color wheel tool online. Discover complementary, analogous, triadic, and tetradic color combinations with live hex codes and token export.',
+            'Free interactive colour wheel tool online with a color wheel picker. Discover complementary, analogous, triadic, and tetradic color combinations with live hex codes and token export.',
           keywords: [
             'interactive color wheel online',
+            'colour wheel interactive',
+            'color wheel picker online',
             'color wheel for graphic design',
             'complementary color wheel finder',
             'triadic color scheme creator',

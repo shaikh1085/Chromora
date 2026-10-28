@@ -124,12 +124,16 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
   ];
 
   const seoConfig: SEOConfig = {
-    title: 'Color Mixer Online: Blend Two Colors with Real-Time Steps & OKLCH',
+    title: 'Color Mixer Online: Mix Colors & Calculate Color Mixes with OKLCH Steps',
     description:
-      'Mix two colors online with custom blending ratios. Explore OKLCH, RGB, HSL, and physical paint subtractive mixing with smooth intermediate steps.',
+      'Mix colors online and calculate color mixes with custom blending ratios. Explore OKLCH, RGB, HSL, and physical paint subtractive mixing with smooth intermediate steps.',
     canonicalUrl: 'https://chromoraflow.vercel.app/color-mixer',
     keywords: [
       'color mixer online',
+      'color mixer',
+      'color mix calculator',
+      'mix color online',
+      'colormixer',
       'mix two colors',
       'color blend tool',
       'color blender',

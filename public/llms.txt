@@ -1,0 +1,42 @@
+# Chromora
+
+> Chromora is a free suite of color tools for UI designers and developers: accessible palette generation, WCAG contrast checking, image palette extraction, multi-space color conversion, and CSS/Tailwind design token export. All tools run entirely in the browser; no account or credit card required.
+
+## Tools
+
+- [Color Picker & Explorer](https://chromoraflow.vercel.app/color-picker)
+- [Interactive Color Wheel](https://chromoraflow.vercel.app/color-wheel)
+- [Color Palette Generator](https://chromoraflow.vercel.app/color-palette-generator)
+- [AI Palette Generator](https://chromoraflow.vercel.app/ai-palette-generator)
+- [Image Color Extractor](https://chromoraflow.vercel.app/image-color-extractor)
+- [WCAG Contrast Checker](https://chromoraflow.vercel.app/wcag-contrast-checker)
+- [CSS Gradient Studio](https://chromoraflow.vercel.app/gradient-generator)
+- [Multi-Way Color Converter](https://chromoraflow.vercel.app/color-converter)
+- [Color Shades & Tints Generator](https://chromoraflow.vercel.app/color-shades-generator)
+- [Color Mixer](https://chromoraflow.vercel.app/color-mixer)
+- [Color Blindness Simulator](https://chromoraflow.vercel.app/color-blindness-simulator)
+- [Random Color Generator](https://chromoraflow.vercel.app/random-color-generator)
+- [Pantone & RAL Converter](https://chromoraflow.vercel.app/pantone-color-converter)
+- [Favicon & App Icon Generator](https://chromoraflow.vercel.app/favicon-generator)
+- [Live Design Preview](https://chromoraflow.vercel.app/design-preview)
+- [Named Colors Directory](https://chromoraflow.vercel.app/colors)
+
+## Collections and Guides
+
+- [Curated Palette Collections](https://chromoraflow.vercel.app/palettes)
+- [Color Guides & Theory](https://chromoraflow.vercel.app/guides)
+- [HEX vs RGB vs HSL — Which Color Format Should You Use in CSS?](https://chromoraflow.vercel.app/guides/hex-vs-rgb-vs-hsl)
+- [What is OKLCH? The Modern CSS Color Space Explained](https://chromoraflow.vercel.app/guides/what-is-oklch)
+- [How to Choose Website Colors — A Step-by-Step UI/UX Guide](https://chromoraflow.vercel.app/guides/how-to-choose-website-colors)
+- [Color Contrast Accessibility Guide — WCAG 2.1 AA & AAA Standards](https://chromoraflow.vercel.app/guides/color-contrast-accessibility)
+- [How to Create a Color Palette from Scratch — Design System Guide](https://chromoraflow.vercel.app/guides/how-to-create-a-color-palette)
+- [Color Harmony Rules — Complementary, Analogous & Triadic Explained](https://chromoraflow.vercel.app/guides/color-harmony)
+- [Color Theory for Web Design](https://chromoraflow.vercel.app/guides/color-theory-for-web-design)
+- [CSS Color Formats](https://chromoraflow.vercel.app/guides/css-color-formats)
+- [Website Color Palette Guide](https://chromoraflow.vercel.app/guides/website-color-palette-guide)
+
+## About
+
+- [About Chromora](https://chromoraflow.vercel.app/about)
+- [Privacy Policy](https://chromoraflow.vercel.app/privacy)
+- [Terms of Service](https://chromoraflow.vercel.app/terms)

@@ -124,7 +124,7 @@ export const FaviconGeneratorTool: React.FC<{ navigate: (route: string) => void 
 
   const faviconFaqs: FAQItem[] = [
     {
-      question: 'What sizes and formats are required for modern website favicons in 2025?',
+      question: 'What sizes and formats are required for modern website favicons in 2026?',
       answer:
         'A complete modern favicon suite requires: a legacy multi-size favicon.ico (containing 16x16 and 32x32), high-DPI PNGs (16x16 and 32x32), an Apple Touch Icon (180x180 for iOS Home Screen bookmarking), Android Chrome Web App icons (192x192 and 512x512), and a site.webmanifest JSON file.',
     },

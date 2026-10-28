@@ -265,11 +265,11 @@ export const PaletteCollectionPage: React.FC<{
                     <ShieldCheck className="w-3.5 h-3.5" />
                   </a>
                   <a
-                    href="/design-tokens"
+                    href="/design-token-generator"
                     onClick={(e) => {
                       e.preventDefault();
                       handleApplyPalette(palette);
-                      navigate('/design-tokens');
+                      navigate('/design-token-generator');
                     }}
                     className="p-2 rounded-xl hover:bg-[var(--surface-glass-active)] text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors inline-flex items-center justify-center"
                     title="Export Tokens"
@@ -301,6 +301,28 @@ export const PaletteCollectionPage: React.FC<{
               </p>
             </article>
           ))}
+
+          {data.relatedGuide && (
+            <a
+              href={data.relatedGuide.route}
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(data.relatedGuide.route);
+              }}
+              className="block p-4 rounded-2xl bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-active)] border border-[var(--border-glass-subtle)] transition-all hover:border-[var(--accent)] group"
+            >
+              <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
+                Related Guide
+              </span>
+              <span className="text-sm font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors flex items-center justify-between mt-1">
+                <span>{data.relatedGuide.title}</span>
+                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+              </span>
+              <p className="text-xs text-[var(--text-muted)] mt-1">
+                {data.relatedGuide.description}
+              </p>
+            </a>
+          )}
         </div>
 
         {/* Related Collections */}

@@ -16,6 +16,7 @@ export interface CollectionPageData {
   samplePalettes: SamplePalette[];
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
+  relatedGuide?: { title: string; route: string; description: string };
 }
 
 export const COLLECTION_PAGES: Record<string, CollectionPageData> = {
@@ -401,7 +402,7 @@ export const COLLECTION_PAGES: Record<string, CollectionPageData> = {
     h1: 'South Asian Wedding Color Palette Ideas',
     primaryKeyword: 'South Asian wedding color palette',
     metaDescription:
-      'Discover South Asian wedding color schemes for Indian, Pakistani, and Bengali celebrations. Vermilion red, peacock teal, marigold yellow, and antique gold.',
+      'Discover South Asian color palettes and wedding color schemes for Indian, Pakistani, and Bengali celebrations. Vermilion red, peacock teal, marigold yellow, and antique gold.',
     category: 'Asia & Global',
     intro:
       'South Asian weddings are legendary for multi-day celebrations, intricate rituals, floral abundance, and spectacular royal attire. These palettes offer harmonious color systems for invitations, decor, stationery, and digital wedding suites.',
@@ -495,10 +496,16 @@ export const COLLECTION_PAGES: Record<string, CollectionPageData> = {
     h1: 'Diwali Color Palette Ideas',
     primaryKeyword: 'Diwali color palette',
     metaDescription:
-      'Explore luminous Diwali color palettes inspired by clay diya flames, marigold garlands, rangoli powders, and festive fireworks.',
+      'Explore luminous Diwali color palettes and Diwali color schemes inspired by clay diya flames, marigold garlands, rangoli powders, and festive fireworks.',
     category: 'Asia & Global',
     intro:
       'Diwali (The Festival of Lights) illuminates homes and hearts with clay lamps (diyas), intricate rangoli patterns, golden sweets, and glittering fireworks. These palettes bring festive brilliance to social media flyers, holiday packaging, and e-commerce campaigns.',
+    relatedGuide: {
+      title: 'Diwali Decoration Colors — Traditional & Modern Diwali Color Ideas',
+      route: '/guides/diwali-decoration-colors',
+      description:
+        'What colors are commonly used in Diwali decorations? Meanings, traditional combinations, and modern palettes.',
+    },
     guideSections: [
       {
         title: 'The Radiance of Fire, Gold, and Rangoli Pigments',
