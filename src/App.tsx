@@ -45,6 +45,9 @@ const ColorMixerTool = lazy(() =>
 const ColorNameFinderTool = lazy(() =>
   import('./components/tools/ColorNameFinderTool').then((m) => ({ default: m.ColorNameFinderTool }))
 );
+const ShareLinkGeneratorTool = lazy(() =>
+  import('./components/tools/ShareLinkGeneratorTool').then((m) => ({ default: m.ShareLinkGeneratorTool }))
+);
 const ColorBlindnessSimulatorTool = lazy(() =>
   import('./components/tools/ColorBlindnessSimulatorTool').then((m) => ({ default: m.ColorBlindnessSimulatorTool }))
 );
@@ -211,6 +214,10 @@ export function AppContent() {
 
     if (path === '/color-name-finder' || path === '/find-color-name' || path === '/hex-to-color-name') {
       return <ColorNameFinderTool navigate={navigate} />;
+    }
+
+    if (path === '/share-link-generator' || path === '/share-your-website') {
+      return <ShareLinkGeneratorTool navigate={navigate} />;
     }
 
     if (

@@ -16,6 +16,7 @@ import {
   ArrowRight,
   BookOpen,
   FolderHeart,
+  Share2,
 } from 'lucide-react';
 
 interface QuickSearchModalProps {
@@ -65,6 +66,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
     { title: 'Pantone & RAL Converter', route: '/pantone-color-converter', icon: Repeat, category: 'Tool' },
     { title: 'Favicon & App Icon Generator', route: '/favicon-generator', icon: Compass, category: 'Tool' },
     { title: 'Live UI Design Preview Studio', route: '/design-preview', icon: Layers, category: 'Tool' },
+    { title: 'Share Link Generator', route: '/share-link-generator', icon: Share2, category: 'Tool' },
     { title: 'HEX to RGB Converter', route: '/hex-to-rgb', icon: Repeat, category: 'Converter' },
     { title: 'RGB to HEX Converter', route: '/rgb-to-hex', icon: Repeat, category: 'Converter' },
     { title: 'HEX to OKLCH Converter', route: '/hex-to-oklch', icon: Repeat, category: 'Converter' },

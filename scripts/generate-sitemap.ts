@@ -49,6 +49,7 @@ function generateSitemapXml() {
     '/color-shades-generator',
     '/color-mixer',
     '/color-name-finder',
+    '/share-link-generator',
     '/color-blindness-simulator',
     '/random-color-generator',
     '/pantone-color-converter',

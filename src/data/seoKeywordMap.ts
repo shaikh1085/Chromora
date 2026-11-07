@@ -577,6 +577,38 @@ export const TOOLS_KEYWORD_MAP: ToolKeywordEntry[] = [
       { name: 'Color Shades Generator', route: '/color-shades-generator', context: 'Generate full tonal scale for the interface' },
     ],
   },
+  {
+    id: 'share-link-generator',
+    name: 'Share Link Generator',
+    route: '/share-link-generator',
+    canonicalUrl: `${SITE_URL}/share-link-generator`,
+    category: 'developer',
+    hubRoute: '/developer-color-tools',
+    primarySearchIntent: 'Create ready share links for any website URL for WhatsApp, X, Facebook, LinkedIn, Telegram and Email.',
+    primaryKeyword: 'share link generator',
+    secondaryKeywords: [
+      'create share links',
+      'whatsapp share link generator',
+      'social share link maker',
+      'share your website',
+      'facebook share link generator',
+      'copy share links',
+    ],
+    h1: 'Share Link Generator — Create Social Share Links for Any Website',
+    seoTitle: 'Share Link Generator — Create WhatsApp, X, Facebook & LinkedIn Share Links',
+    metaDescription:
+      'Paste any website URL and instantly generate ready share links for WhatsApp, X, Facebook, LinkedIn, Telegram and Email. Free, no sign-up, everything runs in your browser.',
+    usefulContentHighlights: [
+      'Ready share links for WhatsApp, X, Facebook, LinkedIn, Telegram and Email from one URL',
+      'Per-link Copy buttons plus a Copy all links button',
+      'Optional title and message fields included in every share link',
+    ],
+    relatedTools: [
+      { name: 'Smart Color Explorer', route: '/color-picker', context: 'Share a color you found with the new links' },
+      { name: 'Color Palette Generator', route: '/color-palette-generator', context: 'Share a generated palette page' },
+      { name: 'Live UI Design Preview Studio', route: '/design-preview', context: 'Share a previewed design' },
+    ],
+  },
 ];
 
 export const HUB_CATEGORIES: Record<string, HubCategorySEO> = {
@@ -720,7 +752,7 @@ export const HUB_CATEGORIES: Record<string, HubCategorySEO> = {
       'Developer-first color utilities. Generate Tailwind 50-950 scales, convert across 10 color spaces (HEX, RGB, OKLCH, CMYK), build CSS gradients, and export design tokens.',
     leadParagraph:
       'Engineered specifically for frontend engineers and design system architects. Transform raw color values into clean Tailwind configuration objects, CSS custom properties, W3C design tokens, and production favicon bundles.',
-    toolIds: ['color-shades-generator', 'color-converter', 'gradient-generator', 'favicon-generator', 'pantone-color-converter'],
+    toolIds: ['color-shades-generator', 'color-converter', 'gradient-generator', 'favicon-generator', 'pantone-color-converter', 'share-link-generator'],
     faqs: [
       {
         question: 'How do I export color scales to Tailwind CSS v3 and v4?',
