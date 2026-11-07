@@ -29,6 +29,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/common/SEO';
 import { FAQSection } from '../components/common/FAQSection';
+import { ShareButtons } from '../components/common/ShareButtons';
+import { PayWiseCard } from '../components/common/PayWiseLink';
 import { GUIDES_DATABASE } from '../data/guidesData';
 import { COLLECTION_PAGES } from '../data/collectionPagesData';
 
@@ -255,6 +257,14 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
                 </kbd>
               </button>
             )}
+            {/* Share Chromora */}
+            <div className="flex justify-center pt-2">
+              <ShareButtons
+                url="https://chromoraflow.vercel.app/"
+                title="Free Color Tools for Designers & Developers — Chromora"
+                label="Share"
+              />
+            </div>
           </div>
 
           {/* 2 Equal Color Sections (50 / 50 Grid with Balanced Padding & Heights) */}
@@ -603,6 +613,11 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
           </div>
         </div>
       </section>
+
+      {/* Our other site — PayWise UK */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+        <PayWiseCard />
+      </div>
 
       {/* Feature Tools Grid */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

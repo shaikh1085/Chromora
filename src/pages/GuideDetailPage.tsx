@@ -28,7 +28,15 @@ export const GuideDetailPage: React.FC<{
 
   if (!guide) {
     return (
-      <div className="min-h-[60vh] py-20 max-w-4xl mx-auto px-4 text-center">
+      <>
+        <SEO
+          config={{
+            title: 'Guide Not Found — Chromora',
+            description: 'The requested color guide does not exist or may have been moved.',
+            robots: 'noindex, nofollow',
+          }}
+        />
+        <div className="min-h-[60vh] py-20 max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-3xl font-bold text-[var(--text-primary)]">Guide Not Found</h1>
         <p className="mt-3 text-sm text-[var(--text-secondary)]">
           The requested color guide does not exist or may have been moved.
@@ -40,6 +48,7 @@ export const GuideDetailPage: React.FC<{
           Browse All Guides
         </button>
       </div>
+      </>
     );
   }
 

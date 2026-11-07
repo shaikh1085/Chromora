@@ -36,7 +36,10 @@ import {
   Trash2,
   BookOpen,
   FolderHeart,
+  Calculator,
+  ExternalLink,
 } from 'lucide-react';
+import { PAYWISE_URL, PAYWISE_LABEL } from './PayWiseLink';
 
 interface HeaderProps {
   currentRoute: string;
@@ -367,6 +370,25 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, navigate, onOpenSe
                           })}
                         </div>
                       ))}
+                    </div>
+                    {/* Our other site */}
+                    <div className="mt-3 pt-3 border-t border-[var(--border-glass-subtle)]">
+                      <a
+                        href={PAYWISE_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2.5 p-2 rounded-xl transition-colors hover:bg-[var(--surface-glass-hover)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                      >
+                        <Calculator className="w-4 h-4 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                        <span className="min-w-0">
+                          <span className="block text-xs font-semibold truncate">
+                            PayWise UK <ExternalLink className="w-3 h-3 inline-block -mt-0.5" />
+                          </span>
+                          <span className="block text-[10px] text-[var(--text-muted)] leading-tight">
+                            Our other site — free UK salary &amp; take-home pay calculators
+                          </span>
+                        </span>
+                      </a>
                     </div>
                   </div>
                 )}
@@ -1006,6 +1028,17 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, navigate, onOpenSe
                 </a>
               );
             })}
+          {/* Our other site */}
+          <a
+            href={PAYWISE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-glass-hover)] transition-colors"
+          >
+            <Calculator className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <span className="flex-1 text-left">{PAYWISE_LABEL}</span>
+            <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+          </a>
           {recentColors.length > 0 && (
             <div className="pt-2 pb-2 px-3 border-t border-[var(--border-glass-subtle)]">
               <div className="flex items-center justify-between mb-2">

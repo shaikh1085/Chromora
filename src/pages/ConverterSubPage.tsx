@@ -41,7 +41,15 @@ export const ConverterSubPage: React.FC<{
 
   if (!data) {
     return (
-      <div className="min-h-screen py-16 max-w-4xl mx-auto px-4 text-center">
+      <>
+        <SEO
+          config={{
+            title: 'Converter Not Found — Chromora',
+            description: 'The requested converter page does not exist.',
+            robots: 'noindex, nofollow',
+          }}
+        />
+        <div className="min-h-screen py-16 max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Converter Not Found</h1>
         <p className="mt-2 text-sm text-[var(--text-secondary)]">The requested converter page does not exist.</p>
         <a
@@ -55,6 +63,7 @@ export const ConverterSubPage: React.FC<{
           View All Converters
         </a>
       </div>
+      </>
     );
   }
 

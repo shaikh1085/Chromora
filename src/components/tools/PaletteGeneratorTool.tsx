@@ -39,6 +39,7 @@ import { ASIAN_GLOBAL_INSPIRATIONS } from '../../data/presetPalettes';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';
+import { ShareButtons } from '../common/ShareButtons';
 
 export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void }> = ({
   navigate,
@@ -843,6 +844,16 @@ export const PaletteGeneratorTool: React.FC<{ navigate: (route: string) => void 
                   <p className="text-[10px] text-zinc-400">Formatted palette text + preview URL</p>
                 </div>
               </a>
+            </div>
+
+            {/* Share on more platforms */}
+            <div className="pt-2 border-t border-zinc-800">
+              <p className="text-xs font-bold text-zinc-400 mb-2">Share on more platforms</p>
+              <ShareButtons
+                url={getShareUrl()}
+                title="Color Palette Generator — Chromora"
+                exclude={['whatsapp', 'copy']}
+              />
             </div>
           </div>
         </div>

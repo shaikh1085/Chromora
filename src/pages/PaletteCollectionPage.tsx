@@ -3,6 +3,7 @@ import { getCollectionPageData, COLLECTION_PAGES, CollectionPageData, SamplePale
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { FAQSection } from '../components/common/FAQSection';
+import { ShareButtons } from '../components/common/ShareButtons';
 import { usePalette } from '../context/PaletteContext';
 import {
   Sparkles,
@@ -29,7 +30,15 @@ export const PaletteCollectionPage: React.FC<{
 
   if (!data) {
     return (
-      <div className="min-h-screen py-16 max-w-4xl mx-auto px-4 text-center">
+      <>
+        <SEO
+          config={{
+            title: 'Collection Not Found — Chromora',
+            description: 'The requested collection does not exist.',
+            robots: 'noindex, nofollow',
+          }}
+        />
+        <div className="min-h-screen py-16 max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Collection Not Found</h1>
         <p className="mt-2 text-sm text-[var(--text-secondary)]">The requested collection does not exist.</p>
         <a
@@ -43,6 +52,7 @@ export const PaletteCollectionPage: React.FC<{
           View Collections
         </a>
       </div>
+      </>
     );
   }
 
@@ -152,6 +162,11 @@ export const PaletteCollectionPage: React.FC<{
               <Eye className="w-3.5 h-3.5" />
               <span>Preview in Live UI</span>
             </a>
+            <ShareButtons
+              url={typeof window !== 'undefined' ? window.location.href : `https://chromoraflow.vercel.app/${data.slug}`}
+              title={`${data.h1} — Chromora`}
+              label="Share"
+            />
           </div>
         </div>
 

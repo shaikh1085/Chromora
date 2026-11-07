@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { usePalette } from '../../context/PaletteContext';
-import { Mail, Check, ArrowRight } from 'lucide-react';
+import { Mail, Check, ArrowRight, Calculator, ExternalLink } from 'lucide-react';
+import { ShareButtons } from './ShareButtons';
+import { PAYWISE_URL, PAYWISE_LABEL } from './PayWiseLink';
 
 export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ navigate }) => {
   const { showToast } = usePalette();
@@ -36,6 +38,7 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
     { label: 'Color Blindness Simulator', route: '/color-blindness-simulator' },
     { label: 'Pantone & RAL Converter', route: '/pantone-color-converter' },
     { label: 'Favicon & App Icon Maker', route: '/favicon-generator' },
+    { label: 'Share Link Generator', route: '/share-link-generator' },
     { label: 'Color Search & Directory', route: '/colors' },
   ];
 
@@ -111,6 +114,28 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
             <p className="text-sm text-[var(--text-secondary)] max-w-sm leading-relaxed">
               Turn any color into a complete design system. Chromora empowers designers to discover accessible palettes, preview live designs, and generate theme tokens.
             </p>
+            {/* Share Chromora */}
+            <ShareButtons
+              url="https://chromoraflow.vercel.app/"
+              title="Free Color Tools for Designers & Developers — Chromora"
+              label="Share"
+            />
+            {/* Our other site */}
+            <a
+              href={PAYWISE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2.5 max-w-sm rounded-xl border border-emerald-500/30 bg-emerald-500/5 dark:bg-emerald-500/10 px-3.5 py-3 text-left transition-colors hover:border-emerald-500/60"
+            >
+              <Calculator className="w-4 h-4 mt-0.5 shrink-0 text-emerald-600 dark:text-emerald-400" />
+              <span>
+                <span className="block text-xs font-bold text-[var(--text-primary)]">
+                  Our other site: PayWise UK
+                  <ExternalLink className="w-3 h-3 inline-block ml-1 -mt-0.5" />
+                </span>
+                <span className="block text-xs text-[var(--text-secondary)] mt-0.5">{PAYWISE_LABEL}</span>
+              </span>
+            </a>
           </div>
 
           {/* Newsletter Form */}

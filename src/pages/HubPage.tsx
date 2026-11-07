@@ -50,7 +50,15 @@ export const HubPage: React.FC<{
 
   if (!hubData) {
     return (
-      <div className="min-h-screen py-16 max-w-4xl mx-auto px-4 text-center">
+      <>
+        <SEO
+          config={{
+            title: 'Category Hub Not Found — Chromora',
+            description: 'The requested tool category does not exist.',
+            robots: 'noindex, nofollow',
+          }}
+        />
+        <div className="min-h-screen py-16 max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-2xl font-bold text-[var(--text-primary)]">Category Hub Not Found</h1>
         <p className="mt-2 text-sm text-[var(--text-secondary)]">The requested tool category does not exist.</p>
         <a
@@ -64,6 +72,7 @@ export const HubPage: React.FC<{
           Return to Home
         </a>
       </div>
+      </>
     );
   }
 
