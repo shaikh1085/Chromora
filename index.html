@@ -89,31 +89,17 @@
         }
       })();
     </script>
-    <!-- Google Analytics 4 (optional, non-blocking): set VITE_GA_ID at build
-         time (e.g. VITE_GA_ID=G-XXXXXXXXXX in .env or the Vercel dashboard).
-         When the variable is unset, this snippet does nothing and loads no
-         analytics script, so SEOptimer-style "no analytics" is expected
-         until an ID is configured. -->
+    <!-- Google Tag Manager (GTM-T4SJV27C) — loads Google Analytics via the GTM container -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SJV27C"></script>
     <script>
-      (function () {
-        var gaId = '%VITE_GA_ID%';
-        // Vite leaves the %VITE_GA_ID% placeholder untouched when unset.
-        if (!gaId || gaId.charAt(0) === '%') return;
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId);
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          window.dataLayer.push(arguments);
-        }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', gaId);
-      })();
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
     </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4SJV27C" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="root"></div>
     <noscript>
       <div style="padding: 2rem; font-family: sans-serif; max-width: 800px; margin: 0 auto;">
