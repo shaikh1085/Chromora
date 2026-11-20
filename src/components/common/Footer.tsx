@@ -43,14 +43,16 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
   ];
 
   const colorFamilies = [
-    { label: 'Red Colors', route: '/colors?family=red' },
-    { label: 'Blue Colors', route: '/colors?family=blue' },
-    { label: 'Green Colors', route: '/colors?family=green' },
-    { label: 'Yellow Colors', route: '/colors?family=yellow' },
-    { label: 'Purple Colors', route: '/colors?family=purple' },
-    { label: 'Orange Colors', route: '/colors?family=orange' },
-    { label: 'Pink Colors', route: '/colors?family=pink' },
-    { label: 'Earthy Tones', route: '/colors?family=brown' },
+    { label: 'Red Colors', route: '/colors/family/red' },
+    { label: 'Blue Colors', route: '/colors/family/blue' },
+    { label: 'Green Colors', route: '/colors/family/green' },
+    { label: 'Yellow Colors', route: '/colors/family/yellow' },
+    { label: 'Purple Colors', route: '/colors/family/purple' },
+    { label: 'Orange Colors', route: '/colors/family/orange' },
+    { label: 'Pink Colors', route: '/colors/family/pink' },
+    // NOTE: 'Earthy Tones' links to the directory (no clean family route):
+    // the named-color database has no colors classified as brown/gray.
+    { label: 'Earthy Tones', route: '/colors' },
   ];
 
   const toolHubCategories = [
@@ -94,16 +96,13 @@ export const Footer: React.FC<{ navigate: (route: string) => void }> = ({ naviga
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-2.5">
               <div
-                className="w-8 h-8 rounded-lg p-0.5 flex items-center justify-center shadow-lg"
-                style={{
-                  background: `linear-gradient(135deg, var(--accent), #f0abfc, #38bdf8)`,
-                  boxShadow: `0 0 16px var(--accent-glow)`,
-                }}
+                className="w-8 h-8 rounded-lg p-0.5 flex items-center justify-center shadow-lg bg-[linear-gradient(135deg,_var(--accent),_#f0abfc,_#38bdf8)] shadow-[0_0_16px_var(--accent-glow)]"
+               
               >
                 <div className="w-full h-full bg-[var(--bg-page)] rounded-[6px] flex items-center justify-center">
                   <div
-                    className="w-3.5 h-3.5 rounded-full"
-                    style={{ backgroundColor: 'var(--accent)' }}
+                    className="w-3.5 h-3.5 rounded-full bg-[var(--accent)]"
+                   
                   />
                 </div>
               </div>

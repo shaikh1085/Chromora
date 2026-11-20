@@ -8,9 +8,7 @@ import {
   RotateCcw,
   X,
   Sliders,
-  ShieldCheck,
-  Eye,
-} from 'lucide-react';
+  ShieldCheck} from 'lucide-react';
 
 export const VisualSettingsModal: React.FC = () => {
   const {
@@ -43,21 +41,15 @@ export const VisualSettingsModal: React.FC = () => {
       aria-labelledby="visual-settings-title"
     >
       <div
-        className="w-full max-w-md glass-modal rounded-3xl p-6 relative animate-scale-up"
-        style={{
-          boxShadow: '0 25px 60px rgba(0, 0, 0, 0.4), var(--glass-highlight)',
-        }}
+        className="w-full max-w-md glass-modal rounded-3xl p-6 relative animate-scale-up shadow-[0_25px_60px_rgba(0,_0,_0,_0.4),_var(--glass-highlight)]"
+       
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-[var(--border-glass-subtle)]">
           <div className="flex items-center gap-2.5">
             <div
-              className="w-8 h-8 rounded-xl flex items-center justify-center shadow-xs"
-              style={{
-                backgroundColor: 'var(--accent-soft)',
-                color: 'var(--accent)',
-                border: '1px solid var(--accent-border)',
-              }}
+              className="w-8 h-8 rounded-xl flex items-center justify-center shadow-xs bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+             
             >
               <Sparkles className="w-4 h-4" />
             </div>
@@ -129,11 +121,8 @@ export const VisualSettingsModal: React.FC = () => {
           <div className="flex items-center justify-between p-3.5 rounded-2xl glass-card">
             <div className="flex items-center gap-3">
               <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center"
-                style={{
-                  backgroundColor: 'var(--accent-soft)',
-                  color: 'var(--accent)',
-                }}
+                className="w-7 h-7 rounded-lg flex items-center justify-center bg-[var(--accent-soft)] text-[var(--accent)]"
+               
               >
                 <SunMedium className="w-4 h-4" />
               </div>
@@ -168,11 +157,8 @@ export const VisualSettingsModal: React.FC = () => {
           <div className="flex items-center justify-between p-3.5 rounded-2xl glass-card">
             <div className="flex items-center gap-3">
               <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center"
-                style={{
-                  backgroundColor: 'var(--accent-soft)',
-                  color: 'var(--accent)',
-                }}
+                className="w-7 h-7 rounded-lg flex items-center justify-center bg-[var(--accent-soft)] text-[var(--accent)]"
+               
               >
                 <Sliders className="w-4 h-4" />
               </div>

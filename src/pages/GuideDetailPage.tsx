@@ -8,15 +8,12 @@ import {
   Clock,
   Calendar,
   ArrowRight,
-  ExternalLink,
   CheckCircle,
-  Lightbulb,
   Info,
   AlertTriangle,
   Layers,
   ChevronRight,
-  Share2,
-} from 'lucide-react';
+  Share2} from 'lucide-react';
 import { usePalette } from '../context/PaletteContext';
 
 export const GuideDetailPage: React.FC<{
@@ -96,12 +93,8 @@ export const GuideDetailPage: React.FC<{
             <div className="mb-8">
               <div className="flex flex-wrap items-center gap-2 mb-3">
                 <span
-                  className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
-                  style={{
-                    backgroundColor: 'var(--accent-soft)',
-                    color: 'var(--accent)',
-                    border: '1px solid var(--accent-border)',
-                  }}
+                  className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+                 
                 >
                   {guide.category}
                 </span>
@@ -213,10 +206,8 @@ export const GuideDetailPage: React.FC<{
             {/* Embedded Interactive Tools Callout */}
             <div className="mt-14 glass-panel rounded-2xl p-6 sm:p-8 border border-[var(--border-glass)] shadow-xl relative overflow-hidden">
               <div
-                className="absolute inset-0 pointer-events-none opacity-10"
-                style={{
-                  background: 'radial-gradient(circle at top right, var(--accent) 0%, transparent 70%)',
-                }}
+                className="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(circle_at_top_right,_var(--accent)_0%,_transparent_70%)]"
+               
               />
               <div className="relative z-10">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">

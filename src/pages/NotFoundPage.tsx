@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Palette, Home, ArrowLeft } from 'lucide-react';
+import { Compass, Palette, Home } from 'lucide-react';
 import { SEO } from '../components/common/SEO';
 
 export const NotFoundPage: React.FC<{ navigate: (route: string) => void }> = ({ navigate }) => {

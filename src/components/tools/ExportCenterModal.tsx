@@ -8,10 +8,8 @@ import {
   Code2,
   FileJson,
   Palette,
-  Sparkles,
   Smartphone,
-  Layers,
-} from 'lucide-react';
+  Layers} from 'lucide-react';
 import { getColorData } from '../../utils/colorUtils';
 
 type ExportFormat = 'css' | 'tailwind' | 'json' | 'scss' | 'flutter' | 'react-native' | 'svg';

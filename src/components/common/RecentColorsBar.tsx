@@ -117,18 +117,15 @@ export const RecentColorsBar: React.FC<RecentColorsBarProps> = ({
   return (
     <div
       id="recent-colors-bar"
-      className={`glass-card p-3 sm:p-4 rounded-2xl border border-[var(--border-glass)] transition-all ${
+      className={`glass-card p-3 sm:p-4 rounded-2xl border border-[var(--border-glass)] transition-all shadow-[var(--shadow-glass)] ${
         variant === 'compact' ? 'py-2 px-3' : ''
       } ${className}`}
-      style={{
-        boxShadow: 'var(--shadow-glass)',
-      }}
     >
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-2.5 border-b border-[var(--border-glass-subtle)]">
         <div className="flex items-center gap-2">
           <div
-            className="w-6 h-6 rounded-lg flex items-center justify-center text-white shrink-0 shadow-xs"
-            style={{ backgroundColor: 'var(--accent)' }}
+            className="w-6 h-6 rounded-lg flex items-center justify-center text-white shrink-0 shadow-xs bg-[var(--accent)]"
+           
           >
             <History className="w-3.5 h-3.5" />
           </div>
@@ -255,8 +252,8 @@ export const RecentColorsBar: React.FC<RecentColorsBarProps> = ({
 
                   {isMenuOpen && (
                     <div
-                      className="absolute left-0 bottom-full mb-2 w-48 rounded-xl p-1.5 glass-dropdown shadow-2xl z-50 animate-fade-in border border-[var(--border-glass)]"
-                      style={{ borderColor: 'var(--accent-border)' }}
+                      className="absolute left-0 bottom-full mb-2 w-48 rounded-xl p-1.5 glass-dropdown shadow-2xl z-50 animate-fade-in border border-[var(--border-glass)] border-[var(--accent-border)]"
+                     
                     >
                       <div className="flex items-center justify-between px-2 py-1 border-b border-[var(--border-glass-subtle)] mb-1">
                         <div className="flex items-center gap-1.5">

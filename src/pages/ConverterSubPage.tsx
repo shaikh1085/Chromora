@@ -6,27 +6,16 @@ import { FAQSection } from '../components/common/FAQSection';
 import { usePalette } from '../context/PaletteContext';
 import {
   parseColorString,
-  getColorData,
-  rgbToHex,
-  hexToHsl,
-  hslToHex,
-  hexToCmyk,
-  cmykToHex,
-  hexToOklch,
-  oklchToHex,
-} from '../utils/colorUtils';
+  getColorData} from '../utils/colorUtils';
 import {
   ArrowRightLeft,
   Copy,
-  Check,
   Sparkles,
   ArrowRight,
   ShieldCheck,
   Palette,
   Eye,
-  Layers,
-  Code2,
-} from 'lucide-react';
+  Code2} from 'lucide-react';
 
 export const ConverterSubPage: React.FC<{
   slug: string;
@@ -138,12 +127,8 @@ export const ConverterSubPage: React.FC<{
         {/* Hero Section */}
         <div className="my-6">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-2"
-            style={{
-              backgroundColor: 'var(--accent-soft)',
-              color: 'var(--accent)',
-              border: '1px solid var(--accent-border)',
-            }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-2 bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+           
           >
             <ArrowRightLeft className="w-3.5 h-3.5" />
             <span>Developer-Ready Mathematical Conversion</span>
@@ -316,7 +301,7 @@ export const ConverterSubPage: React.FC<{
         {/* Mathematical Formula Banner */}
         <div className="p-6 rounded-2xl glass-card border border-[var(--border-glass)] mb-12">
           <div className="flex items-center gap-2 mb-2">
-            <Code2 className="w-4 h-4" style={{ color: 'var(--accent)' }} />
+            <Code2 className="w-4 h-4 text-[var(--accent)]" />
             <h2 className="text-sm font-bold text-[var(--text-primary)]">Conversion Formula & Logic</h2>
           </div>
           <div className="p-4 rounded-xl bg-[var(--bg-page)] border border-[var(--border-glass-subtle)] font-mono text-xs text-[var(--text-primary)] overflow-x-auto">
@@ -341,7 +326,7 @@ export const ConverterSubPage: React.FC<{
         {/* Related Converter Pages */}
         <div className="my-12 p-6 rounded-3xl glass-card border border-[var(--border-glass)]">
           <h2 className="text-lg font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-            <ArrowRightLeft className="w-4 h-4" style={{ color: 'var(--accent)' }} />
+            <ArrowRightLeft className="w-4 h-4 text-[var(--accent)]" />
             <span>Related Color Converters</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -374,7 +359,7 @@ export const ConverterSubPage: React.FC<{
         {/* Related Core Chromora Tools */}
         <div className="my-12 p-6 rounded-3xl glass-panel border border-[var(--border-glass)]">
           <h2 className="text-lg font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-            <Sparkles className="w-4 h-4" style={{ color: 'var(--accent)' }} />
+            <Sparkles className="w-4 h-4 text-[var(--accent)]" />
             <span>Related Chromora Design Tools</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">

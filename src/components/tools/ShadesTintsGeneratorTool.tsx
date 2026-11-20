@@ -10,23 +10,17 @@ import {
   rgbToOklch,
   oklchToRgb,
   getContrastRatio,
-  clamp,
-} from '../../utils/colorUtils';
+  clamp} from '../../utils/colorUtils';
 import {
   Copy,
   Check,
-  Sparkles,
   Sliders,
   Code,
   Download,
-  Shuffle,
   Layers,
   ArrowRight,
   Info,
-  Palette,
-  CheckCircle2,
-  Share2,
-} from 'lucide-react';
+  Palette} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

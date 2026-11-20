@@ -5,20 +5,10 @@ import {
   getColorData,
   generateTailwindShades,
   generatePalette,
-  getContrastRatio,
-  hexToSlug,
-} from '../utils/colorUtils';
+  getContrastRatio} from '../utils/colorUtils';
 import {
   Copy,
-  Check,
-  Compass,
-  Palette,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  ShieldCheck,
-  Sparkles,
-} from 'lucide-react';
+  Palette} from 'lucide-react';
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { FAQSection } from '../components/common/FAQSection';

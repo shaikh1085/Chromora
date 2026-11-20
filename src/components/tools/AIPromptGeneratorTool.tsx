@@ -3,9 +3,7 @@ import { usePalette } from '../../context/PaletteContext';
 import { useI18n } from '../../context/I18nContext';
 import {
   generateAiPromptPalette,
-  aiPromptPresets,
-  ASIAN_GLOBAL_INSPIRATIONS,
-} from '../../data/presetPalettes';
+  ASIAN_GLOBAL_INSPIRATIONS} from '../../data/presetPalettes';
 import { getColorData, getContrastRatio } from '../../utils/colorUtils';
 import {
   Sparkles,
@@ -16,11 +14,8 @@ import {
   Copy,
   Layout,
   ShieldCheck,
-  Zap,
-  Tag,
   Palette,
-  Globe,
-} from 'lucide-react';
+  Globe} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';
@@ -124,12 +119,8 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
         {/* Hero Section */}
         <div className="my-6">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-2"
-            style={{
-              backgroundColor: 'var(--accent-soft)',
-              color: 'var(--accent)',
-              border: '1px solid var(--accent-border)',
-            }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-2 bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+           
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Smart Keyword & Regional Synthesis</span>
@@ -152,7 +143,7 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
             className="flex flex-col sm:flex-row gap-3"
           >
             <div className="relative flex-1">
-              <Sparkles className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2" style={{ color: 'var(--accent)' }} />
+              <Sparkles className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--accent)]" />
               <input
                 type="text"
                 value={prompt}
@@ -215,12 +206,8 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
                     {activeResult.tags?.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="px-2.5 py-0.5 rounded-full text-[11px] font-bold"
-                        style={{
-                          backgroundColor: 'var(--accent-soft)',
-                          color: 'var(--accent)',
-                          border: '1px solid var(--accent-border)',
-                        }}
+                        className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+                       
                       >
                         {tag}
                       </span>
@@ -340,8 +327,7 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
                     setPaletteFromHexList(activeResult.palette, activeResult.name);
                     navigate('/color-palette-generator');
                   }}
-                  className="text-xs font-bold hover:underline mt-1 flex items-center gap-1 transition-colors"
-                  style={{ color: 'var(--accent)' }}
+                  className="text-xs font-bold hover:underline mt-1 flex items-center gap-1 transition-colors text-[var(--accent)]"
                 >
                   <span>Open in Palette Generator</span>
                   <ArrowRight className="w-3 h-3" />
@@ -356,7 +342,7 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
           <div className="mb-6 flex items-center justify-between">
             <div>
               <h2 className="text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
-                <Globe className="w-5 h-5" style={{ color: 'var(--accent)' }} />
+                <Globe className="w-5 h-5 text-[var(--accent)]" />
                 <span>Asian & Global Inspirations</span>
               </h2>
               <p className="text-xs text-[var(--text-secondary)]">
@@ -373,7 +359,7 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold" style={{ color: 'var(--accent)' }}>
+                    <span className="text-xs font-bold text-[var(--accent)]">
                       {preset.category}
                     </span>
                     <span className="text-[11px] text-[var(--text-muted)]">{preset.tags[0]}</span>
@@ -406,8 +392,7 @@ export const AIPromptGeneratorTool: React.FC<{ navigate: (route: string) => void
                         handleGenerate(preset.prompt);
                         window.scrollTo({ top: 120, behavior: 'smooth' });
                       }}
-                      className="text-xs font-bold hover:underline flex items-center gap-1"
-                      style={{ color: 'var(--accent)' }}
+                      className="text-xs font-bold hover:underline flex items-center gap-1 text-[var(--accent)]"
                     >
                       <span>Test Prompt</span>
                       <ArrowRight className="w-3 h-3" />

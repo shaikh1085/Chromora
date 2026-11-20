@@ -8,8 +8,7 @@ import {
   findCompliantColor,
   findAccessibleTextColor,
   simulateColorBlindness,
-  ColorBlindMode,
-} from '../../utils/colorUtils';
+  ColorBlindMode} from '../../utils/colorUtils';
 import {
   CheckCircle2,
   XCircle,
@@ -17,13 +16,10 @@ import {
   Sparkles,
   Wand2,
   Check,
-  Copy,
-  Info,
   ShieldCheck,
   Eye,
   Type,
-  RotateCcw,
-} from 'lucide-react';
+  RotateCcw} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

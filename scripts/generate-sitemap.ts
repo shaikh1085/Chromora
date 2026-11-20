@@ -87,6 +87,10 @@ function generateSitemapXml() {
   addRoute('/privacy', '0.3', 'yearly');
   addRoute('/terms', '0.3', 'yearly');
 
+  // 6b. Color family directory pages (clean URLs, no query params)
+  const colorFamilies = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink'];
+  colorFamilies.forEach((family) => addRoute(`/colors/family/${family}`, '0.6', 'monthly'));
+
   // 7. Palette collections directory + Guides hub & guide detail pages
   // (these were in the hand-corrected sitemap but missing from this script,
   // so every build silently dropped them again)

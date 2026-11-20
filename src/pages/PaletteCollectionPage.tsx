@@ -108,12 +108,8 @@ export const PaletteCollectionPage: React.FC<{
         {/* Hero Header */}
         <div className="my-6">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-2"
-            style={{
-              backgroundColor: 'var(--accent-soft)',
-              color: 'var(--accent)',
-              border: '1px solid var(--accent-border)',
-            }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-2 bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+           
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Curated Palette Collection & Generator</span>
@@ -300,7 +296,7 @@ export const PaletteCollectionPage: React.FC<{
         {/* In-Depth Guide & Typography Section */}
         <div className="p-8 rounded-3xl glass-panel border border-[var(--border-glass)] mb-16 space-y-8 max-w-4xl">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-5 h-5" style={{ color: 'var(--accent)' }} />
+            <BookOpen className="w-5 h-5 text-[var(--accent)]" />
             <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
               Comprehensive Design Guide
             </span>
@@ -343,7 +339,7 @@ export const PaletteCollectionPage: React.FC<{
         {/* Related Collections */}
         <div className="my-12 p-6 rounded-3xl glass-card border border-[var(--border-glass)]">
           <h2 className="text-lg font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-            <Layers className="w-4 h-4" style={{ color: 'var(--accent)' }} />
+            <Layers className="w-4 h-4 text-[var(--accent)]" />
             <span>Explore Related Color Collections</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -376,7 +372,7 @@ export const PaletteCollectionPage: React.FC<{
         {/* Related Core Chromora Tools */}
         <div className="my-12 p-6 rounded-3xl glass-panel border border-[var(--border-glass)]">
           <h2 className="text-lg font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-            <Code2 className="w-4 h-4" style={{ color: 'var(--accent)' }} />
+            <Code2 className="w-4 h-4 text-[var(--accent)]" />
             <span>Power Your Workflow with Chromora Tools</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">

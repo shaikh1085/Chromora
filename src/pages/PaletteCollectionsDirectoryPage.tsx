@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { COLLECTION_PAGES, CollectionPageData } from '../data/collectionPagesData';
+import { COLLECTION_PAGES } from '../data/collectionPagesData';
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import {
@@ -8,10 +8,8 @@ import {
   ArrowRight,
   Layers,
   Sparkles,
-  SlidersHorizontal,
   FolderHeart,
-  Compass,
-} from 'lucide-react';
+  Compass} from 'lucide-react';
 
 export const PaletteCollectionsDirectoryPage: React.FC<{
   navigate: (route: string) => void;

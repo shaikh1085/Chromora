@@ -2,31 +2,18 @@ import React, { useState, useMemo } from 'react';
 import { usePalette } from '../../context/PaletteContext';
 import { useI18n } from '../../context/I18nContext';
 import {
-  getColorData,
-  hexToRgb,
-  rgbToHsl,
-  getContrastRatio,
-  rgbToOklch,
-} from '../../utils/colorUtils';
+  getColorData} from '../../utils/colorUtils';
 import {
   blendColors,
   generateIntermediateSteps,
-  MixingMode,
-} from '../../utils/colorMixingUtils';
+  MixingMode} from '../../utils/colorMixingUtils';
 import {
-  Sliders,
   Copy,
   Check,
-  Sparkles,
   ArrowRightLeft,
-  Shuffle,
-  Layers,
   ArrowRight,
   Droplets,
-  Palette,
-  Eye,
-  RotateCcw,
-} from 'lucide-react';
+  Palette} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';
@@ -126,7 +113,7 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
   const seoConfig: SEOConfig = {
     title: 'Color Mixer Online: Mix Colors & Calculate Color Mixes with OKLCH Steps',
     description:
-      'Mix colors online and calculate color mixes with custom blending ratios. Explore OKLCH, RGB, HSL, and physical paint subtractive mixing with smooth intermediate steps.',
+      'Mix two colors online with precise ratios in RGB, HSL, and OKLCH. Preview smooth blend steps and copy ready-to-use CSS color-mix() code instantly.',
     canonicalUrl: 'https://chromoraflow.vercel.app/color-mixer',
     keywords: [
       'color mixer online',
@@ -476,10 +463,8 @@ export const ColorMixerTool: React.FC<{ navigate: (route: string) => void }> = (
 
         {/* Step Cards Grid */}
         <div
-          className="grid gap-3 sm:gap-4"
-          style={{
-            gridTemplateColumns: `repeat(auto-fit, minmax(130px, 1fr))`,
-          }}
+          className="grid gap-3 sm:gap-4 grid-cols-[repeat(auto-fit,_minmax(130px,_1fr))]"
+         
         >
           {intermediateSteps.map((step, idx) => {
             const data = getColorData(step.hex);

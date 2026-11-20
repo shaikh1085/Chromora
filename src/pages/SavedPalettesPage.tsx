@@ -8,12 +8,9 @@ import {
   Download,
   Upload,
   Palette,
-  Layout,
   Copy,
   Plus,
-  Share2,
-  ArrowRight,
-} from 'lucide-react';
+  ArrowRight} from 'lucide-react';
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 
@@ -68,7 +65,7 @@ export const SavedPalettesPage: React.FC<{ navigate: (route: string) => void }> 
         config={{
           title: `Saved Palettes Collection (${savedPalettes.length}) — Chromora`,
           description:
-            'Manage, export, and organize your saved color palettes and design system tokens.',
+            'Manage your saved color palettes and design systems in Chromora. Organize collections, export Tailwind tokens, and revisit your favorite schemes anytime.',
           canonicalUrl: 'https://chromoraflow.vercel.app/saved-palettes',
           robots: 'noindex, follow',
         }}

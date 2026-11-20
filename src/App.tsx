@@ -10,7 +10,7 @@ import { DesignPreviewModal } from './components/tools/DesignPreviewModal';
 import { QuickSearchModal } from './components/common/QuickSearchModal';
 import { VisualSettingsModal } from './components/common/VisualSettingsModal';
 import { CONVERTER_PAGES } from './data/converterPagesData';
-import { COLLECTION_PAGES, getCollectionPageData } from './data/collectionPagesData';
+import { getCollectionPageData } from './data/collectionPagesData';
 import { HUB_CATEGORIES } from './data/seoKeywordMap';
 
 // Lazy Loaded Pages & Tools for Code Splitting & Performance
@@ -333,6 +333,17 @@ export function AppContent() {
       );
     }
 
+    // Clean color-family directory routes (e.g. /colors/family/red).
+    // Only families present in the named-color database get a route.
+    if (path.startsWith('/colors/family/')) {
+      const family = path.replace('/colors/family/', '');
+      const knownFamilies = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink'];
+      if (!knownFamilies.includes(family)) {
+        return <NotFoundPage navigate={navigate} />;
+      }
+      return <ColorSearchPage initialFamily={family} navigate={navigate} />;
+    }
+
     if (path.startsWith('/colors/')) {
       const colorSlug = path.replace('/colors/', '');
       return <ColorDetailPage key={colorSlug} slug={colorSlug} navigate={navigate} />;
@@ -351,34 +362,26 @@ export function AppContent() {
         <div className="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
           {/* Ambient Blob 1 - Top Left Accent */}
           <div
-            className="absolute -top-32 -left-32 w-[550px] h-[550px] md:w-[680px] md:h-[680px] rounded-full blur-[100px] md:blur-[140px] opacity-20 dark:opacity-22 transition-all duration-700"
-            style={{
-              background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)',
-            }}
+            className="absolute -top-32 -left-32 w-[550px] h-[550px] md:w-[680px] md:h-[680px] rounded-full blur-[100px] md:blur-[140px] opacity-20 dark:opacity-22 transition-all duration-700 bg-[radial-gradient(circle,_var(--accent)_0%,_transparent_70%)]"
+           
           />
 
           {/* Ambient Blob 2 - Top Right Accent Light */}
           <div
-            className="absolute top-1/6 -right-32 w-[450px] h-[450px] md:w-[600px] md:h-[600px] rounded-full blur-[100px] md:blur-[130px] opacity-16 dark:opacity-18 transition-all duration-700"
-            style={{
-              background: 'radial-gradient(circle, var(--accent-light, var(--accent)) 0%, transparent 70%)',
-            }}
+            className="absolute top-1/6 -right-32 w-[450px] h-[450px] md:w-[600px] md:h-[600px] rounded-full blur-[100px] md:blur-[130px] opacity-16 dark:opacity-18 transition-all duration-700 bg-[radial-gradient(circle,_var(--accent-light,_var(--accent))_0%,_transparent_70%)]"
+           
           />
 
           {/* Ambient Blob 3 - Mid/Bottom Left Accent */}
           <div
-            className="hidden sm:block absolute top-2/3 -left-20 w-[420px] h-[420px] md:w-[520px] md:h-[520px] rounded-full blur-[110px] md:blur-[130px] opacity-12 dark:opacity-16 transition-all duration-700"
-            style={{
-              background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)',
-            }}
+            className="hidden sm:block absolute top-2/3 -left-20 w-[420px] h-[420px] md:w-[520px] md:h-[520px] rounded-full blur-[110px] md:blur-[130px] opacity-12 dark:opacity-16 transition-all duration-700 bg-[radial-gradient(circle,_var(--accent)_0%,_transparent_70%)]"
+           
           />
 
           {/* Ambient Blob 4 - Center Soft Radial Gradient Overlay */}
           <div
-            className="absolute top-0 inset-x-0 h-[600px] pointer-events-none opacity-25 dark:opacity-20 transition-opacity duration-700"
-            style={{
-              background: 'radial-gradient(ellipse 80% 60% at 50% 0%, var(--accent-glow-weak) 0%, transparent 75%)',
-            }}
+            className="absolute top-0 inset-x-0 h-[600px] pointer-events-none opacity-25 dark:opacity-20 transition-opacity duration-700 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,_var(--accent-glow-weak)_0%,_transparent_75%)]"
+           
           />
         </div>
       )}

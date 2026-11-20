@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { GUIDES_DATABASE, GuideArticle } from '../data/guidesData';
+import { GUIDES_DATABASE } from '../data/guidesData';
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
-import { BookOpen, Clock, ArrowRight, Sparkles, Filter, ChevronRight, Layers } from 'lucide-react';
+import { BookOpen, Clock, ChevronRight } from 'lucide-react';
 
 export const GuidesHubPage: React.FC<{ navigate: (route: string) => void }> = ({ navigate }) => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -39,7 +39,7 @@ export const GuidesHubPage: React.FC<{ navigate: (route: string) => void }> = ({
         config={{
           title: 'Color Guides & Tutorials for Designers and Developers — Chromora',
           description:
-            'Free in-depth color guides for frontend developers and UI/UX designers. Learn HEX vs RGB vs HSL, OKLCH, WCAG accessibility, color harmonies, and modern design systems.',
+            'Free color guides for designers and developers. Learn HEX vs RGB vs HSL, OKLCH, WCAG contrast, color harmonies, and modern design systems.',
           canonicalUrl: 'https://chromoraflow.vercel.app/guides',
           keywords: [
             'color guides for developers',
@@ -64,12 +64,8 @@ export const GuidesHubPage: React.FC<{ navigate: (route: string) => void }> = ({
         {/* Hero Header */}
         <div className="my-8 text-center max-w-3xl mx-auto space-y-3">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2"
-            style={{
-              backgroundColor: 'var(--accent-soft)',
-              color: 'var(--accent)',
-              border: '1px solid var(--accent-border)',
-            }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+           
           >
             <BookOpen className="w-3.5 h-3.5" />
             <span>Educational Knowledge Base</span>
@@ -116,12 +112,8 @@ export const GuidesHubPage: React.FC<{ navigate: (route: string) => void }> = ({
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <span
-                    className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full"
-                    style={{
-                      backgroundColor: 'var(--accent-soft)',
-                      color: 'var(--accent)',
-                      border: '1px solid var(--accent-border)',
-                    }}
+                    className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+                   
                   >
                     {guide.category}
                   </span>

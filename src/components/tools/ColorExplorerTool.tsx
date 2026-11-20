@@ -5,8 +5,7 @@ import {
   parseColorInput,
   generateTailwindShades,
   generatePalette,
-  hexToSlug,
-} from '../../utils/colorUtils';
+  hexToSlug} from '../../utils/colorUtils';
 import {
   Copy,
   Check,
@@ -15,11 +14,8 @@ import {
   Palette,
   CheckCircle,
   ExternalLink,
-  Info,
-  Layers,
   ArrowRight,
-  Maximize2,
-} from 'lucide-react';
+  Maximize2} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

@@ -12,10 +12,7 @@ import {
   Heart,
   MessageCircle,
   Sliders,
-  Check,
-  ChevronRight,
-  Zap,
-} from 'lucide-react';
+  Zap} from 'lucide-react';
 import { getColorData, getContrastRatio } from '../../utils/colorUtils';
 
 type PreviewMode = 'saas' | 'landing' | 'mobile' | 'ecommerce' | 'social';

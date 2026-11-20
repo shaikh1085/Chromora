@@ -10,11 +10,8 @@ import {
   Code2,
   Layout,
   Copy,
-  Plus,
-  Trash2,
   Sliders,
   Sparkles,
-  ChevronDown,
   Layers,
   Share2,
   Download,
@@ -23,9 +20,7 @@ import {
   Instagram,
   Check,
   Globe,
-  ArrowRight,
-  Keyboard,
-} from 'lucide-react';
+  Keyboard} from 'lucide-react';
 import {
   getColorData,
   generateTailwindShades,
@@ -33,8 +28,7 @@ import {
   hslToRgb,
   hexToRgb,
   rgbToHsl,
-  clamp,
-} from '../../utils/colorUtils';
+  clamp} from '../../utils/colorUtils';
 import { ASIAN_GLOBAL_INSPIRATIONS } from '../../data/presetPalettes';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';

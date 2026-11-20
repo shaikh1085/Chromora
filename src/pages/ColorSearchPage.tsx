@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { usePalette } from '../context/PaletteContext';
-import { namedColorsDatabase, ColorFamily } from '../data/colorNames';
+import { namedColorsDatabase } from '../data/colorNames';
 import { getColorData, hexToSlug } from '../utils/colorUtils';
-import { Search, Filter, Copy, Check, ExternalLink, Layers, Sparkles } from 'lucide-react';
+import { Search, Filter, Copy, Check, Layers } from 'lucide-react';
 import { SEO } from '../components/common/SEO';
+import { getRouteSEO } from '../data/seoConfig';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { FAQSection } from '../components/common/FAQSection';
 
@@ -87,29 +88,40 @@ export const ColorSearchPage: React.FC<{
     },
   ];
 
+  // Clean family routes (/colors/family/<family>) use their own SEO entry so
+  // title/description/canonical match the family page; the plain directory
+  // (and legacy ?family= links) keep the generic directory SEO below.
+  const KNOWN_FAMILIES = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink'];
+  const familySeo =
+    initialFamily && KNOWN_FAMILIES.includes(initialFamily)
+      ? getRouteSEO(`/colors/family/${initialFamily}`)
+      : null;
+
   return (
     <div className="min-h-screen py-8">
       <SEO
-        config={{
-          title: 'Color Names Directory & Hex Code Search — Browse 400+ Curated Shades',
-          description:
-            'Browse our curated color names directory with exact HEX codes and RGB values. Search historical pigments, modern CSS named colors, and brand color swatches.',
-          keywords: [
-            'color names list with hex codes',
-            'html color code search engine',
-            'hex code finder by color name',
-            'curated color names directory',
-            'pantone color names list',
-            'css named colors reference chart',
-          ],
-          canonicalUrl: 'https://chromoraflow.vercel.app/colors',
-          faqs: directoryFaqs,
-          softwareApp: {
-            name: 'Chromora Color Names Directory & Finder',
-            description: 'Catalog of 400+ named colors with filtering by hue family, brightness, and hex code.',
-            applicationCategory: 'DesignApplication',
-          },
-        }}
+        config={
+          familySeo ?? {
+            title: 'Color Names Directory & Hex Code Search — Browse 400+ Curated Shades',
+            description:
+              'Browse our curated color names directory with exact HEX codes and RGB values. Search historical pigments, modern CSS named colors, and brand color swatches.',
+            keywords: [
+              'color names list with hex codes',
+              'html color code search engine',
+              'hex code finder by color name',
+              'curated color names directory',
+              'pantone color names list',
+              'css named colors reference chart',
+            ],
+            canonicalUrl: 'https://chromoraflow.vercel.app/colors',
+            faqs: directoryFaqs,
+            softwareApp: {
+              name: 'Chromora Color Names Directory & Finder',
+              description: 'Catalog of 400+ named colors with filtering by hue family, brightness, and hex code.',
+              applicationCategory: 'DesignApplication',
+            },
+          }
+        }
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

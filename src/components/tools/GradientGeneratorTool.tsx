@@ -4,17 +4,13 @@ import { GradientStop } from '../../types';
 import { gradientPresets, generateCssGradient } from '../../data/gradientPresets';
 import { getRandomColor, getColorData } from '../../utils/colorUtils';
 import {
-  Sliders,
   Sparkles,
   Copy,
   Plus,
   Trash2,
   Shuffle,
   Check,
-  Compass,
-  ArrowRight,
-  Code2,
-} from 'lucide-react';
+  Code2} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';
