@@ -4,10 +4,8 @@ import {
   getColorData,
   parseColorInput,
   generateTailwindShades,
-  generatePalette,
   getContrastRatio,
-  hexToSlug,
-} from '../utils/colorUtils';
+  hexToSlug} from '../utils/colorUtils';
 import {
   Compass,
   Palette,
@@ -20,13 +18,10 @@ import {
   Copy,
   Check,
   Search,
-  ExternalLink,
   Layers,
   Code2,
   Shield,
-  BookOpen,
-  FolderHeart,
-} from 'lucide-react';
+  BookOpen} from 'lucide-react';
 import { SEO } from '../components/common/SEO';
 import { FAQSection } from '../components/common/FAQSection';
 import { ShareButtons } from '../components/common/ShareButtons';
@@ -201,7 +196,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
         config={{
           title: 'Free Color Tools for Designers & Developers — Chromora',
           description:
-            'Chromora is a comprehensive suite of free color tools for designers and developers. Generate accessible palettes, check WCAG contrast, extract colors from images, convert HEX to OKLCH & RGB, and export Tailwind tokens.',
+            'Free color tools to create accessible palettes, check WCAG contrast, and convert HEX to OKLCH. Generate, test, and export design-ready colors online.',
           keywords: [
             'free color tools for designers and developers',
             'accessible color palette generator for UI design',
@@ -232,10 +227,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[var(--text-primary)] tracking-tight text-center">
               Free Color Tools for{' '}
               <span
-                className="text-transparent bg-clip-text"
-                style={{
-                  backgroundImage: `linear-gradient(135deg, var(--accent), #d946ef, #38bdf8)`,
-                }}
+                className="text-transparent bg-clip-text bg-[linear-gradient(135deg,_var(--accent),_#d946ef,_#38bdf8)]"
+               
               >
                 Designers &amp; Developers.
               </span>
@@ -272,10 +265,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
             {/* Left Card: Input Studio & Fast Generator */}
             <div className="w-full glass-panel rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl relative p-6 sm:p-8 flex flex-col justify-between gap-6">
               <div
-                className="absolute inset-0 pointer-events-none opacity-15"
-                style={{
-                  background: `radial-gradient(circle at top left, var(--accent) 0%, transparent 60%)`,
-                }}
+                className="absolute inset-0 pointer-events-none opacity-15 bg-[radial-gradient(circle_at_top_left,_var(--accent)_0%,_transparent_60%)]"
+               
               />
 
               <div className="relative z-10 flex flex-col gap-6">
@@ -340,7 +331,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
                       }}
                       className="flex-1 py-2.5 px-4 rounded-xl bg-[var(--surface-glass-card)] hover:bg-[var(--surface-glass-active)] text-[var(--text-primary)] text-xs font-semibold flex items-center justify-center gap-2 border border-[var(--border-glass)] transition-colors"
                     >
-                      <Compass className="w-3.5 h-3.5" style={{ color: 'var(--accent)' }} />
+                      <Compass className="w-3.5 h-3.5 text-[var(--accent)]" />
                       <span>Explore Specs</span>
                     </a>
                     <a
@@ -386,8 +377,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
                   >
                     <div>
                       <div
-                        className="w-8 h-8 rounded-lg flex items-center justify-center mb-3 group-hover:scale-105 transition-transform"
-                        style={{ backgroundColor: 'var(--accent-soft)', color: 'var(--accent)' }}
+                        className="w-8 h-8 rounded-lg flex items-center justify-center mb-3 group-hover:scale-105 transition-transform bg-[var(--accent-soft)] text-[var(--accent)]"
+                       
                       >
                         <CheckCircle className="w-4 h-4" />
                       </div>
@@ -431,10 +422,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
             {/* Right Card: Interactive Showcase Stage */}
             <div className="w-full glass-panel rounded-[28px] sm:rounded-[32px] overflow-hidden shadow-2xl relative p-6 sm:p-8 flex flex-col justify-between gap-6">
               <div
-                className="absolute inset-0 pointer-events-none opacity-20"
-                style={{
-                  background: `radial-gradient(circle at top right, var(--accent) 0%, transparent 60%)`,
-                }}
+                className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--accent)_0%,_transparent_60%)]"
+               
               />
 
               <div className="relative z-10 flex flex-col gap-6">
@@ -578,7 +567,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
                           All Formats
                         </button>
                       </div>
-                      <div className="space-y-1 font-mono text-[11px] bg-[var(--surface-glass-card)] p-2.5 rounded-lg border border-[var(--border-glass-subtle)] leading-relaxed" style={{ color: 'var(--accent)' }}>
+                      <div className="space-y-1 font-mono text-[11px] bg-[var(--surface-glass-card)] p-2.5 rounded-lg border border-[var(--border-glass-subtle)] leading-relaxed text-[var(--accent)]">
                         <div>--primary-500: {activeHex.toUpperCase()};</div>
                         <div>--primary-600: {activeShades.find((s) => s.step === '600')?.hex.toUpperCase() || '#4F46E5'};</div>
                         <div>--bg-surface: var(--bg-page);</div>
@@ -623,12 +612,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span
-            className="px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full inline-block mb-3"
-            style={{
-              backgroundColor: 'var(--accent-soft)',
-              color: 'var(--accent)',
-              border: '1px solid var(--accent-border)',
-            }}
+            className="px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full inline-block mb-3 bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent-border)]"
+           
           >
             Design System Tools
           </span>
@@ -664,8 +649,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
                     <span className="flex items-center gap-2">
                       {isFeatured && (
                         <span
-                          className="text-[11px] font-bold text-white px-2.5 py-1 rounded-full"
-                          style={{ backgroundColor: 'var(--accent)' }}
+                          className="text-[11px] font-bold text-white px-2.5 py-1 rounded-full bg-[var(--accent)]"
+                         
                         >
                           Most Popular
                         </span>
@@ -685,8 +670,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
                 </div>
 
                 <div
-                  className="pt-6 mt-6 border-t border-[var(--border-glass-subtle)] flex items-center justify-between text-xs font-bold transition-all"
-                  style={{ color: 'var(--accent)' }}
+                  className="pt-6 mt-6 border-t border-[var(--border-glass-subtle)] flex items-center justify-between text-xs font-bold transition-all text-[var(--accent)]"
+                 
                 >
                   <span>Launch Tool</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -697,12 +682,11 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
         </div>
       </section>
 
-
       {/* Popular Colors — compact strip (full directory lives at /colors) */}
       <section className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
+            <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
               Curated Swatches
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mt-1">
@@ -776,7 +760,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
       <section className="py-16 border-t border-[var(--border-glass)] bg-[var(--surface-glass)] backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
+            <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
               Built for Modern Product Teams
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mt-1.5">
@@ -844,7 +828,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
+              <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
                 Curated Schemes
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mt-1">
@@ -917,7 +901,7 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--accent)' }}>
+              <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
                 Educational Articles
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mt-1">
@@ -969,8 +953,8 @@ export const HomePage: React.FC<{ navigate: (route: string) => void; onOpenSearc
                 </div>
 
                 <div
-                  className="mt-6 pt-4 border-t border-[var(--border-glass-subtle)] flex items-center justify-between text-xs font-bold transition-all"
-                  style={{ color: 'var(--accent)' }}
+                  className="mt-6 pt-4 border-t border-[var(--border-glass-subtle)] flex items-center justify-between text-xs font-bold transition-all text-[var(--accent)]"
+                 
                 >
                   <span className="flex items-center gap-1.5">
                     <BookOpen className="w-3.5 h-3.5" />

@@ -44,7 +44,7 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
     h1: 'HEX vs RGB vs HSL: Color Formats Explained for Web Developers',
     primaryKeyword: 'hex vs rgb vs hsl',
     metaDescription:
-      'Understand the differences between HEX, RGB, and HSL color formats in web design and CSS. Learn when to use each format, readability trade-offs, and conversion examples.',
+      'Understand HEX, RGB, and HSL color formats in web design and CSS. Learn when to use each format, readability trade-offs, and conversion examples.',
     readTime: '6 min read',
     category: 'Color Formats',
     publishDate: '2026-08-15',
@@ -415,7 +415,7 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
     h1: 'How to Create a Cohesive Color Palette from Scratch',
     primaryKeyword: 'how to create a color palette',
     metaDescription:
-      'Learn how to create a complete color palette for brands, websites, and UI design systems. Master base color selection, harmony math, shade scales, and token export.',
+      'Learn to create a complete color palette for brands, websites, and UI systems. Master base colors, harmony math, shade scales, and token export.',
     readTime: '7 min read',
     category: 'UI & Web Design',
     publishDate: '2026-08-26',
@@ -671,7 +671,7 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
     h1: 'Color Theory for Web Design: Psychology, Contrast & Harmony',
     primaryKeyword: 'color theory for web design',
     metaDescription:
-      'Learn fundamental color theory applied to web design and UI development, with practical color theory tools and examples. Discover additive vs subtractive color, visual weight, emotional psychology, and UI contrast.',
+      'Learn fundamental color theory for web design and UI. Additive vs subtractive color, visual weight, emotional psychology, and contrast essentials.',
     readTime: '8 min read',
     category: 'Color Theory',
     publishDate: '2026-09-01',
@@ -728,7 +728,7 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
     h1: 'Color-Blind-Friendly Palettes: Designing for Color Vision Deficiency',
     primaryKeyword: 'color blind friendly palette generator',
     metaDescription:
-      'Learn how to design color-blind-friendly palettes that stay readable for people with protanopia, deuteranopia, and tritanopia. Safe color combinations, contrast rules, and testing tips.',
+      'Design color-blind-friendly palettes that stay readable with protanopia, deuteranopia, and tritanopia. Safe combos, contrast rules, and testing tips.',
     readTime: '6 min read',
     category: 'Accessibility',
     publishDate: '2026-10-27',
@@ -812,7 +812,7 @@ export const GUIDES_DATABASE: Record<string, GuideArticle> = {
     h1: 'Diwali Decoration Colors: Traditional Meanings & Modern Combinations',
     primaryKeyword: 'diwali decoration colors',
     metaDescription:
-      'Discover the colors of Diwali decorations: marigold yellow, vermilion red, molten gold, and peacock green. Meanings, traditional combinations, and modern palettes for homes and designs.',
+      'Diwali decoration colors: marigold yellow, vermilion red, molten gold, and peacock green. Meanings, traditional combos, and modern palettes for homes.',
     readTime: '5 min read',
     category: 'UI & Web Design',
     publishDate: '2026-10-27',

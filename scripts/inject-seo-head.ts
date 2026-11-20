@@ -20,6 +20,19 @@
  * og:url, twitter:title, twitter:description. og:type, og:image and
  * twitter:card are kept exactly as in the shell.
  *
+ * STATIC CONTENT (GEO / LLM READABILITY)
+ * The same files ALSO get a route-specific static content block injected
+ * inside <div id="root">: the page's own <h1>, its meta description as a
+ * paragraph, and its hero subtitle (or data intro/summary) — the exact text
+ * the React app renders for that route, taken from the same data modules.
+ * Crawlers and LLMs that read the initial HTML see the core content without
+ * running JS. React's createRoot() replaces the #root children on mount, so
+ * the static block never shows to users and never changes the design. The
+ * homepage (dist/index.html itself) gets the same treatment, plus the tool
+ * directory list reused from the shell's own <noscript> block. The noscript
+ * heading in index.html is an <h2> on purpose, so the raw HTML of every
+ * route contains exactly ONE <h1> (the static block's).
+ *
  * NO STALE ASSETS BY CONSTRUCTION
  * The injected files are built from the FRESH dist/index.html on EVERY build,
  * so they always reference the current hashed JS/CSS bundles. Nothing is
@@ -57,13 +70,14 @@ import { getRouteSEO, CORE_ROUTES_SEO, SITE_URL } from '../src/data/seoConfig';
 import { CONVERTER_PAGES } from '../src/data/converterPagesData';
 import { COLLECTION_PAGES } from '../src/data/collectionPagesData';
 import { GUIDES_DATABASE } from '../src/data/guidesData';
+import { HUB_CATEGORIES } from '../src/data/seoKeywordMap';
 import { getColorData, parseSlugToHex } from '../src/utils/colorUtils';
 
 const ROOT = path.resolve(process.cwd());
 const DIST_DIR = path.join(ROOT, 'dist');
 const SHELL_PATH = path.join(DIST_DIR, 'index.html');
 const SITEMAP_PATH = path.join(DIST_DIR, 'sitemap.xml');
-const EXPECTED_SITEMAP_URLS = 1320;
+const EXPECTED_SITEMAP_URLS = 1327;
 const HOME_CANONICAL = `${SITE_URL}/`;
 
 /** Routes whose title/description exist only as literals in their components. */
@@ -78,7 +92,7 @@ const LITERAL_SEO: Record<string, { title: string; description: string }> = {
   '/share-link-generator': {
     title: 'Share Link Generator — Create WhatsApp, X, Facebook & LinkedIn Share Links',
     description:
-      'Paste any website URL and instantly generate ready share links for WhatsApp, X, Facebook, LinkedIn, Telegram and Email. Free, no sign-up, everything runs in your browser.',
+      'Paste any website URL and create ready share links for WhatsApp, X, Facebook, LinkedIn, Telegram, and Email. Free, instant, and fully private.',
   },
   // src/pages/AboutPage.tsx
   '/about': {
@@ -95,7 +109,7 @@ const LITERAL_SEO: Record<string, { title: string; description: string }> = {
   // src/pages/TermsPage.tsx
   '/terms': {
     title: 'Terms of Service — Chromora',
-    description: 'Terms of service and usage conditions for the Chromora color intelligence suite.',
+    description: 'Terms of service for the Chromora color tools suite. Read the rules for using our free browser-based color pickers, palette generators, and converters.',
   },
   // src/pages/PaletteCollectionsDirectoryPage.tsx
   '/palettes': {
@@ -107,13 +121,175 @@ const LITERAL_SEO: Record<string, { title: string; description: string }> = {
   '/guides': {
     title: 'Color Guides & Tutorials for Designers and Developers — Chromora',
     description:
-      'Free in-depth color guides for frontend developers and UI/UX designers. Learn HEX vs RGB vs HSL, OKLCH, WCAG accessibility, color harmonies, and modern design systems.',
+      'Free color guides for designers and developers. Learn HEX vs RGB vs HSL, OKLCH, WCAG contrast, color harmonies, and modern design systems.',
   },
 };
 
 /** The SEO component's exact title rule (src/components/common/SEO.tsx). */
 function fullTitle(title: string): string {
   return title.includes('Chromora') ? title : `${title} | Chromora`;
+}
+
+/**
+ * Rendered <h1> text per route, copied verbatim from the component that
+ * renders it. Used for the static block inside #root — it MUST match what
+ * React renders, so prefer the component literal over seoConfig's h1 field
+ * (which is display-only metadata and differs on several tool pages).
+ * Dynamic h1s (color pages, converters, collections, guides, hubs, color
+ * picker/converter defaults) are resolved from data in resolveStatic().
+ */
+const LITERAL_H1: Record<string, string> = {
+  '/': 'Free Color Tools for Designers & Developers',
+  '/color-picker': 'Very Light Blue #6366F1', // default activeHex #6366f1
+  '/color-palette-generator': 'Color Palette Generator',
+  '/ai-palette-generator': 'AI Prompt to Color Palette',
+  '/image-color-extractor': 'Image Color Palette Extractor',
+  '/wcag-contrast-checker': 'Color Contrast Checker & Optimizer',
+  '/gradient-generator': 'CSS Gradient Studio & Generator',
+  '/color-converter': 'Multi-Space Color Converter (HEX, RGB, HSL, CMYK, OKLCH)',
+  '/color-shades-generator': 'Color Shades & Tints Generator',
+  '/color-mixer': 'Color Mixer Online',
+  '/color-name-finder': 'Color Name Finder',
+  '/share-link-generator': 'Share Link Generator',
+  '/color-blindness-simulator': 'Color Blindness Simulator',
+  '/random-color-generator': 'Random Color & Palette Generator',
+  '/pantone-color-converter': 'Pantone & RAL Color Converter',
+  '/favicon-generator': 'Favicon Generator & App Icon Maker',
+  '/color-wheel': 'Color Wheel & Harmony Generator',
+  '/design-preview': 'Real-Time Design System Preview',
+  '/colors': 'Named Colors Directory',
+  '/about': 'About Chromora',
+  '/privacy': 'Privacy Policy',
+  '/terms': 'Terms of Service',
+  '/palettes': 'Color Palette Collections',
+  '/guides': 'Color Guides & Engineering Tutorials',
+};
+
+/**
+ * Hero subtitle paragraph rendered directly under the <h1>, copied verbatim
+ * from the component. Routes without an entry use the data intro/summary
+ * (converters, collections, guides, hubs) or no subtitle at all.
+ */
+const LITERAL_SUBTITLE: Record<string, string> = {
+  '/': 'Powerful color tools for palettes, conversions, accessibility, gradients, and image color extraction — free and easy to use.',
+  '/color-palette-generator':
+    'Explore 12 mathematical harmonies, lock favorite swatches, and inspect 50–950 shade curves. Press Space to regenerate.',
+  '/ai-palette-generator':
+    'Describe any aesthetic, brand concept, cultural celebration, industry, or mood to synthesize a calibrated 5-color palette with psychological justification.',
+  '/image-color-extractor':
+    'Extract dominant color harmonies directly from photography, UI screenshots, and artwork.',
+  '/wcag-contrast-checker':
+    'Audit foreground and background pairings for WCAG AA and AAA compliance with live UI components, color-blind simulation, and multilingual scripts.',
+  '/gradient-generator':
+    'Fine-tune linear angles, color stop positions, and copy instant CSS rules.',
+  '/color-converter':
+    'Live interactive transformation between web, digital display, CSS color levels, and print representations.',
+  '/color-shades-generator':
+    'Input any base color to automatically calculate a perceptually uniform 10-step tint and shade palette. Complete with WCAG contrast ratings, CSS variables, and one-click Tailwind config export.',
+  '/color-mixer':
+    'Blend two colors in real-time with customizable mixing ratios and color spaces. View intermediate step gradients and export palette swatches instantly.',
+  '/color-name-finder':
+    'Have a hex code but no name for it? Type any hex color and instantly find the closest named colors from our database, with a full shade scale for the best match.',
+  '/share-link-generator':
+    'Paste your website URL and get ready share links for WhatsApp, X, Facebook, LinkedIn, Telegram and Email — copy one link or all of them and post anywhere.',
+  '/color-blindness-simulator':
+    'Simulate how your colors, UI palettes, and interface screenshots appear to users with Protanopia, Deuteranopia, Tritanopia, and Achromatopsia vision deficiencies.',
+  '/random-color-generator':
+    'Instantly discover aesthetic random colors and color palettes. Apply mood filters for pastels, neons, warm, or cool tones, lock your favorites, and copy CSS codes.',
+  '/pantone-color-converter':
+    'Bridge digital UI design and physical print/manufacturing production. Match any digital HEX or RGB color to the closest standard Pantone PMS spot ink and RAL industrial coating.',
+  '/favicon-generator':
+    'Create complete production favicon suites for desktop browsers, iOS Apple Touch Icons, and Android PWA manifests from text, emojis, or uploaded logos.',
+  '/color-wheel':
+    'Rotate through the full 360° HSL color wheel to discover perfect complementary, analogous, triadic, split-complementary, and tetradic color combinations.',
+  '/design-preview':
+    'Map your color palette to semantic UI roles and see how it looks across production SaaS, mobile, ecommerce, and landing page layouts.',
+  '/colors':
+    'Search 400+ curated shades, historical pigments, and UI design standards. Click any swatch for full coordinate breakdowns.',
+  '/color-picker':
+    'Input any HEX, RGB, HSL, HSV, OKLCH, or CSS name to inspect color space coordinates, Tailwind shade scales, and exportable design tokens.',
+  '/about':
+    'Chromora was founded on a simple conviction: digital color should be mathematically precise, universally accessible, and effortless to integrate into modern software codebases.',
+  '/guides':
+    'In-depth, practical guides on color theory, digital spaces, modern CSS formats, WCAG accessibility compliance, and UI design systems.',
+  '/palettes':
+    'Hand-curated, WCAG-tested color schemes tailored for modern digital applications, creative portfolios, cultural festivities, and brand design systems.',
+};
+
+interface ResolvedStatic {
+  h1: string;
+  description: string;
+  subtitle: string | null;
+}
+
+/** Resolve a route to its static-block content (rendered h1 + description + subtitle), or null. */
+function resolveStatic(route: string): ResolvedStatic | null {
+  const seo = resolveSeo(route);
+  if (!seo) return null;
+
+  let h1: string | null = LITERAL_H1[route] ?? null;
+  let subtitle: string | null = LITERAL_SUBTITLE[route] ?? null;
+  const slug = route.slice(1);
+
+  if (!h1 || !subtitle) {
+    if (route.startsWith('/colors/family/')) {
+      h1 ??= 'Named Colors Directory';
+    } else if (route.startsWith('/colors/')) {
+      try {
+        const hex = parseSlugToHex(route.slice('/colors/'.length));
+        const colorData = getColorData(hex);
+        if (colorData?.name) h1 ??= colorData.name;
+      } catch {
+        /* fall through */
+      }
+    } else if (route.startsWith('/guides/')) {
+      const guide = (GUIDES_DATABASE as Record<string, { h1: string; summary: string }>)[route.slice('/guides/'.length)];
+      if (guide) {
+        h1 ??= guide.h1;
+        subtitle ??= guide.summary;
+      }
+    } else {
+      const converter = (CONVERTER_PAGES as Record<string, { h1: string; intro: string }>)[slug];
+      if (converter) {
+        h1 ??= converter.h1;
+        subtitle ??= converter.intro;
+      } else {
+        const collection = (COLLECTION_PAGES as Record<string, { h1: string; intro: string }>)[slug];
+        if (collection) {
+          h1 ??= collection.h1;
+          subtitle ??= collection.intro;
+        } else {
+          const hub = (HUB_CATEGORIES as Record<string, { h1: string; leadParagraph: string }>)[slug];
+          if (hub) {
+            h1 ??= hub.h1;
+            subtitle ??= hub.leadParagraph;
+          }
+        }
+      }
+    }
+  }
+  if (!h1) h1 = CORE_ROUTES_SEO[route]?.h1 ?? seo.title;
+  return { h1, description: seo.description, subtitle };
+}
+
+/**
+ * Build the static content block for #root: the page's own h1, its meta
+ * description, and its hero subtitle. Plain semantic HTML, no classes — it
+ * is replaced by React on mount, so it only ever shows to no-JS readers
+ * and crawlers. For the homepage, append the tool-directory link list
+ * reused from the shell's own <noscript> block.
+ */
+function buildStaticBlock(staticData: ResolvedStatic, shell: string, route: string): string {
+  const parts: string[] = [
+    `<h1>${escapeText(staticData.h1)}</h1>`,
+    `<p>${escapeText(staticData.description)}</p>`,
+  ];
+  if (staticData.subtitle) parts.push(`<p>${escapeText(staticData.subtitle)}</p>`);
+  if (route === '/') {
+    const noscriptUl = shell.match(/<noscript>[\s\S]*?(<ul>[\s\S]*?<\/ul>)/)?.[1];
+    if (noscriptUl) parts.push(noscriptUl);
+  }
+  return parts.join('\n');
 }
 
 interface ResolvedSeo {
@@ -282,13 +458,46 @@ function main(): void {
 
   const failures: string[] = [];
   const canonicalOnly: string[] = [];
+  const staticOnly: string[] = [];
   let written = 0;
 
   for (const route of uniqueRoutes) {
-    if (route === '/') continue; // Homepage keeps the built dist/index.html untouched.
     const canonical = route === '/' ? HOME_CANONICAL : `${SITE_URL}${route}`;
-    const seo = resolveSeo(route);
-    if (!seo) canonicalOnly.push(route);
+    const seo = route === '/' ? null : resolveSeo(route);
+    if (route !== '/' && !seo) canonicalOnly.push(route);
+
+    // Homepage: head tags are already correct in the shell (index.html);
+    // only the static block goes into #root.
+    if (route === '/') {
+      const staticData = resolveStatic(route);
+      if (!staticData) {
+        staticOnly.push(route);
+        continue;
+      }
+      const staticBlock = buildStaticBlock(staticData, shell, route);
+      const rootPattern = /<div id="root"><\/div>/;
+      if (!rootPattern.test(shell)) {
+        failures.push(`${route}: shell is missing the empty <div id="root"></div> — cannot inject static block`);
+        continue;
+      }
+      const html = shell.replace(rootPattern, () => `<div id="root">${staticBlock}</div>`);
+      fs.writeFileSync(SHELL_PATH, html, 'utf-8');
+      const writtenHtml = fs.readFileSync(SHELL_PATH, 'utf-8');
+      const checks: string[] = [];
+      if (!writtenHtml.includes(`<h1>${escapeText(staticData.h1)}</h1>`)) checks.push('static h1 missing/wrong');
+      if (!writtenHtml.includes(`<p>${escapeText(staticData.description)}</p>`)) {
+        checks.push('static description paragraph missing/wrong');
+      }
+      if (writtenHtml.replace(`<div id="root">${staticBlock}</div>`, '<div id="root"></div>') !== shell) {
+        checks.push('homepage differs from shell outside the static block');
+      }
+      if (checks.length > 0) {
+        failures.push(`${route}: verification failed — ${checks.join('; ')}`);
+        continue;
+      }
+      written++;
+      continue;
+    }
 
     const { replacements, failures: tagFailures } = buildReplacements(shell, seo, canonical);
     if (tagFailures.length > 0) {
@@ -301,6 +510,28 @@ function main(): void {
       // Replacer function: replacement text is literal (a '$' in a title or
       // description must not be treated as a $-pattern by String.replace).
       html = html.replace(r.pattern, () => r.replacement);
+    }
+
+    // Static content block inside #root (same h1/description/subtitle the
+    // React app renders for this route).
+    const staticData = resolveStatic(route);
+    let rootReplacement: TagReplacement | null = null;
+    if (staticData) {
+      const staticBlock = buildStaticBlock(staticData, shell, route);
+      const rootPattern = /<div id="root"><\/div>/;
+      const rootMatch = html.match(rootPattern);
+      if (!rootMatch) {
+        failures.push(`${route}: built HTML is missing the empty <div id="root"></div> — cannot inject static block`);
+        continue;
+      }
+      rootReplacement = {
+        pattern: rootPattern,
+        original: rootMatch[0],
+        replacement: `<div id="root">${staticBlock}</div>`,
+      };
+      html = html.replace(rootPattern, () => rootReplacement!.replacement);
+    } else {
+      staticOnly.push(route);
     }
 
     const outPath = path.join(DIST_DIR, route, 'index.html');
@@ -326,16 +557,28 @@ function main(): void {
         checks.push('og:url missing/wrong');
       }
     }
+    if (staticData) {
+      if (!writtenHtml.includes(`<h1>${escapeText(staticData.h1)}</h1>`)) {
+        checks.push('static h1 missing/wrong');
+      }
+      if (!writtenHtml.includes(`<p>${escapeText(staticData.description)}</p>`)) {
+        checks.push('static description paragraph missing/wrong');
+      }
+      if (staticData.subtitle && !writtenHtml.includes(`<p>${escapeText(staticData.subtitle)}</p>`)) {
+        checks.push('static subtitle missing/wrong');
+      }
+    }
     if (writtenHtml.includes(`<link rel="canonical" href="${HOME_CANONICAL}" />`)) {
       checks.push('still contains the homepage canonical');
     }
     // Round-trip: swapping the replacements back must reproduce the shell exactly.
     let roundTripped = writtenHtml;
-    for (const r of replacements) {
+    const allReplacements = rootReplacement ? [...replacements, rootReplacement] : replacements;
+    for (const r of allReplacements) {
       roundTripped = roundTripped.replace(r.replacement, () => r.original);
     }
     if (roundTripped !== shell) {
-      checks.push('file differs from shell outside the replaced head tags');
+      checks.push('file differs from shell outside the replaced head tags / static block');
     }
     if (checks.length > 0) {
       failures.push(`${route}: verification failed — ${checks.join('; ')}`);
@@ -344,13 +587,20 @@ function main(): void {
     written++;
   }
 
-  console.log(`inject-seo-head: wrote ${written} per-route files (sitemap routes minus homepage).`);
+  console.log(`inject-seo-head: wrote ${written} per-route files (sitemap routes, homepage included).`);
   if (canonicalOnly.length > 0) {
     console.log(
       `inject-seo-head: ${canonicalOnly.length} route(s) got canonical-only injection (no title/description resolved): ${canonicalOnly.join(', ')}`,
     );
   } else {
     console.log('inject-seo-head: every route got full title/description/canonical injection.');
+  }
+  if (staticOnly.length > 0) {
+    console.log(
+      `inject-seo-head: ${staticOnly.length} route(s) got no static block (no h1/description resolved): ${staticOnly.join(', ')}`,
+    );
+  } else {
+    console.log('inject-seo-head: every route got a static content block in #root.');
   }
   if (failures.length > 0) {
     console.error(`inject-seo-head: FAILED with ${failures.length} error(s):`);

@@ -160,7 +160,7 @@ export const ColorNameFinderTool: React.FC<{ navigate: (route: string) => void }
       {parsedHex && results.length > 0 && (
         <div className="mb-10">
           <h2 className="text-xl font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
-            <Palette className="w-5 h-5" style={{ color: 'var(--accent)' }} />
+            <Palette className="w-5 h-5 text-[var(--accent)]" />
             Closest named colors to {parsedHex}
           </h2>
 

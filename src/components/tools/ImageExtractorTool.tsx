@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { usePalette } from '../../context/PaletteContext';
 import { extractDominantColors, getColorData } from '../../utils/colorUtils';
 import {
-  Image as ImageIcon,
   UploadCloud,
   Pipette,
   Palette,
@@ -10,8 +9,7 @@ import {
   Copy,
   Sparkles,
   ArrowRight,
-  RefreshCw,
-} from 'lucide-react';
+  RefreshCw} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

@@ -620,7 +620,7 @@ export const HUB_CATEGORIES: Record<string, HubCategorySEO> = {
     h1: 'Free Online Color Tools — Exploration, Science & Color Wheels',
     seoTitle: 'Free Online Color Tools — Color Picker, Wheel & Mixer Suite',
     metaDescription:
-      'Explore our suite of free online color tools for designers and developers. Inspect hex codes, explore 360° color wheels, mix colors in OKLCH, and search 1,000+ named colors.',
+      'Free online color tools for designers and developers. Pick, explore, and mix colors with a 360-degree wheel, smart explorer, and OKLCH blender.',
     leadParagraph:
       'Whether you are choosing a brand accent color, exploring classical color harmonies, or mixing paint-accurate color shades, Chromora provides fast, client-side tools designed for modern digital and print workflows.',
     toolIds: ['color-picker', 'color-wheel', 'color-mixer', 'color-name-finder', 'color-converter'],
@@ -663,7 +663,7 @@ export const HUB_CATEGORIES: Record<string, HubCategorySEO> = {
     h1: 'Color Palette Generators & Color Scheme Creators',
     seoTitle: 'Color Palette Generators — Free Accessible Schemes & Moods',
     metaDescription:
-      'Generate harmonious, accessible color schemes with our free suite of palette generators. Create palettes using AI prompts, geometric harmony rules, random discovery, and image extraction.',
+      'Generate harmonious, accessible color palettes free. Use AI prompts, harmony rules, random discovery, and image extraction for UI and brand design.',
     leadParagraph:
       'Build cohesive, production-ready color palettes in seconds. From 12-rule geometric harmony engines and natural prompt AI generators to mood-filtered random rolling and curated aesthetic collections.',
     toolIds: ['color-palette-generator', 'ai-palette-generator', 'image-color-extractor', 'random-color-generator'],
@@ -706,7 +706,7 @@ export const HUB_CATEGORIES: Record<string, HubCategorySEO> = {
     h1: 'Color Accessibility Tools — WCAG Contrast & Daltonism Auditing',
     seoTitle: 'Color Accessibility Tools — WCAG Contrast & Color Blindness',
     metaDescription:
-      'Audit color accessibility for websites and digital products. Test WCAG 2.1 AA/AAA contrast ratios, simulate 8 forms of color vision deficiency, and get smart auto-fixes.',
+      'Audit color accessibility for your website. Test WCAG 2.1 AA and AAA contrast, simulate 8 color vision deficiencies, and auto-fix failing pairs.',
     leadParagraph:
       'Ensure your web applications and digital designs are inclusive, accessible, and fully compliant with international WCAG 2.1 Level AA and AAA standards as well as ADA digital compliance requirements.',
     toolIds: ['wcag-contrast-checker', 'color-blindness-simulator', 'design-preview', 'color-shades-generator'],
@@ -749,7 +749,7 @@ export const HUB_CATEGORIES: Record<string, HubCategorySEO> = {
     h1: 'Developer Color Tools — Tailwind Scales, Formats & Design Tokens',
     seoTitle: 'Developer Color Tools — Tailwind Scales, Formats & Tokens',
     metaDescription:
-      'Developer-first color utilities. Generate Tailwind 50-950 scales, convert across 10 color spaces (HEX, RGB, OKLCH, CMYK), build CSS gradients, and export design tokens.',
+      'Developer-first color utilities. Generate Tailwind 50-950 scales, convert HEX, RGB, OKLCH, and CMYK, build gradients, and export design tokens.',
     leadParagraph:
       'Engineered specifically for frontend engineers and design system architects. Transform raw color values into clean Tailwind configuration objects, CSS custom properties, W3C design tokens, and production favicon bundles.',
     toolIds: ['color-shades-generator', 'color-converter', 'gradient-generator', 'favicon-generator', 'pantone-color-converter', 'share-link-generator'],
@@ -792,7 +792,7 @@ export const HUB_CATEGORIES: Record<string, HubCategorySEO> = {
     h1: 'Image Color Tools — Palette Extraction & Photo Eyedropper',
     seoTitle: 'Image Color Tools — Extract Palettes From Any Photo',
     metaDescription:
-      'Extract beautiful color palettes and sample individual pixels from any image or photo. 100% private in-browser canvas processing with instant HEX, RGB, and Tailwind export.',
+      'Extract color palettes from any photo or image. Sample pixels with an eyedropper and export HEX, RGB, and Tailwind codes - 100% private, in your browser.',
     leadParagraph:
       'Upload any photograph, logo, screenshot, or digital artwork to extract dominant color schemes and inspect exact pixel coordinates with our precision loupe magnifying eyedropper.',
     toolIds: ['image-color-extractor', 'color-palette-generator', 'color-picker', 'design-preview'],

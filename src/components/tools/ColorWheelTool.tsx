@@ -6,31 +6,20 @@ import {
   hexToRgb,
   rgbToHsl,
   hslToHex,
-  rgbToHex,
-  hslToRgb,
   getColorWheelHarmonies,
-  clamp,
-} from '../../utils/colorUtils';
+  clamp} from '../../utils/colorUtils';
 import { WheelHarmonyMode, WheelHarmonyColor, FAQItem } from '../../types';
 import {
   Compass,
   Copy,
   Check,
-  Sparkles,
   Shuffle,
   Palette,
   ArrowRight,
   Sliders,
   RotateCcw,
-  Layers,
-  Layout,
   Info,
-  Droplets,
-  Share2,
-  Bookmark,
-  Eye,
-  CheckCircle2,
-} from 'lucide-react';
+  Bookmark} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';
@@ -313,7 +302,7 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
         config={{
           title: 'Interactive Color Wheel Online — Find Color Harmonies & Schemes',
           description:
-            'Free interactive colour wheel tool online with a color wheel picker. Discover complementary, analogous, triadic, and tetradic color combinations with live hex codes and token export.',
+            'Free interactive color wheel for designers. Explore 360-degree HSL harmonies - complementary, analogous, triadic, and tetradic - with live HEX and RGB codes.',
           keywords: [
             'interactive color wheel online',
             'colour wheel interactive',
@@ -938,10 +927,8 @@ export const ColorWheelTool: React.FC<{ navigate: (route: string) => void }> = (
 
           {/* Detailed Cards for each Harmony Color */}
           <div
-            className="grid gap-4"
-            style={{
-              gridTemplateColumns: `repeat(auto-fit, minmax(220px, 1fr))`,
-            }}
+            className="grid gap-4 grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))]"
+           
           >
             {harmonies.map((item, idx) => {
               const isCopied = copiedHex === item.hex;

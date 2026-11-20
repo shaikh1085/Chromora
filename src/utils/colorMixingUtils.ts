@@ -1,4 +1,4 @@
-import { RGB, HSL, OKLCH } from '../types';
+
 import {
   hexToRgb,
   rgbToHex,
@@ -6,8 +6,7 @@ import {
   hslToRgb,
   rgbToOklch,
   oklchToRgb,
-  clamp,
-} from './colorUtils';
+  clamp} from './colorUtils';
 
 export type MixingMode = 'oklch' | 'rgb' | 'hsl' | 'subtractive';
 

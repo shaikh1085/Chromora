@@ -8,7 +8,7 @@ export const TermsPage: React.FC<{ navigate: (route: string) => void }> = ({ nav
       <SEO
         config={{
           title: 'Terms of Service — Chromora',
-          description: 'Terms of service and usage conditions for the Chromora color intelligence suite.',
+          description: 'Terms of service for the Chromora color tools suite. Read the rules for using our free browser-based color pickers, palette generators, and converters.',
           canonicalUrl: 'https://chromoraflow.vercel.app/terms',
         }}
       />

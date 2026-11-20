@@ -1,33 +1,22 @@
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { usePalette } from '../../context/PaletteContext';
 import { useI18n } from '../../context/I18nContext';
-import { getColorData } from '../../utils/colorUtils';
+
 import {
   FaviconConfig,
   renderFaviconToCanvas,
   createFaviconZipArchive,
-  generateHtmlSnippet,
-  generateWebManifest,
-} from '../../utils/faviconUtils';
+  generateHtmlSnippet} from '../../utils/faviconUtils';
 import {
   Download,
   Upload,
-  Image as ImageIcon,
   Type,
   Copy,
   Check,
-  Sparkles,
-  Layers,
   Code,
   Globe,
-  Smartphone,
   Search,
-  ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
-  Sliders,
-  Palette,
-} from 'lucide-react';
+  ArrowRight} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

@@ -27,7 +27,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Free Color Tools for Designers & Developers — Chromora',
     h1: 'Free Color Tools for Designers & Developers',
     description:
-      'Chromora is a comprehensive suite of free color tools for UI/UX designers, frontend developers, and digital creators. Generate accessible palettes, check WCAG contrast, extract colors from images, convert HEX to OKLCH & RGB, and export Tailwind tokens.',
+      'Free color tools to create accessible palettes, check WCAG contrast, and convert HEX to OKLCH. Generate, test, and export design-ready colors online.',
     keywords: [
       'free color tools for designers and developers',
       'color palette generator',
@@ -42,7 +42,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     ],
     ogTitle: 'Free Color Tools for Designers & Developers — Chromora',
     ogDescription:
-      'Generate accessible color palettes, audit WCAG contrast, convert across HEX, RGB, OKLCH, and export Tailwind CSS & Figma design tokens.',
+      'Free color tools to create accessible palettes, check WCAG contrast, and convert HEX to OKLCH. Generate, test, and export design-ready colors online.',
     schemaType: 'WebApplication',
     appName: 'Chromora Color Platform',
     appCategory: 'DesignApplication',
@@ -87,7 +87,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Picker & Smart Color Explorer — Chromora',
     h1: 'Online Color Picker & Color Explorer',
     description:
-      'Free online color picker and inspector. Explore HEX codes, RGB, HSL, HSV, CMYK, and OKLCH values, generate Tailwind 50-950 shade curves, and copy CSS design variables.',
+      'Free online color picker and inspector. Explore HEX, RGB, HSL, HSV, CMYK, and OKLCH values, build Tailwind 50-950 shade curves, and copy CSS variables.',
     keywords: [
       'color picker online',
       'html color code finder',
@@ -131,7 +131,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Palette Generator — Create Harmonic Color Schemes | Chromora',
     h1: 'Color Palette Generator',
     description:
-      'Create beautiful, accessible color palettes for UI/UX design. Generate analogous, complementary, triadic, and monochromatic schemes, lock swatches, and export to Tailwind and Figma.',
+      'Generate harmonious, WCAG-accessible color palettes from any hex code. Explore 12 harmony models, lock colors, preview UI, and export Tailwind design tokens.',
     keywords: [
       'color palette generator',
       'accessible color schemes',
@@ -175,7 +175,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'WCAG Color Contrast Checker — ADA & WCAG 2.1 AA/AAA Tool | Chromora',
     h1: 'WCAG Color Contrast Checker',
     description:
-      'Free WCAG 2.1 color contrast checker. Audit contrast ratios in real time, check AA and AAA compliance for normal & large text, simulate 8 color blindness conditions, and auto-fix failing contrast.',
+      'Free WCAG 2.1 AAA/AA color contrast checker. Audit contrast ratios in real time, simulate color blindness, auto-fix failing contrast, and test UI components.',
     keywords: [
       'wcag contrast checker',
       'color contrast checker',
@@ -220,7 +220,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Image Color Palette Extractor — Extract HEX & RGB from Photos | Chromora',
     h1: 'Image Color Palette Extractor',
     description:
-      'Extract dominant color palettes and exact HEX/RGB codes from any photo, graphic, or UI screenshot. Inspect pixel coordinates with an eyedropper. 100% private browser processing.',
+      'Extract dominant color palettes and color codes from any image or screenshot. Sample pixels with a magnifying eyedropper. 100% private browser processing.',
     keywords: [
       'image color extractor',
       'extract color palette from image with hex codes',
@@ -264,7 +264,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Multi-Space Color Converter — HEX, RGB, HSL, CMYK, OKLCH | Chromora',
     h1: 'Multi-Space Color Space Converter',
     description:
-      'Convert colors across HEX, RGB, HSL, HSV, CMYK, and OKLCH in real time. Precise mathematical color conversion formulas for web designers, frontend developers, and print production.',
+      'Convert colors across HEX, RGB, HSL, HSV, CMYK, and OKLCH spaces in real time. Precise color conversions for web developers, UI designers, and print media.',
     keywords: [
       'color converter online free',
       'hex to rgb converter',
@@ -304,7 +304,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'CSS Gradient Studio — Linear & Radial Gradient Generator | Chromora',
     h1: 'CSS Gradient Generator & Studio',
     description:
-      'Design beautiful linear, radial, and multi-stop CSS gradients with precision angle controls. Copy production-ready CSS code and Tailwind background classes.',
+      'Free online CSS gradient generator. Design custom linear, radial, and multi-stop gradients with live preview, visual angle editor, and copy-paste CSS code.',
     keywords: [
       'css gradient generator',
       'linear gradient maker',
@@ -343,7 +343,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Interactive Color Wheel — Color Theory & Harmonies | Chromora',
     h1: 'Interactive Color Wheel & Color Theory Harmony Studio',
     description:
-      'Explore color theory with a 360-degree interactive HSL color wheel. Calculate complementary, analogous, triadic, tetradic, and monochromatic color harmonies in real time.',
+      'Free interactive color wheel for designers. Explore 360-degree HSL harmonies - complementary, analogous, triadic, and tetradic - with live HEX and RGB codes.',
     keywords: [
       'color wheel online',
       'interactive color theory wheel',
@@ -382,7 +382,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'AI Color Palette Generator — Natural Language Color Studio | Chromora',
     h1: 'AI Prompt to Color Palette Generator',
     description:
-      'Generate themed color palettes from natural language prompts, moods, brand concepts, industries, and cultural themes with intelligent semantic mapping.',
+      'Generate custom, production-ready color palettes from text prompts. Get instant psychological color analysis, WCAG contrast checks, and design token export.',
     keywords: [
       'ai color palette generator',
       'prompt to color palette',
@@ -415,7 +415,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Shades & Tints Generator — 50-950 Tailwind Scale | Chromora',
     h1: 'Color Shades and Tints Generator',
     description:
-      'Generate full 50–950 shade and tint curves for any seed color. Create mathematically balanced color steps for Tailwind CSS, CSS variables, and design systems.',
+      'Generate a complete 10-step shade and tint scale from any HEX color. Export instantly to Tailwind CSS, CSS variables, and JSON design tokens.',
     keywords: [
       'color shades generator',
       'color tints and shades maker',
@@ -448,7 +448,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Mixer & Blender — Mix Colors in RGB, HSL & OKLCH | Chromora',
     h1: 'Color Mixer and Blend Studio',
     description:
-      'Blend two or more colors with precise percentage ratios across RGB, HSL, and OKLCH color spaces. Preview smooth color steps and copy CSS color-mix() code.',
+      'Mix two colors online with precise ratios in RGB, HSL, and OKLCH. Preview smooth blend steps and copy ready-to-use CSS color-mix() code instantly.',
     keywords: [
       'color mixer online',
       'blend two colors online',
@@ -481,7 +481,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Blindness Simulator — Test UI Accessibility | Chromora',
     h1: 'Color Blindness Simulator & Accessibility Auditor',
     description:
-      'Simulate 8 types of color vision deficiencies including Protanopia, Deuteranopia, Tritanopia, and Achromatopsia to verify accessibility and visual contrast in UI design.',
+      'Free online color blindness simulator for UI designs and images. Accurately test Protanopia, Deuteranopia, Tritanopia, and Achromatopsia vision in real-time.',
     keywords: [
       'color blindness simulator',
       'protanopia deuteranopia simulator',
@@ -514,7 +514,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Pantone & RAL Color Converter — Find Closest PMS Shades | Chromora',
     h1: 'Pantone and RAL Color Converter',
     description:
-      'Match any digital HEX or RGB color to the closest standard Pantone Matching System (PMS) and RAL industrial color codes with delta-E accuracy ratings.',
+      'Match any HEX or RGB color to the closest Pantone PMS and RAL Classic shades with Delta-E accuracy. Free converter for print and brand design.',
     keywords: [
       'hex to pantone converter',
       'pantone color finder online',
@@ -547,7 +547,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Random Color & Palette Generator — Infinite Inspiration | Chromora',
     h1: 'Random Color and Palette Generator',
     description:
-      'Generate random hex colors, pastels, neon shades, dark tones, and harmonious palettes with one click. Instant copy for web and UI design.',
+      'Generate random colors and harmonious 5-color palettes with mood filters (Pastel, Neon, Warm, Cool, Earthy). Spacebar to roll, one-click copy HEX & CSS.',
     keywords: [
       'random color generator',
       'random hex color generator',
@@ -580,7 +580,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Favicon & App Icon Generator — Instant PNG & ICO | Chromora',
     h1: 'Color Favicon and App Icon Generator',
     description:
-      'Generate clean, multi-size browser favicons, Apple touch icons, and Android manifest icons from any color or emoji with instant ZIP download.',
+      'Free online favicon generator. Convert text, emojis, or logos into favicon.ico, 180x180 Apple Touch Icons, and site.webmanifest with instant ZIP download.',
     keywords: [
       'favicon generator from color',
       'app icon maker online',
@@ -613,7 +613,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Live UI Design Preview & Palette Simulator — Chromora',
     h1: 'Live UI Design Color Palette Simulator',
     description:
-      'Test your color palette against realistic SaaS dashboard interfaces, mobile app mockups, store cards, and social media templates with real-time theme swapping.',
+      'Test your color palette in real-time across realistic SaaS dashboards, landing pages, mobile apps, and e-commerce UI components with live role mapping.',
     keywords: [
       'ui design color preview',
       'palette simulator for website',
@@ -646,7 +646,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Explore All Named Colors & Hex Codes Database — Chromora',
     h1: 'Browse All Named Colors & Color Codes Database',
     description:
-      'Search and browse over 1,000 named colors with exact HEX, RGB, HSL, and CMYK values, color family groupings, and harmonious palette suggestions.',
+      'Browse our curated color names directory with exact HEX codes and RGB values. Search historical pigments, modern CSS named colors, and brand color swatches.',
     keywords: [
       'all color names database',
       'html color names list',
@@ -671,13 +671,174 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     ],
   },
 
+  '/colors/family/red': {
+    route: '/colors/family/red',
+    canonicalUrl: `${SITE_URL}/colors/family/red`,
+    title: 'Red Colors — Shades, Palettes & HEX Codes | Chromora',
+    h1: 'Red Colors',
+    description:
+      'Browse red color shades from crimson to burgundy with exact HEX and RGB codes. Find red palettes for branding, UI design, and celebrations.',
+    keywords: [
+      'red color palette',
+      'red shades hex codes',
+      'browse red colors',
+    ],
+    ogTitle: 'Red Colors — Shades, Palettes & HEX Codes | Chromora',
+    ogDescription:
+      'Browse red color shades from crimson to burgundy with exact HEX and RGB codes. Find red palettes for branding, UI design, and celebrations.',
+    schemaType: 'WebPage',
+    breadcrumbs: [
+      { name: 'Home', url: '/' },
+      { name: 'Colors', url: '/colors' },
+      { name: 'Red Colors', url: '/colors/family/red' },
+    ],
+    faqs: [],
+  },
+  '/colors/family/blue': {
+    route: '/colors/family/blue',
+    canonicalUrl: `${SITE_URL}/colors/family/blue`,
+    title: 'Blue Colors — Shades, Palettes & HEX Codes | Chromora',
+    h1: 'Blue Colors',
+    description:
+      'Browse blue color shades from sky to navy with exact HEX and RGB codes. Find calm, trusted blue palettes for websites, apps, and branding.',
+    keywords: [
+      'blue color palette',
+      'blue shades hex codes',
+      'browse blue colors',
+    ],
+    ogTitle: 'Blue Colors — Shades, Palettes & HEX Codes | Chromora',
+    ogDescription:
+      'Browse blue color shades from sky to navy with exact HEX and RGB codes. Find calm, trusted blue palettes for websites, apps, and branding.',
+    schemaType: 'WebPage',
+    breadcrumbs: [
+      { name: 'Home', url: '/' },
+      { name: 'Colors', url: '/colors' },
+      { name: 'Blue Colors', url: '/colors/family/blue' },
+    ],
+    faqs: [],
+  },
+  '/colors/family/green': {
+    route: '/colors/family/green',
+    canonicalUrl: `${SITE_URL}/colors/family/green`,
+    title: 'Green Colors — Shades, Palettes & HEX Codes | Chromora',
+    h1: 'Green Colors',
+    description:
+      'Browse green color shades from mint to forest with exact HEX and RGB codes. Find fresh, natural green palettes for eco brands and UI design.',
+    keywords: [
+      'green color palette',
+      'green shades hex codes',
+      'browse green colors',
+    ],
+    ogTitle: 'Green Colors — Shades, Palettes & HEX Codes | Chromora',
+    ogDescription:
+      'Browse green color shades from mint to forest with exact HEX and RGB codes. Find fresh, natural green palettes for eco brands and UI design.',
+    schemaType: 'WebPage',
+    breadcrumbs: [
+      { name: 'Home', url: '/' },
+      { name: 'Colors', url: '/colors' },
+      { name: 'Green Colors', url: '/colors/family/green' },
+    ],
+    faqs: [],
+  },
+  '/colors/family/yellow': {
+    route: '/colors/family/yellow',
+    canonicalUrl: `${SITE_URL}/colors/family/yellow`,
+    title: 'Yellow Colors — Shades, Palettes & HEX Codes | Chromora',
+    h1: 'Yellow Colors',
+    description:
+      'Browse yellow color shades from pastel to goldenrod with exact HEX and RGB codes. Find bright, cheerful yellow palettes for web and brand design.',
+    keywords: [
+      'yellow color palette',
+      'yellow shades hex codes',
+      'browse yellow colors',
+    ],
+    ogTitle: 'Yellow Colors — Shades, Palettes & HEX Codes | Chromora',
+    ogDescription:
+      'Browse yellow color shades from pastel to goldenrod with exact HEX and RGB codes. Find bright, cheerful yellow palettes for web and brand design.',
+    schemaType: 'WebPage',
+    breadcrumbs: [
+      { name: 'Home', url: '/' },
+      { name: 'Colors', url: '/colors' },
+      { name: 'Yellow Colors', url: '/colors/family/yellow' },
+    ],
+    faqs: [],
+  },
+  '/colors/family/purple': {
+    route: '/colors/family/purple',
+    canonicalUrl: `${SITE_URL}/colors/family/purple`,
+    title: 'Purple Colors — Shades, Palettes & HEX Codes | Chromora',
+    h1: 'Purple Colors',
+    description:
+      'Browse purple color shades from lavender to violet with exact HEX and RGB codes. Find rich, creative purple palettes for branding and UI design.',
+    keywords: [
+      'purple color palette',
+      'purple shades hex codes',
+      'browse purple colors',
+    ],
+    ogTitle: 'Purple Colors — Shades, Palettes & HEX Codes | Chromora',
+    ogDescription:
+      'Browse purple color shades from lavender to violet with exact HEX and RGB codes. Find rich, creative purple palettes for branding and UI design.',
+    schemaType: 'WebPage',
+    breadcrumbs: [
+      { name: 'Home', url: '/' },
+      { name: 'Colors', url: '/colors' },
+      { name: 'Purple Colors', url: '/colors/family/purple' },
+    ],
+    faqs: [],
+  },
+  '/colors/family/orange': {
+    route: '/colors/family/orange',
+    canonicalUrl: `${SITE_URL}/colors/family/orange`,
+    title: 'Orange Colors — Shades, Palettes & HEX Codes | Chromora',
+    h1: 'Orange Colors',
+    description:
+      'Browse orange color shades from peach to burnt orange with exact HEX and RGB codes. Find warm, energetic orange palettes for web and brand design.',
+    keywords: [
+      'orange color palette',
+      'orange shades hex codes',
+      'browse orange colors',
+    ],
+    ogTitle: 'Orange Colors — Shades, Palettes & HEX Codes | Chromora',
+    ogDescription:
+      'Browse orange color shades from peach to burnt orange with exact HEX and RGB codes. Find warm, energetic orange palettes for web and brand design.',
+    schemaType: 'WebPage',
+    breadcrumbs: [
+      { name: 'Home', url: '/' },
+      { name: 'Colors', url: '/colors' },
+      { name: 'Orange Colors', url: '/colors/family/orange' },
+    ],
+    faqs: [],
+  },
+  '/colors/family/pink': {
+    route: '/colors/family/pink',
+    canonicalUrl: `${SITE_URL}/colors/family/pink`,
+    title: 'Pink Colors — Shades, Palettes & HEX Codes | Chromora',
+    h1: 'Pink Colors',
+    description:
+      'Browse pink color shades from blush to hot pink with exact HEX and RGB codes. Find soft, playful pink palettes for beauty brands and UI design.',
+    keywords: [
+      'pink color palette',
+      'pink shades hex codes',
+      'browse pink colors',
+    ],
+    ogTitle: 'Pink Colors — Shades, Palettes & HEX Codes | Chromora',
+    ogDescription:
+      'Browse pink color shades from blush to hot pink with exact HEX and RGB codes. Find soft, playful pink palettes for beauty brands and UI design.',
+    schemaType: 'WebPage',
+    breadcrumbs: [
+      { name: 'Home', url: '/' },
+      { name: 'Colors', url: '/colors' },
+      { name: 'Pink Colors', url: '/colors/family/pink' },
+    ],
+    faqs: [],
+  },
   '/color-tools': {
     route: '/color-tools',
     canonicalUrl: `${SITE_URL}/color-tools`,
     title: 'Free Online Color Tools — Color Picker, Wheel & Mixer Suite',
     h1: 'Free Online Color Tools — Exploration, Science & Color Wheels',
     description:
-      'Explore our suite of free online color tools for designers and developers. Inspect hex codes, explore 360° color wheels, mix colors in OKLCH, and search 1,000+ named colors.',
+      'Free online color tools for designers and developers. Pick, explore, and mix colors with a 360-degree wheel, smart explorer, and OKLCH blender.',
     keywords: [
       'free online color tools',
       'color exploration tools',
@@ -709,7 +870,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Palette Generators — Free Accessible Schemes & Moods',
     h1: 'Color Palette Generators & Color Scheme Creators',
     description:
-      'Generate harmonious, accessible color schemes with our free suite of palette generators. Create palettes using AI prompts, geometric harmony rules, random discovery, and image extraction.',
+      'Generate harmonious, accessible color palettes free. Use AI prompts, harmony rules, random discovery, and image extraction for UI and brand design.',
     keywords: [
       'color palette generators',
       'color scheme creators',
@@ -741,7 +902,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Color Accessibility Tools — WCAG Contrast & Color Blindness',
     h1: 'Color Accessibility Tools — WCAG Contrast & Daltonism Auditing',
     description:
-      'Audit color accessibility for websites and digital products. Test WCAG 2.1 AA/AAA contrast ratios, simulate 8 forms of color vision deficiency, and get smart auto-fixes.',
+      'Audit color accessibility for your website. Test WCAG 2.1 AA and AAA contrast, simulate 8 color vision deficiencies, and auto-fix failing pairs.',
     keywords: [
       'color accessibility tools',
       'wcag contrast checker suite',
@@ -773,7 +934,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Developer Color Tools — Tailwind Scales, Formats & Tokens',
     h1: 'Developer Color Tools — Tailwind Scales, Formats & Design Tokens',
     description:
-      'Developer-first color utilities. Generate Tailwind 50-950 scales, convert across 10 color spaces (HEX, RGB, OKLCH, CMYK), build CSS gradients, and export design tokens.',
+      'Developer-first color utilities. Generate Tailwind 50-950 scales, convert HEX, RGB, OKLCH, and CMYK, build gradients, and export design tokens.',
     keywords: [
       'developer color tools',
       'tailwind color scale generator',
@@ -805,7 +966,7 @@ export const CORE_ROUTES_SEO: Record<string, RouteSEOData> = {
     title: 'Image Color Tools — Extract Palettes From Any Photo',
     h1: 'Image Color Tools — Palette Extraction & Photo Eyedropper',
     description:
-      'Extract beautiful color palettes and sample individual pixels from any image or photo. 100% private in-browser canvas processing with instant HEX, RGB, and Tailwind export.',
+      'Extract color palettes from any photo or image. Sample pixels with an eyedropper and export HEX, RGB, and Tailwind codes - 100% private, in your browser.',
     keywords: [
       'image color tools',
       'image palette extractor',

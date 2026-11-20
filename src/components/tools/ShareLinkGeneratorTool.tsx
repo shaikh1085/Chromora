@@ -163,7 +163,7 @@ export const ShareLinkGeneratorTool: React.FC<{ navigate: (route: string) => voi
   const seoConfig: SEOConfig = {
     title: 'Share Link Generator — Create WhatsApp, X, Facebook & LinkedIn Share Links',
     description:
-      'Paste any website URL and instantly generate ready share links for WhatsApp, X, Facebook, LinkedIn, Telegram and Email. Free, no sign-up, everything runs in your browser.',
+      'Paste any website URL and create ready share links for WhatsApp, X, Facebook, LinkedIn, Telegram, and Email. Free, instant, and fully private.',
     canonicalUrl: 'https://chromoraflow.vercel.app/share-link-generator',
     keywords: [
       'share link generator',
@@ -300,7 +300,7 @@ export const ShareLinkGeneratorTool: React.FC<{ navigate: (route: string) => voi
         <div className="mb-10">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
             <h2 className="text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
-              <Share2 className="w-5 h-5" style={{ color: 'var(--accent)' }} />
+              <Share2 className="w-5 h-5 text-[var(--accent)]" />
               Your share links
             </h2>
             <button

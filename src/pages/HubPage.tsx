@@ -19,10 +19,8 @@ import {
   Globe,
   Layout,
   ArrowRight,
-  ShieldCheck,
   Code2,
-  BookOpen,
-} from 'lucide-react';
+  BookOpen} from 'lucide-react';
 
 const ICON_MAP: Record<string, React.ElementType> = {
   'color-picker': Compass,

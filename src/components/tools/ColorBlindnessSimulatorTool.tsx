@@ -1,29 +1,22 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { usePalette } from '../../context/PaletteContext';
 import { useI18n } from '../../context/I18nContext';
-import { getColorData, hexToRgb, getContrastRatio } from '../../utils/colorUtils';
+import { getColorData } from '../../utils/colorUtils';
 import {
   VisionDeficiency,
   DEFICIENCY_INFO_LIST,
   simulateDeficiency,
-  applyCanvasDeficiencyFilter,
-} from '../../utils/colorBlindnessUtils';
+  applyCanvasDeficiencyFilter} from '../../utils/colorBlindnessUtils';
 import {
   Eye,
   Upload,
   Image as ImageIcon,
   Copy,
   Check,
-  Sparkles,
   ArrowRight,
-  ShieldCheck,
-  AlertTriangle,
   Download,
   Info,
-  RefreshCw,
-  Palette,
-  Sliders,
-} from 'lucide-react';
+  Palette} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

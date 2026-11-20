@@ -5,28 +5,16 @@ import {
   getColorData,
   getRandomColor,
   generateHarmonicPalette,
-  hexToRgb,
-  rgbToHsl,
   hslToRgb,
-  rgbToHex,
-  clamp,
-} from '../../utils/colorUtils';
+  rgbToHex} from '../../utils/colorUtils';
 import {
   Shuffle,
   Copy,
   Check,
-  Sparkles,
-  Sliders,
   ArrowRight,
   Palette,
-  Eye,
-  Layers,
   Lock,
-  Unlock,
-  Download,
-  Share2,
-  RefreshCw,
-} from 'lucide-react';
+  Unlock} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

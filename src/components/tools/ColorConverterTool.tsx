@@ -3,17 +3,10 @@ import { usePalette } from '../../context/PaletteContext';
 import {
   getColorData,
   parseColorInput,
-  hexToRgb,
   rgbToHex,
-  rgbToHsl,
   hslToRgb,
-  rgbToCmyk,
-  rgbToOklch,
-  cmykToRgb,
-  rgbToHsv,
-  clamp,
-} from '../../utils/colorUtils';
-import { Repeat, Copy, Check, Sparkles, ArrowRight, Layers, ArrowRightLeft } from 'lucide-react';
+  clamp} from '../../utils/colorUtils';
+import { Repeat, Copy, Check, ArrowRight, ArrowRightLeft } from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';

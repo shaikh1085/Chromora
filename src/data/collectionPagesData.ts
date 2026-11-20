@@ -402,7 +402,7 @@ export const COLLECTION_PAGES: Record<string, CollectionPageData> = {
     h1: 'South Asian Wedding Color Palette Ideas',
     primaryKeyword: 'South Asian wedding color palette',
     metaDescription:
-      'Discover South Asian color palettes and wedding color schemes for Indian, Pakistani, and Bengali celebrations. Vermilion red, peacock teal, marigold yellow, and antique gold.',
+      'South Asian wedding color palettes for Indian, Pakistani, and Bengali celebrations. Vermilion red, peacock teal, marigold, and antique gold schemes.',
     category: 'Asia & Global',
     intro:
       'South Asian weddings are legendary for multi-day celebrations, intricate rituals, floral abundance, and spectacular royal attire. These palettes offer harmonious color systems for invitations, decor, stationery, and digital wedding suites.',
@@ -2570,7 +2570,7 @@ export const COLLECTION_PAGES: Record<string, CollectionPageData> = {
     h1: 'Blue Color Palette Ideas',
     primaryKeyword: 'blue color palette',
     metaDescription:
-      'Discover aesthetic blue color palettes for UI design, branding, and websites. Ocean blues, royal sapphire, navy, pastel sky, and electric cobalt palettes with hex codes.',
+      'Aesthetic blue color palettes for UI design, branding, and websites. Ocean, royal sapphire, navy, pastel sky, and electric cobalt schemes with hex codes.',
     category: 'UI & Systems',
     intro:
       'Blue is the world’s most versatile and trusted color in UI/UX design. From deep oceanic navies to refreshing sky pastels and electric tech indigos, explore curated blue color combinations crafted for digital interfaces and modern brands.',

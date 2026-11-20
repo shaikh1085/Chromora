@@ -1,31 +1,18 @@
 import React, { useState, useMemo } from 'react';
 import { usePalette } from '../../context/PaletteContext';
 import { useI18n } from '../../context/I18nContext';
-import { getColorData, hexToRgb, rgbToHex } from '../../utils/colorUtils';
+import { getColorData } from '../../utils/colorUtils';
 import {
   findNearestPantone,
   findNearestRal,
-  searchPantoneRal,
-  PANTONE_DATABASE,
-  RAL_DATABASE,
-  PantoneEntry,
-  RalEntry,
-} from '../../data/pantoneRalData';
+  searchPantoneRal} from '../../data/pantoneRalData';
 import {
   Search,
   Copy,
   Check,
-  Sparkles,
   ArrowRight,
   Printer,
-  Layers,
-  Info,
-  CheckCircle2,
-  Tag,
-  ShieldCheck,
-  Palette,
-  ExternalLink,
-} from 'lucide-react';
+  Layers} from 'lucide-react';
 import { SEO } from '../common/SEO';
 import { Breadcrumbs } from '../common/Breadcrumbs';
 import { FAQSection } from '../common/FAQSection';
@@ -117,7 +104,7 @@ export const PantoneRalConverterTool: React.FC<{ navigate: (route: string) => vo
   const seoConfig: SEOConfig = {
     title: 'Pantone & RAL Color Converter: HEX to PMS & RAL Classic Match',
     description:
-      'Match any HEX or RGB color to the closest Pantone Solid Coated (PMS) and RAL Classic standards, with accurate Delta E perceptual distance scores — the fastest way to match RAL to Pantone or convert RGB to PMS.',
+      'Match any HEX or RGB color to the closest Pantone PMS and RAL Classic shades with Delta-E accuracy. Free converter for print and brand design.',
     canonicalUrl: 'https://chromoraflow.vercel.app/pantone-color-converter',
     keywords: [
       'pantone color converter',
